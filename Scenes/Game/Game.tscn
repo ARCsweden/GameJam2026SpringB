@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dpa7etolnwg3j"]
+
+[ext_resource type="PackedScene" uid="uid://kk50qp4e2lch" path="res://Scenes/Game/Schematic.tscn" id="1_iukft"]
+[ext_resource type="PackedScene" uid="uid://c07fpo7nlye7n" path="res://Scenes/Game/GUI.tscn" id="2_gwu2e"]
+
+[node name="Game" type="Node2D" unique_id=235563203]
+
+[node name="Schematic" parent="." unique_id=1559803732 instance=ExtResource("1_iukft")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
+
+[node name="Gui" parent="CanvasLayer" unique_id=228469892 instance=ExtResource("2_gwu2e")]
