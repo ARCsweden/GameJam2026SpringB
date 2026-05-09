@@ -18,9 +18,10 @@ func load_level_goals(goals_array: Array[GoalData]) -> void:
 		activate_single_goal(goal)
 
 # METHOD B: Add a single goal dynamically
-func activate_single_goal(goal: GoalData) -> void:
+func activate_single_goal(base_goal: GoalData) -> void:
 	# First check if it's already active to prevent duplicates
-	if not active_goals.has(goal.goal_id):
+	if not active_goals.has(base_goal.goal_id):
+		var goal = base_goal.duplicate()
 		# 1. Save the Resource data so we know the target and reward later
 		goal_definitions[goal.goal_id] = goal
 		# 2. Add it to active goals and set its starting progress to 0
@@ -114,6 +115,10 @@ func _finish_and_remove_goal(goal_id: String) -> void:
 			
 	# 3. --- THE REPEATABLE LOGIC ---
 	if completed_goal_data.is_repeatable:
+		# 1. Multiply the target and reward for the NEXT round (convert float back to int)
+		completed_goal_data.target_value = int(completed_goal_data.target_value * completed_goal_data.target_multiplier)
+		completed_goal_data.reward_amount = int(completed_goal_data.reward_amount * completed_goal_data.reward_multiplier)
+		
 		# Reset the progress back to 0
 		active_goals[goal_id] = 0
 		

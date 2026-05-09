@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://ckf076y47jqlf"]
+
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_5vhja"]
+[ext_resource type="PackedScene" uid="uid://bopvl8m66kr2b" path="res://Scenes/Game/Nodes/camera_simple.tscn" id="2_ma6wc"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="3_l2xes"]
+
+[resource]
+script = ExtResource("3_l2xes")
+module_name = "Camera_Simple"
+cost = 200
+packed_scene = ExtResource("2_ma6wc")
+action_tag = "camera"
+icon = ExtResource("1_5vhja")

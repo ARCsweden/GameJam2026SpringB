@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://c27bt5ygaamp0"]
+
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="1_r7ena"]
+[ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="2_1b58m"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="3_3g4s7"]
+
+[resource]
+script = ExtResource("3_3g4s7")
+module_name = "Object_Detection"
+cost = 50
+packed_scene = ExtResource("2_1b58m")
+action_tag = "object_detection"
+icon = ExtResource("1_r7ena")
