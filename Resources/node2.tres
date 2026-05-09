@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://lhwar65rtdn8"]
 
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_3k0cs"]
 [ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="1_6okmc"]
+[ext_resource type="PackedScene" uid="uid://cak87gijsxlcr" path="res://Scenes/Game/Nodes/battery_super.tscn" id="1_ho0t2"]
 
 [resource]
 script = ExtResource("1_6okmc")
 module_name = "GPU"
 cost = 100
+packed_scene = ExtResource("1_ho0t2")
 goal_id_to_trigger = "buy_gpu"
 action_tag = "gpu"
+icon = ExtResource("1_3k0cs")
 metadata/_custom_type_script = "uid://cxwn8yrjkyp3v"

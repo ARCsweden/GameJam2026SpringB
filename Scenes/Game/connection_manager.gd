@@ -37,6 +37,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					start.connection = connection
 					end.connection = connection
 					connections.append(connection)
+					SignalBus.connection_made.emit()
 				# Clear old line/start/end
 				else:
 					remove_child(line)

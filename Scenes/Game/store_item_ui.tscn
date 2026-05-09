@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bnktsncfaa2e0"]
+
+[ext_resource type="Script" uid="uid://cfvcem4esi47i" path="res://Scripts/StoreItemUI.gd" id="1_0opp5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ps5tp"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_um6xf"]
+font_size = 20
+
+[node name="StoreItemUI" type="PanelContainer" unique_id=1783544407]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0opp5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1510626441]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=237646383]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_ps5tp")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=173939847]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=646510233]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+label_settings = SubResource("LabelSettings_um6xf")
+horizontal_alignment = 1

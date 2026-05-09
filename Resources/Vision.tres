@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://f7lerg63cjjp"]
+
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_q6my7"]
+[ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="2_3mg22"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="2_ts0pb"]
+
+[resource]
+script = ExtResource("2_ts0pb")
+module_name = "Vision"
+cost = 51
+packed_scene = ExtResource("2_3mg22")
+action_tag = "vision"
+icon = ExtResource("1_q6my7")

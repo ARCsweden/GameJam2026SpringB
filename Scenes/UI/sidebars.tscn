@@ -4,9 +4,18 @@
 [ext_resource type="Script" uid="uid://beawjojb6jtid" path="res://Scripts/BuyPipeButton.gd" id="2_uf5x1"]
 [ext_resource type="Resource" uid="uid://lhwar65rtdn8" path="res://Resources/node2.tres" id="3_43ur1"]
 [ext_resource type="Script" uid="uid://birkj6dde2i87" path="res://Scripts/DebugGoalButton.gd" id="4_6ptox"]
+[ext_resource type="Resource" uid="uid://dfxvaw5875k6y" path="res://Resources/Battery_Simple.tres" id="5_et7fu"]
 [ext_resource type="Resource" uid="uid://cdlqcud8budfg" path="res://Resources/node1.tres" id="5_sr12i"]
+[ext_resource type="Resource" uid="uid://f7lerg63cjjp" path="res://Resources/Vision.tres" id="5_tko4l"]
 [ext_resource type="Script" uid="uid://dgmpkb4r6yt5o" path="res://Scripts/DynamicGoalPanel.gd" id="6_tko4l"]
+[ext_resource type="Resource" uid="uid://cxjh16v7qo2y6" path="res://Resources/Battery_Super.tres" id="6_xo0gq"]
 [ext_resource type="PackedScene" uid="uid://2rvovwt788pj" path="res://Scenes/Game/goal_item_ui.tscn" id="7_j4jrg"]
+[ext_resource type="Resource" uid="uid://ckf076y47jqlf" path="res://Resources/Camera_Simple.tres" id="7_lu8f2"]
+[ext_resource type="Script" uid="uid://nor21fjxlc74" path="res://Scripts/StoreGrid.gd" id="8_43ur1"]
+[ext_resource type="PackedScene" uid="uid://bnktsncfaa2e0" path="res://Scenes/Game/store_item_ui.tscn" id="9_6ptox"]
+[ext_resource type="Resource" uid="uid://c27bt5ygaamp0" path="res://Resources/Object_Detection.tres" id="9_h0ar1"]
+[ext_resource type="Resource" uid="uid://c0p8lydruxjxk" path="res://Resources/Arm_Simple.tres" id="10_i7w1n"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="10_sr12i"]
 
 [node name="Sidebars" type="HBoxContainer" unique_id=2095981365]
 anchors_preset = 15
@@ -19,6 +28,7 @@ size_flags_vertical = 3
 metadata/_edit_group_ = true
 
 [node name="Store" type="MarginContainer" parent="." unique_id=1188098701]
+visible = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 2
@@ -257,6 +267,19 @@ size_flags_vertical = 8
 text = "MCU"
 horizontal_alignment = 1
 autowrap_mode = 1
+
+[node name="Store2" type="MarginContainer" parent="." unique_id=2350805]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Store2" unique_id=1837228376]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+
+[node name="StoreGrid" type="GridContainer" parent="Store2/ScrollContainer" unique_id=544246150]
+layout_mode = 2
+script = ExtResource("8_43ur1")
+store_item_scene = ExtResource("9_6ptox")
+available_modules = Array[ExtResource("10_sr12i")]([ExtResource("5_et7fu"), ExtResource("6_xo0gq"), ExtResource("7_lu8f2"), ExtResource("9_h0ar1"), ExtResource("10_i7w1n"), ExtResource("5_tko4l"), ExtResource("3_43ur1"), ExtResource("3_43ur1"), ExtResource("3_43ur1"), ExtResource("3_43ur1")])
 
 [node name="Goal" type="MarginContainer" parent="." unique_id=1347628786]
 custom_minimum_size = Vector2(150, 0)

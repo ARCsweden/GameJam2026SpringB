@@ -8,6 +8,8 @@ class_name GoalData
 @export var next_goals: Array[GoalData]
 @export var is_repeatable: bool = false
 @export var action_tag: String
+@export var target_multiplier: float = 1.0 
+@export var reward_multiplier: float = 1.0
 #@export var amount_of_CPU: int
 #@export var amount_of_GPU: int
 #@export var amount_of_cameras: int # e.g., "Connect 5 pipes" -> target_value = 5
