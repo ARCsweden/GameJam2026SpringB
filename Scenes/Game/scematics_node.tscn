@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://p1wpvwl2csap" path="res://Assets/Art/node.png" id="1_2gwpg"]
 [ext_resource type="Script" uid="uid://c0seprcog42nt" path="res://Scenes/Game/scematics_node.gd" id="1_kixod"]
+[ext_resource type="Texture2D" uid="uid://26t36bs5l4sr" path="res://Assets/Art/move_icon.png" id="3_ogetc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ogetc"]
 
 [node name="ScematicsNode" type="Node2D" unique_id=1799637696]
 script = ExtResource("1_kixod")
@@ -16,3 +19,17 @@ patch_margin_right = 32
 patch_margin_bottom = 32
 
 [node name="Slots" type="Node2D" parent="." unique_id=1721700871]
+
+[node name="MoveIcon" type="Sprite2D" parent="." unique_id=1087313928]
+position = Vector2(16, 16)
+texture = ExtResource("3_ogetc")
+
+[node name="Area2D" type="Area2D" parent="MoveIcon" unique_id=179981898]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveIcon/Area2D" unique_id=2118973219]
+shape = SubResource("CircleShape2D_ogetc")
+
+[connection signal="mouse_entered" from="NinePatchRect" to="." method="_on_nine_patch_rect_mouse_entered"]
+[connection signal="mouse_exited" from="NinePatchRect" to="." method="_on_nine_patch_rect_mouse_exited"]
+[connection signal="mouse_entered" from="MoveIcon/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="MoveIcon/Area2D" to="." method="_on_area_2d_mouse_exited"]
