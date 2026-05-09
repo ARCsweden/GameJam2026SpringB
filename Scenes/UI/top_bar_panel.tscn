@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://36wi4tl0cghm"]
 
+[ext_resource type="Script" uid="uid://dx2vsf4ctm4ti" path="res://Scripts/MoneyUI.gd" id="1_7xdl6"]
+
 [node name="TopBarPanel" type="Panel" unique_id=240318811]
 custom_minimum_size = Vector2(100, 60)
 anchors_preset = 10
@@ -50,6 +52,7 @@ theme_override_constants/margin_right = 5
 layout_mode = 2
 size_flags_vertical = 1
 text = "500k$"
+script = ExtResource("1_7xdl6")
 
 [node name="GPUContainer" type="MarginContainer" parent="TopBarHBOX/MarginContainer/Resources" unique_id=252269028]
 layout_mode = 2
