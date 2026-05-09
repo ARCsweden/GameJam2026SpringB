@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c07fpo7nlye7n"]
 
+[ext_resource type="PackedScene" uid="uid://dovg0n42rqrcv" path="res://Scenes/UI/sidebars.tscn" id="1_d2po1"]
+[ext_resource type="PackedScene" uid="uid://36wi4tl0cghm" path="res://Scenes/UI/top_bar_panel.tscn" id="2_px1ag"]
+
 [node name="Gui" type="Control" unique_id=228469892]
 layout_mode = 3
 anchors_preset = 15
@@ -16,166 +19,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TopBarPanel" type="Panel" parent="Main" unique_id=1618604617]
-custom_minimum_size = Vector2(100, 60)
+[node name="TopBarPanel" parent="Main" unique_id=240318811 instance=ExtResource("2_px1ag")]
 layout_mode = 2
 
-[node name="TopBarHBOX" type="HBoxContainer" parent="Main/TopBarPanel" unique_id=219983369]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Main/TopBarPanel/TopBarHBOX" unique_id=1363334136]
+[node name="Sidebars" parent="Main" unique_id=2095981365 instance=ExtResource("1_d2po1")]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Resources" type="HBoxContainer" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer" unique_id=85128428]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="BatteryContainer" type="MarginContainer" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer/Resources" unique_id=2129909352]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_right = 5
-
-[node name="Battery" type="Label" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer/Resources/BatteryContainer" unique_id=950186651]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 1
-text = "10 kW"
-
-[node name="MoneyContainer" type="MarginContainer" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer/Resources" unique_id=2048911230]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_right = 5
-
-[node name="Money" type="Label" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer/Resources/MoneyContainer" unique_id=814931649]
-layout_mode = 2
-size_flags_vertical = 1
-text = "500k$"
-
-[node name="GPUContainer" type="MarginContainer" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer/Resources" unique_id=298723983]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_right = 5
-
-[node name="GPU" type="Label" parent="Main/TopBarPanel/TopBarHBOX/MarginContainer/Resources/GPUContainer" unique_id=1400195388]
-layout_mode = 2
-size_flags_vertical = 1
-text = "560 Gflops"
-
-[node name="Sidebars" type="HBoxContainer" parent="Main" unique_id=2064440727]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Store" type="MarginContainer" parent="Main/Sidebars" unique_id=813622466]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="StorePanel" type="Panel" parent="Main/Sidebars/Store" unique_id=1979650478]
-layout_mode = 2
-
-[node name="StoreVBOX" type="VBoxContainer" parent="Main/Sidebars/Store/StorePanel" unique_id=422875179]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 10
-
-[node name="MarginContainer" type="MarginContainer" parent="Main/Sidebars/Store/StorePanel/StoreVBOX" unique_id=1345154059]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="Main/Sidebars/Store/StorePanel/StoreVBOX/MarginContainer" unique_id=1591816319]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-text = "Add MCU"
-autowrap_mode = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="Main/Sidebars/Store/StorePanel/StoreVBOX" unique_id=1351382785]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="Main/Sidebars/Store/StorePanel/StoreVBOX/MarginContainer2" unique_id=394716523]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-text = "Add FPGA"
-autowrap_mode = 1
-
-[node name="Goal" type="MarginContainer" parent="Main/Sidebars" unique_id=1163772959]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="GoalPanel" type="Panel" parent="Main/Sidebars/Goal" unique_id=1666198856]
-layout_mode = 2
-
-[node name="InvestorBox" type="VBoxContainer" parent="Main/Sidebars/Goal/GoalPanel" unique_id=1961487588]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 10
-
-[node name="MarginContainer" type="MarginContainer" parent="Main/Sidebars/Goal/GoalPanel/InvestorBox" unique_id=413734994]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="Main/Sidebars/Goal/GoalPanel/InvestorBox/MarginContainer" unique_id=133227694]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-text = "Investor A:
-blablalbal
-balbalbl
-ablabll"
-autowrap_mode = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="Main/Sidebars/Goal/GoalPanel/InvestorBox" unique_id=938992832]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="Main/Sidebars/Goal/GoalPanel/InvestorBox/MarginContainer2" unique_id=1483504096]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-text = "Investor B:
-balblaa	b	
-balbalba bb
-balblab 
-abalba"
-autowrap_mode = 1
