@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ccnuk2wqctkw6"]
+
+[ext_resource type="Texture2D" uid="uid://p1wpvwl2csap" path="res://Assets/Art/node.png" id="1_2gwpg"]
+
+[node name="ScematicsNode" type="Node2D" unique_id=1799637696]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2050590102]
+offset_right = 128.0
+offset_bottom = 96.0
+texture = ExtResource("1_2gwpg")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
