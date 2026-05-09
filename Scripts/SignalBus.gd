@@ -7,4 +7,7 @@ signal click_cancel()
 signal slot_entered(slot: NodeSlot)
 signal slot_exited(slot: NodeSlot)
 
+signal node_entered(slot: SchematicsNode)
+signal node_exited(slot: SchematicsNode)
+
 signal connection_made()
