@@ -22,22 +22,30 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 		input_slot = stop_slot
 		output_slot = start_slot
 	
-	# If power, turn power on. Then update all inputs that are connected to the outpouts
+	# If power, update the amount value of output slots. Then update all inputs that are connected to the outpouts
 	# TODO check all power inputs, otherwise power shouldn't turn on.
 	if input_slot.type == ResourceTypes.RT.POWER:
-		input_slot.parent_node.powered = true
-		# Find all output slots
+		# Update that power is on
+		input_slot.amount = output_slot.amount
+		# Calculate what the output should be
+		var total = 0
 		for c in input_slot.parent_node.slots.get_children():
 			var ns : NodeSlot = c as NodeSlot
+			if ns.dir == ResourceTypes.DIR.IN and ns.type != ResourceTypes.RT.POWER:
+				total += ns.amount
+		# Find all output slots, and update the input slot they are connected to
+		for c in input_slot.parent_node.slots.get_children():
+			var ns : NodeSlot = c as NodeSlot
+			ns.amount = total
 			if ns.dir == ResourceTypes.DIR.OUT and ns.type != ResourceTypes.RT.POWER:
 				# Check that an output is connected to an input
 				if ns.connection != null:
 					# Identify which slot in the connection is the input
-					var signal_receiver
-					if ns.connection.start == input_slot:
-						signal_receiver = ns.connection.end
-					else:
-						signal_receiver = ns.connection.start
+					#var signal_receiver
+					#if ns.connection.start == input_slot:
+					#	signal_receiver = ns.connection.end
+					#else:
+					#	signal_receiver = ns.connection.start
 					# Emit signal to propagate the change
 					SignalBus.update_slot_flow.emit(ns.connection.start, ns.connection.end)
 				

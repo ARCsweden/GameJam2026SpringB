@@ -14,8 +14,20 @@ type = 1
 [node name="Sprite" parent="Slots/NodeSlot" index="1" unique_id=883112050]
 texture = ExtResource("3_8n4vn")
 
+[node name="Label" type="Label" parent="Slots/NodeSlot" index="3" unique_id=1315909526]
+offset_left = -35.0
+offset_top = -10.0
+offset_right = 5.0
+offset_bottom = 13.0
+
 [node name="NodeSlot2" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=138805625 instance=ExtResource("2_j1vgl")]
 position = Vector2(64, 76)
+
+[node name="Label" type="Label" parent="Slots/NodeSlot2" index="3" unique_id=1207827340]
+offset_left = -13.0
+offset_top = 22.0
+offset_right = 27.0
+offset_bottom = 45.0
 
 [node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="2" unique_id=112302833 instance=ExtResource("2_j1vgl")]
 position = Vector2(108, 48)
@@ -24,6 +36,12 @@ dir = 1
 
 [node name="Sprite" parent="Slots/NodeSlot3" index="1" unique_id=883112050]
 texture = ExtResource("4_spijq")
+
+[node name="Label" type="Label" parent="Slots/NodeSlot3" index="3" unique_id=2105924905]
+offset_left = 29.0
+offset_top = -8.0
+offset_right = 69.0
+offset_bottom = 15.0
 
 [editable path="Slots/NodeSlot"]
 [editable path="Slots/NodeSlot3"]

@@ -13,10 +13,28 @@ offset_bottom = 64.0
 position = Vector2(32, 32)
 dir = 1
 
+[node name="Label" type="Label" parent="Slots/NodeSlot" index="3" unique_id=37635371]
+offset_left = -10.0
+offset_top = -62.0
+offset_right = 30.0
+offset_bottom = -39.0
+
 [node name="NodeSlot2" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=1184792835 instance=ExtResource("2_bnbnk")]
 position = Vector2(70, 32)
 dir = 1
 
+[node name="Label" type="Label" parent="Slots/NodeSlot2" index="3" unique_id=886828908]
+offset_left = -7.0
+offset_top = -63.0
+offset_right = 33.0
+offset_bottom = -40.0
+
 [node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="2" unique_id=757575105 instance=ExtResource("2_bnbnk")]
 position = Vector2(108, 32)
 dir = 1
+
+[node name="Label" type="Label" parent="Slots/NodeSlot3" index="3" unique_id=483294788]
+offset_left = -8.0
+offset_top = -60.0
+offset_right = 32.0
+offset_bottom = -37.0

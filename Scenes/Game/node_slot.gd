@@ -14,7 +14,13 @@ var connection : Connection = null
 var parent_node : SchematicsNode = null
 
 func _ready():
-	amount = base_amount
+	if dir == ResourceTypes.DIR.OUT and type == ResourceTypes.RT.POWER:
+		amount = base_amount
+	else:
+		amount = 0
+	
+func _process(delta: float) -> void:
+	$Label.text = str(amount)
 
 func _on_slot_entered():
 	SignalBus.slot_entered.emit(self)
