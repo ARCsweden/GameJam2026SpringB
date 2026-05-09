@@ -9,9 +9,16 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#TODO: Clear placeholders
+	return
+	for n in inputs.get_children():
+		inputs.remove_child(n)
+		n.queue_free()
+	for n in outputs.get_children():
+		outputs.remove_child(n)
+		n.queue_free()
+	for n in power.get_children():
+		power.remove_child(n)
+		n.queue_free()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#TODO: Initialize node with the correct slots

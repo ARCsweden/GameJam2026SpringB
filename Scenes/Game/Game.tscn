@@ -15,6 +15,7 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
 
 [node name="Gui" parent="CanvasLayer" unique_id=228469892 instance=ExtResource("2_gwu2e")]
+mouse_filter = 1
 
 [node name="MoneyLabel" type="Label" parent="CanvasLayer" unique_id=1520405334]
 offset_left = 518.0

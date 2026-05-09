@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://papeltj4fgxv"]
 
 [ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_gg472"]
+[ext_resource type="Script" uid="uid://dddk585ujlkxj" path="res://Scenes/Game/node_slot.gd" id="1_weota"]
+[ext_resource type="Texture2D" uid="uid://c351to8o6x2le" path="res://Assets/Art/activation.png" id="2_2vx3h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gg472"]
 radius = 16.0
 
 [node name="NodeSlot" type="Node2D" unique_id=435795435]
+script = ExtResource("1_weota")
+
+[node name="ActivationSprite" type="Sprite2D" parent="." unique_id=1425754640]
+visible = false
+modulate = Color(0.23696423, 0.74370295, 0, 1)
+texture = ExtResource("2_2vx3h")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=883112050]
 texture = ExtResource("1_gg472")
@@ -14,3 +22,6 @@ texture = ExtResource("1_gg472")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1729825031]
 shape = SubResource("CircleShape2D_gg472")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_slot_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_slot_exited"]
