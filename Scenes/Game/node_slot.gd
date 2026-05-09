@@ -7,6 +7,8 @@ extends Node2D
 @export var type : ResourceTypes.RT
 @export var dir : ResourceTypes.DIR
 
+var connection : Connection = null
+
 func _on_slot_entered():
 	SignalBus.slot_entered.emit(self)
 	activation_sprite.show()
