@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://kk50qp4e2lch"]
 
+[ext_resource type="Script" uid="uid://t8w8da7gera8" path="res://Scenes/Game/schematic.gd" id="1_3p7ui"]
+[ext_resource type="Texture2D" uid="uid://paxlhb6ma43q" path="res://icon.svg" id="2_npapt"]
+
 [node name="Schematic" type="Node2D" unique_id=1559803732]
+script = ExtResource("1_3p7ui")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=734684311]
+position_smoothing_enabled = true
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1019765797]
+position = Vector2(209, -146)
+texture = ExtResource("2_npapt")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1440590568]
+position = Vector2(-179, 82)
+texture = ExtResource("2_npapt")
