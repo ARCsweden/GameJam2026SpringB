@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bopvl8m66kr2b" path="res://Scenes/Game/Nodes/camera_simple.tscn" id="5_bb6ld"]
 [ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="6_rs2g2"]
 [ext_resource type="Script" uid="uid://cgncr20ekrwfl" path="res://Scenes/Game/flow_manager.gd" id="7_bb6ld"]
-[ext_resource type="PackedScene" uid="uid://bt0g5kqt42ow5" path="res://Scenes/Game/Nodes/arm_simple.tscn" id="7_bb6ld"]
+[ext_resource type="PackedScene" uid="uid://cx67oxm5oxbbb" path="res://Scenes/Game/Nodes/arm_simple.tscn" id="8_rs2g2"]
 
 [node name="Schematic" type="Node2D" unique_id=1559803732]
 script = ExtResource("1_3p7ui")
@@ -32,5 +32,6 @@ position = Vector2(-39, -114)
 
 [node name="FlowManager" type="Node2D" parent="." unique_id=681621820]
 script = ExtResource("7_bb6ld")
-[node name="ScematicsNode2" parent="." unique_id=1585557815 instance=ExtResource("7_bb6ld")]
+
+[node name="ScematicsNode2" parent="." unique_id=1585557815 instance=ExtResource("8_rs2g2")]
 position = Vector2(148, -53)
