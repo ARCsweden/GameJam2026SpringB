@@ -29,11 +29,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if line: # Finish connection
 				# Add connection to list if the line is valid
-				if end and start.type == end.type and start.dir != end.dir:
+				if end and _is_conn_valid(start, end):
 					var connection = Connection.new()
 					connection.line = line
 					connection.start = start
 					connection.end = end
+					start.connection = connection
+					end.connection = connection
 					connections.append(connection)
 				# Clear old line/start/end
 				else:
@@ -45,17 +47,38 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif start: # Create new connection
 				# Create line
 				line = Line2D.new()
-				line.add_point(start.global_position)
-				line.add_point(get_global_mouse_position())
+				# Remove existing line
+				if start.connection:
+					# Make the other side of the existing connection the start
+					var conn = start.connection
+					if conn.start == start:
+						start = conn.end
+						line.add_point(conn.end.global_position)
+					else:
+						start = conn.start
+						line.add_point(conn.start.global_position)
+					line.add_point(get_global_mouse_position())
+					# Cleanup old line/connection
+					remove_child(conn.line)
+					connections.erase(conn)
+					conn.start.connection = null
+					conn.end.connection = null
+				else:
+					# New line, starting at start node
+					line.add_point(start.global_position)
+					line.add_point(get_global_mouse_position())
 				add_child(line)
+
+func _is_conn_valid(n1: NodeSlot, n2: NodeSlot) -> bool:
+	return n1.type == n2.type and n1.dir != n2.dir and n1.connection == null and n2.connection == null
 
 func _on_slot_entered(node: NodeSlot) -> void:
 	if line:
 		end = node
-		if start.type != end.type or start.dir == end.dir:
-			line.modulate = Color.RED
-		else:
+		if _is_conn_valid(start, end):
 			line.modulate = Color.GREEN
+		else:
+			line.modulate = Color.RED
 	else:
 		start = node
 
