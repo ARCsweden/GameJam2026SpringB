@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://dfxvaw5875k6y"]
+
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_teoel"]
+[ext_resource type="PackedScene" uid="uid://byqppitqlaym3" path="res://Scenes/Game/Nodes/battery_simple.tscn" id="2_r2ttp"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="3_nog5v"]
+
+[resource]
+script = ExtResource("3_nog5v")
+module_name = "Battery_Simple"
+cost = 50
+packed_scene = ExtResource("2_r2ttp")
+action_tag = "battery"
+icon = ExtResource("1_teoel")

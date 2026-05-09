@@ -22,7 +22,7 @@ dir = 1
 texture = ExtResource("3_asx6s")
 
 [node name="NodeSlot4" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="3" unique_id=539755019 instance=ExtResource("2_84cqp")]
-position = Vector2(23, 31)
+position = Vector2(23, 46)
 type = 2
 
 [node name="Sprite" parent="Slots/NodeSlot4" index="1" unique_id=883112050]
