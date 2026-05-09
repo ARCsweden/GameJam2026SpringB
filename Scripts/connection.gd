@@ -4,7 +4,7 @@ extends Node
 var line : Line2D = null
 var start : NodeSlot = null
 var end : NodeSlot = null
-var connection_type : ResourceTypes.RT = ResourceTypes.RT.NONE
+var connection_type : ResourceTypes.RT
 
 func update_line() -> void:
 	if line and start and end:
