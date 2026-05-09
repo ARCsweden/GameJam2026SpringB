@@ -10,3 +10,7 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
 
 [node name="Gui" parent="CanvasLayer" unique_id=228469892 instance=ExtResource("2_gwu2e")]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
