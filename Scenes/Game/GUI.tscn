@@ -80,7 +80,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Store" type="MarginContainer" parent="Main/Sidebars" unique_id=813622466]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 2
 theme_override_constants/margin_left = 10
