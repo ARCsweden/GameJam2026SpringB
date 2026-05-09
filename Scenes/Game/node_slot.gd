@@ -6,9 +6,15 @@ extends Node2D
 
 @export var type : ResourceTypes.RT
 @export var dir : ResourceTypes.DIR
+@export var base_amount = 1
+
+var amount
 
 var connection : Connection = null
 var parent_node : SchematicsNode = null
+
+func _ready():
+	amount = base_amount
 
 func _on_slot_entered():
 	SignalBus.slot_entered.emit(self)
