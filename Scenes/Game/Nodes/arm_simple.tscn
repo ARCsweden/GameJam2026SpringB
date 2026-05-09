@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bt0g5kqt42ow5"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_d7xf2"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_84cqp"]
+[ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="3_asx6s"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="4_ojkko"]
+
+[node name="ArmSimple" unique_id=1799637696 instance=ExtResource("1_d7xf2")]
+
+[node name="NodeSlot" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="0" unique_id=435795435 instance=ExtResource("2_84cqp")]
+position = Vector2(42, 76)
+
+[node name="NodeSlot2" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=959180832 instance=ExtResource("2_84cqp")]
+position = Vector2(84, 76)
+
+[node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="2" unique_id=575134612 instance=ExtResource("2_84cqp")]
+position = Vector2(106, 31)
+type = 3
+dir = 1
+
+[node name="Sprite" parent="Slots/NodeSlot3" index="1" unique_id=883112050]
+texture = ExtResource("3_asx6s")
+
+[node name="NodeSlot4" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="3" unique_id=539755019 instance=ExtResource("2_84cqp")]
+position = Vector2(23, 31)
+type = 2
+
+[node name="Sprite" parent="Slots/NodeSlot4" index="1" unique_id=883112050]
+texture = ExtResource("4_ojkko")
+
+[editable path="Slots/NodeSlot3"]
+[editable path="Slots/NodeSlot4"]
