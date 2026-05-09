@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cak87gijsxlcr"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_ocx6o"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_bnbnk"]
+
+[node name="BatterySuper" unique_id=1799637696 instance=ExtResource("1_ocx6o")]
+
+[node name="NinePatchRect" parent="." index="0" unique_id=2050590102]
+offset_right = 140.0
+offset_bottom = 64.0
+
+[node name="NodeSlot" parent="." index="1" unique_id=435795435 instance=ExtResource("2_bnbnk")]
+position = Vector2(32, 32)
+type = 1
+dir = 1
+
+[node name="NodeSlot2" parent="." index="2" unique_id=1184792835 instance=ExtResource("2_bnbnk")]
+position = Vector2(70, 32)
+type = 1
+dir = 1
+
+[node name="NodeSlot3" parent="." index="3" unique_id=757575105 instance=ExtResource("2_bnbnk")]
+position = Vector2(108, 32)
+type = 1
+dir = 1

@@ -3,3 +3,6 @@ extends Node
 signal click_output(object_clicked : Node)
 
 signal click_cancel()
+
+signal slot_entered(slot: NodeSlot)
+signal slot_exited(slot: NodeSlot)

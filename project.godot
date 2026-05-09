@@ -22,6 +22,7 @@ Globals="*uid://bo0i0um4csap5"
 SignalBus="*uid://b4eipu7hxs7ow"
 EconomyManager="*uid://idr0nthsuonq"
 GoalManager="*uid://mawq8hvpvfie"
+ResourceTypes="*uid://ct7hi2a06sqef"
 
 [input]
 

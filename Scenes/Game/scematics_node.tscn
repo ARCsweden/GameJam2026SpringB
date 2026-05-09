@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://p1wpvwl2csap" path="res://Assets/Art/node.png" id="1_2gwpg"]
 [ext_resource type="Script" uid="uid://c0seprcog42nt" path="res://Scenes/Game/scematics_node.gd" id="1_kixod"]
-[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="3_ogetc"]
-[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="4_lfa5q"]
-[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="5_2kh5k"]
 
 [node name="ScematicsNode" type="Node2D" unique_id=1799637696]
 script = ExtResource("1_kixod")
@@ -17,27 +14,3 @@ patch_margin_left = 32
 patch_margin_top = 32
 patch_margin_right = 32
 patch_margin_bottom = 32
-
-[node name="InputSlots" type="Node2D" parent="." unique_id=838834942]
-position = Vector2(28, 28)
-
-[node name="NodeSlot" parent="InputSlots" unique_id=435795435 instance=ExtResource("3_ogetc")]
-
-[node name="Sprite" parent="InputSlots/NodeSlot" index="0" unique_id=883112050]
-texture = ExtResource("4_lfa5q")
-
-[node name="OutputSlots" type="Node2D" parent="." unique_id=1898821160]
-position = Vector2(100, 28)
-
-[node name="NodeSlot" parent="OutputSlots" unique_id=1270963597 instance=ExtResource("3_ogetc")]
-
-[node name="Sprite" parent="OutputSlots/NodeSlot" index="0" unique_id=883112050]
-texture = ExtResource("5_2kh5k")
-
-[node name="PowerSlots" type="Node2D" parent="." unique_id=1426843035]
-position = Vector2(64, 68)
-
-[node name="NodeSlot" parent="PowerSlots" unique_id=500641076 instance=ExtResource("3_ogetc")]
-
-[editable path="InputSlots/NodeSlot"]
-[editable path="OutputSlots/NodeSlot"]

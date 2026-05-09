@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://byqppitqlaym3"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_h3qgs"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_k250f"]
+
+[node name="BatterySimple" unique_id=1799637696 instance=ExtResource("1_h3qgs")]
+
+[node name="NinePatchRect" parent="." index="0" unique_id=2050590102]
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="NodeSlot" parent="." index="1" unique_id=435795435 instance=ExtResource("2_k250f")]
+position = Vector2(32, 32)
+type = 1
+dir = 1

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cd2mf4640gwy6"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_fmxes"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_j1vgl"]
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="3_8n4vn"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="4_spijq"]
+
+[node name="ObjectDetection" unique_id=1799637696 instance=ExtResource("1_fmxes")]
+
+[node name="NodeSlot" parent="." index="1" unique_id=435795435 instance=ExtResource("2_j1vgl")]
+position = Vector2(20, 48)
+type = 2
+
+[node name="Sprite" parent="NodeSlot" index="1" unique_id=883112050]
+texture = ExtResource("3_8n4vn")
+
+[node name="NodeSlot2" parent="." index="2" unique_id=138805625 instance=ExtResource("2_j1vgl")]
+position = Vector2(64, 76)
+type = 1
+
+[node name="NodeSlot3" parent="." index="3" unique_id=112302833 instance=ExtResource("2_j1vgl")]
+position = Vector2(108, 48)
+type = 3
+dir = 1
+
+[node name="Sprite" parent="NodeSlot3" index="1" unique_id=883112050]
+texture = ExtResource("4_spijq")
+
+[editable path="NodeSlot"]
+[editable path="NodeSlot3"]
