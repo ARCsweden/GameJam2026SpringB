@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dovg0n42rqrcv"]
+
+[node name="Sidebars" type="HBoxContainer" unique_id=2095981365]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Store" type="MarginContainer" parent="." unique_id=1188098701]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="StorePanel" type="Panel" parent="Store" unique_id=810600983]
+layout_mode = 2
+
+[node name="StoreVBOX" type="VBoxContainer" parent="Store/StorePanel" unique_id=1691196248]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="Store/StorePanel/StoreVBOX" unique_id=2108174408]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="Store/StorePanel/StoreVBOX/MarginContainer" unique_id=943674934]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "Add MCU"
+autowrap_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Store/StorePanel/StoreVBOX" unique_id=1384172955]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="Store/StorePanel/StoreVBOX/MarginContainer2" unique_id=1524836364]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "Add FPGA"
+autowrap_mode = 1
+
+[node name="Goal" type="MarginContainer" parent="." unique_id=1347628786]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GoalPanel" type="Panel" parent="Goal" unique_id=786465356]
+layout_mode = 2
+
+[node name="InvestorBox" type="VBoxContainer" parent="Goal/GoalPanel" unique_id=121921375]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="Goal/GoalPanel/InvestorBox" unique_id=2062337532]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="Goal/GoalPanel/InvestorBox/MarginContainer" unique_id=1348828728]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "Investor A:
+blablalbal
+balbalbl
+ablabll"
+autowrap_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Goal/GoalPanel/InvestorBox" unique_id=1184901981]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="Goal/GoalPanel/InvestorBox/MarginContainer2" unique_id=1242480510]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "Investor B:
+balblaa	b	
+balbalba bb
+balblab 
+abalba"
+autowrap_mode = 1
