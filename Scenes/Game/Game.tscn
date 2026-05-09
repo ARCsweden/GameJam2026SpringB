@@ -2,6 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://kk50qp4e2lch" path="res://Scenes/Game/Schematic.tscn" id="1_iukft"]
 [ext_resource type="PackedScene" uid="uid://c07fpo7nlye7n" path="res://Scenes/Game/GUI.tscn" id="2_gwu2e"]
+[ext_resource type="Script" uid="uid://dx2vsf4ctm4ti" path="res://Scripts/MoneyUI.gd" id="3_xbxml"]
+[ext_resource type="Script" uid="uid://beawjojb6jtid" path="res://Scripts/BuyPipeButton.gd" id="4_ln2h6"]
+[ext_resource type="Resource" uid="uid://lhwar65rtdn8" path="res://Resources/node2.tres" id="5_3k6gv"]
+[ext_resource type="Script" uid="uid://birkj6dde2i87" path="res://Scripts/DebugGoalButton.gd" id="5_y3kpf"]
+[ext_resource type="Resource" uid="uid://cdlqcud8budfg" path="res://Resources/node1.tres" id="7_1q8bt"]
 
 [node name="Game" type="Node2D" unique_id=235563203]
 
@@ -10,3 +15,39 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
 
 [node name="Gui" parent="CanvasLayer" unique_id=228469892 instance=ExtResource("2_gwu2e")]
+
+[node name="MoneyLabel" type="Label" parent="CanvasLayer" unique_id=1520405334]
+offset_left = 518.0
+offset_top = 20.0
+offset_right = 639.0
+offset_bottom = 86.0
+script = ExtResource("3_xbxml")
+
+[node name="BuyGPUButton" type="Button" parent="CanvasLayer" unique_id=1859033779]
+offset_left = 35.0
+offset_top = 327.0
+offset_right = 101.0
+offset_bottom = 374.0
+text = "Add GPU
+cost: 100"
+script = ExtResource("4_ln2h6")
+module_to_buy = ExtResource("5_3k6gv")
+
+[node name="DebugGoalButton" type="Button" parent="CanvasLayer" unique_id=1950378667]
+offset_left = 37.0
+offset_top = 389.0
+offset_right = 155.0
+offset_bottom = 433.0
+text = "Goal Achieved
+Add: 100"
+script = ExtResource("5_y3kpf")
+
+[node name="BuyCPUButton" type="Button" parent="CanvasLayer" unique_id=1805070640]
+offset_left = 36.0
+offset_top = 266.0
+offset_right = 113.0
+offset_bottom = 313.0
+text = "Add CPU
+cost: 50"
+script = ExtResource("4_ln2h6")
+module_to_buy = ExtResource("7_1q8bt")
