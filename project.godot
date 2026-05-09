@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Constants="*uid://bnbiqa6x28v67"
 Globals="*uid://bo0i0um4csap5"
 SignalBus="*uid://b4eipu7hxs7ow"
+EconomyManager="*uid://idr0nthsuonq"
 
 [input]
 

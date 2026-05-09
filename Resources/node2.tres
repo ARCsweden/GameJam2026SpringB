@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://lhwar65rtdn8"]
+
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="1_6okmc"]
+
+[resource]
+script = ExtResource("1_6okmc")
+module_name = "GPU"
+cost = 100
+metadata/_custom_type_script = "uid://cxwn8yrjkyp3v"
