@@ -16,19 +16,19 @@ func _ready() -> void:
 
 func _on_click_input(): #make this happen whenver the object this placed on is clicked.
 	SignalBus.click_cancel.emit()
-	SignalBus.click_output.connect()
-	SignalBus.click_cancel.connect()
+	SignalBus.click_output.connect(_on_click_output)
+	SignalBus.click_cancel.connect(_on_click_cancell)
 	print("listening for output clicks")
 
 func _on_click_output(object):
 	join(object)
-	SignalBus.click_output.disconnect()
-	SignalBus.click_cancel.disconnect()
+	SignalBus.click_output.disconnect(_on_click_output)
+	SignalBus.click_cancel.disconnect(_on_click_cancell)
 	print("output heard")
 
 func _on_click_cancell():
-	SignalBus.click_output.disconnect()
-	SignalBus.click_cancel.disconnect()
+	SignalBus.click_output.disconnect(_on_click_output)
+	SignalBus.click_cancel.disconnect(_on_click_cancell)
 	print("linking cancelled")
 
 func join(endpoint: Node2D):
