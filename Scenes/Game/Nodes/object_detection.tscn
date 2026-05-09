@@ -15,10 +15,10 @@ type = 1
 texture = ExtResource("3_8n4vn")
 
 [node name="Label" type="Label" parent="Slots/NodeSlot" index="3" unique_id=1315909526]
-offset_left = -35.0
-offset_top = -10.0
-offset_right = 5.0
-offset_bottom = 13.0
+offset_left = -62.0
+offset_top = -70.0
+offset_right = -9.0
+offset_bottom = -47.0
 
 [node name="NodeSlot2" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=138805625 instance=ExtResource("2_j1vgl")]
 position = Vector2(64, 76)

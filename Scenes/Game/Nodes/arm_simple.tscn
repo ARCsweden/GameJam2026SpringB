@@ -50,10 +50,10 @@ type = 2
 texture = ExtResource("4_ojkko")
 
 [node name="Label" type="Label" parent="Slots/NodeSlot4" index="3" unique_id=1775375296]
-offset_left = -36.0
-offset_top = -12.0
-offset_right = 4.0
-offset_bottom = 11.0
+offset_left = -56.0
+offset_top = -14.0
+offset_right = -16.0
+offset_bottom = 9.0
 
 [editable path="Slots/NodeSlot3"]
 [editable path="Slots/NodeSlot4"]
