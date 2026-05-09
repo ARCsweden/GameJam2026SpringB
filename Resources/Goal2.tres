@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://bbpn4wl0wonps"]
+
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_fswo7"]
+
+[resource]
+script = ExtResource("1_fswo7")
+goal_id = "buy_gpu"
+description = "Buy 3 GPUs"
+reward_amount = 20000
+target_value = 3
+action_tag = "gpu"
+metadata/_custom_type_script = "uid://cmyshpwolbips"

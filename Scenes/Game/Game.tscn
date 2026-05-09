@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://dpa7etolnwg3j"]
 
 [ext_resource type="PackedScene" uid="uid://kk50qp4e2lch" path="res://Scenes/Game/Schematic.tscn" id="1_iukft"]
+[ext_resource type="Resource" uid="uid://rcxdu7ar0peg" path="res://Resources/Goal1.tres" id="2_3586x"]
 [ext_resource type="PackedScene" uid="uid://c07fpo7nlye7n" path="res://Scenes/Game/GUI.tscn" id="2_gwu2e"]
+[ext_resource type="Resource" uid="uid://bbpn4wl0wonps" path="res://Resources/Goal2.tres" id="3_10ki7"]
 [ext_resource type="Script" uid="uid://dx2vsf4ctm4ti" path="res://Scripts/MoneyUI.gd" id="3_xbxml"]
 [ext_resource type="Script" uid="uid://beawjojb6jtid" path="res://Scripts/BuyPipeButton.gd" id="4_ln2h6"]
 [ext_resource type="Resource" uid="uid://lhwar65rtdn8" path="res://Resources/node2.tres" id="5_3k6gv"]
 [ext_resource type="Script" uid="uid://birkj6dde2i87" path="res://Scripts/DebugGoalButton.gd" id="5_y3kpf"]
 [ext_resource type="Resource" uid="uid://cdlqcud8budfg" path="res://Resources/node1.tres" id="7_1q8bt"]
+[ext_resource type="Script" uid="uid://cl6ve3a0ld4uu" path="res://Scripts/GoalPanel.gd" id="8_gvja8"]
+[ext_resource type="Script" uid="uid://dgmpkb4r6yt5o" path="res://Scripts/DynamicGoalPanel.gd" id="11_10ki7"]
+[ext_resource type="PackedScene" uid="uid://2rvovwt788pj" path="res://Scenes/Game/goal_item_ui.tscn" id="12_ti1oi"]
 
 [node name="Game" type="Node2D" unique_id=235563203]
 
 [node name="Schematic" parent="." unique_id=1559803732 instance=ExtResource("1_iukft")]
+cpu_goal = ExtResource("2_3586x")
+gpu_goal = ExtResource("3_10ki7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
 
@@ -51,3 +58,35 @@ text = "Add CPU
 cost: 50"
 script = ExtResource("4_ln2h6")
 module_to_buy = ExtResource("7_1q8bt")
+
+[node name="GoalPanel" type="VBoxContainer" parent="CanvasLayer" unique_id=1203527586]
+offset_left = 627.0
+offset_top = 28.0
+offset_right = 806.0
+offset_bottom = 148.0
+script = ExtResource("8_gvja8")
+
+[node name="Goal Panel" type="Label" parent="CanvasLayer/GoalPanel" unique_id=342258914]
+layout_mode = 2
+text = "Goals:
+1. Buy two CPU"
+
+[node name="CPUProgressBar" type="ProgressBar" parent="CanvasLayer/GoalPanel" unique_id=1141272039]
+layout_mode = 2
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer/GoalPanel" unique_id=193465630]
+layout_mode = 2
+text = "2. Buy Two GPU"
+
+[node name="GPUProgressBar" type="ProgressBar" parent="CanvasLayer/GoalPanel" unique_id=1658577566]
+layout_mode = 2
+show_percentage = false
+
+[node name="DynamicGoalPanel" type="VBoxContainer" parent="CanvasLayer" unique_id=1475320242]
+offset_left = 21.0
+offset_top = 499.0
+offset_right = 204.0
+offset_bottom = 596.0
+script = ExtResource("11_10ki7")
+goal_item_scene = ExtResource("12_ti1oi")
