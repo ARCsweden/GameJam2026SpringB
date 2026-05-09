@@ -15,6 +15,10 @@ run/main_scene="uid://dpa7etolnwg3j"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bjuoyb3ia7mbp"
+
 [autoload]
 
 Constants="*uid://bnbiqa6x28v67"
@@ -23,6 +27,11 @@ SignalBus="*uid://b4eipu7hxs7ow"
 EconomyManager="*uid://idr0nthsuonq"
 GoalManager="*uid://mawq8hvpvfie"
 ResourceTypes="*uid://ct7hi2a06sqef"
+AudioManager="*uid://defgxkassrmn7"
+
+[dotnet]
+
+project/assembly_name="HypeUp"
 
 [input]
 
