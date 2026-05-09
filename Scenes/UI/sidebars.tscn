@@ -16,6 +16,8 @@
 [ext_resource type="Resource" uid="uid://c27bt5ygaamp0" path="res://Resources/Object_Detection.tres" id="9_h0ar1"]
 [ext_resource type="Resource" uid="uid://c0p8lydruxjxk" path="res://Resources/Arm_Simple.tres" id="10_i7w1n"]
 [ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="10_sr12i"]
+[ext_resource type="Script" uid="uid://bvri523cqqbw4" path="res://Scripts/GoalsStoreGrid.gd" id="17_xo0gq"]
+[ext_resource type="PackedScene" uid="uid://c8q18rwxj14nt" path="res://Scenes/Game/goal_store_item_ui.tscn" id="18_lu8f2"]
 
 [node name="Sidebars" type="HBoxContainer" unique_id=2095981365]
 anchors_preset = 15
@@ -279,9 +281,10 @@ layout_mode = 2
 layout_mode = 2
 script = ExtResource("8_43ur1")
 store_item_scene = ExtResource("9_6ptox")
-available_modules = Array[ExtResource("10_sr12i")]([ExtResource("5_et7fu"), ExtResource("6_xo0gq"), ExtResource("7_lu8f2"), ExtResource("9_h0ar1"), ExtResource("10_i7w1n"), ExtResource("5_tko4l"), ExtResource("3_43ur1"), ExtResource("3_43ur1"), ExtResource("3_43ur1"), ExtResource("3_43ur1")])
+available_modules = Array[ExtResource("10_sr12i")]([ExtResource("5_et7fu"), ExtResource("6_xo0gq"), ExtResource("7_lu8f2"), ExtResource("9_h0ar1"), ExtResource("10_i7w1n"), ExtResource("5_tko4l"), ExtResource("3_43ur1"), ExtResource("5_sr12i"), ExtResource("3_43ur1"), ExtResource("3_43ur1")])
 
 [node name="Goal" type="MarginContainer" parent="." unique_id=1347628786]
+visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -375,3 +378,16 @@ offset_right = 123.0
 offset_bottom = 340.0
 script = ExtResource("6_tko4l")
 goal_item_scene = ExtResource("7_j4jrg")
+
+[node name="GoalStore" type="MarginContainer" parent="." unique_id=1526233132]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GoalStore" unique_id=1151201094]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+
+[node name="GoalStoreGrid" type="GridContainer" parent="GoalStore/ScrollContainer" unique_id=1345384772]
+layout_mode = 2
+script = ExtResource("17_xo0gq")
+goal_store_item_scene = ExtResource("18_lu8f2")
