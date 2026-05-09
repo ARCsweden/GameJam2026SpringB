@@ -2,9 +2,15 @@ extends Node2D
 
 @onready var camera : Camera2D = $Camera2D
 
+@export var cpu_goal: GoalData
+@export var gpu_goal: GoalData
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	EconomyManager.initialize_game(Constants.STARTING_MONEY)
+	GoalManager.call_deferred("activate_single_goal",cpu_goal)
+	GoalManager.call_deferred("activate_single_goal",gpu_goal)
+	#GoalManager.activate_single_goal(cpu_goal)
+	#GoalManager.activate_single_goal(gpu_goal)
 	pass # Replace with function body.
 
 

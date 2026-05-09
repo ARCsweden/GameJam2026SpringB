@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://kkg8e06fywo5"]
+
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_umg5b"]
+
+[resource]
+script = ExtResource("1_umg5b")
+goal_id = "buy_cpu_2"
+description = "Buy 5 Cpus"
+reward_amount = 1000000
+target_value = 5
+action_tag = "cpu"
+metadata/_custom_type_script = "uid://cmyshpwolbips"

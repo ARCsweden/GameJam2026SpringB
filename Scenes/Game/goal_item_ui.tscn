@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2rvovwt788pj"]
+
+[ext_resource type="Script" uid="uid://y4yfi83dvdca" path="res://Scripts/GoalItemUI.gd" id="1_an4bq"]
+
+[node name="GoalItemUI" type="VBoxContainer" unique_id=1666911190]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_an4bq")
+
+[node name="Label" type="Label" parent="." unique_id=1099458745]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=711421980]
+layout_mode = 2
+show_percentage = false
