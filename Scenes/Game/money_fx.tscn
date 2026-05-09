@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://csto6t07nqlh3"]
+
+[ext_resource type="Texture2D" uid="uid://badhvvkdfhjx1" path="res://Assets/Art/money.png" id="1_3nsdw"]
+[ext_resource type="Script" uid="uid://dl4npp1m820cg" path="res://Scenes/Game/money_fx.gd" id="1_u5170"]
+
+[sub_resource type="Gradient" id="Gradient_u5170"]
+offsets = PackedFloat32Array(0, 0.78104573, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7abju"]
+gradient = SubResource("Gradient_u5170")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ody3n"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 39.03
+angle_min = -346.1
+angle_max = 278.1
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 137.34
+angular_velocity_min = -247.21
+angular_velocity_max = 98.87998
+gravity = Vector3(0, 98, 0)
+damping_max = 20.601002
+color_ramp = SubResource("GradientTexture1D_7abju")
+
+[node name="MoneyFX" type="Node2D" unique_id=2037920458]
+script = ExtResource("1_u5170")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1806645217]
+emitting = false
+amount = 12
+texture = ExtResource("1_3nsdw")
+one_shot = true
+explosiveness = 0.7
+process_material = SubResource("ParticleProcessMaterial_ody3n")
