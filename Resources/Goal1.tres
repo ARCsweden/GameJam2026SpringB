@@ -13,4 +13,6 @@ target_value = 3
 next_goals = Array[ExtResource("1_w5eog")]([ExtResource("2_fi1ry"), ExtResource("3_7ijsc")])
 is_repeatable = true
 action_tag = "cpu"
+target_multiplier = 2.0
+reward_multiplier = 1.5
 metadata/_custom_type_script = "uid://cmyshpwolbips"

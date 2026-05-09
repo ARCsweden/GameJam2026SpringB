@@ -15,6 +15,7 @@ func setup(goal: GoalData) -> void:
 
 # Called every time progress is made
 func update_progress(current: int, target: int) -> void:
+	progress_bar.max_value = target
 	progress_bar.value = current
 	# Using Godot's string formatting to make it look like: "Buy CPU (1/2)"
 	label.text = "%s (%d/%d)" % [base_description, current, target]

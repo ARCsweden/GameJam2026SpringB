@@ -16,8 +16,24 @@ func _ready() -> void:
 	#GoalManager.activate_single_goal(gpu_goal)
 	SignalBus.node_entered.connect(_on_node_entered)
 	SignalBus.node_exited.connect(_on_node_exited)
+	SignalBus.spawn_from_store.connect(_on_spawn_from_store)
 	pass # Replace with function body.
-
+	
+func _on_spawn_from_store(module: ModuleData) -> void:
+	# 1. Instantiate the new node
+	var new_node = module.packed_scene.instantiate() as SchematicsNode
+	add_child(new_node)
+	
+	# 2. Instantly snap it to the mouse so it doesn't blink at (0,0)
+	new_node.set_position(get_global_mouse_position() - new_node.get_center())
+	
+	# 3. Hijack your existing variables!
+	node = new_node
+	dragging = true
+	
+	# 4. Trigger the goal system since we successfully bought it
+	if module.action_tag != "":
+		GoalManager.trigger_action(module.action_tag, 1)
 func _on_node_entered(n: SchematicsNode) -> void:
 	if not dragging:
 		node = n
