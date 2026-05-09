@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cdlqcud8budfg"]
 
+[ext_resource type="PackedScene" uid="uid://byqppitqlaym3" path="res://Scenes/Game/Nodes/battery_simple.tscn" id="1_3f7hd"]
 [ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="1_oumwg"]
 
 [resource]
 script = ExtResource("1_oumwg")
 module_name = "CPU"
 cost = 50
+packed_scene = ExtResource("1_3f7hd")
 goal_id_to_trigger = "buy_cpu"
 action_tag = "cpu"
 metadata/_custom_type_script = "uid://cxwn8yrjkyp3v"
