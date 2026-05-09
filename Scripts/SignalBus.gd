@@ -6,3 +6,5 @@ signal click_cancel()
 
 signal slot_entered(slot: NodeSlot)
 signal slot_exited(slot: NodeSlot)
+
+signal connection_made()
