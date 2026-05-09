@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://dovg0n42rqrcv"]
 
 [ext_resource type="Texture2D" uid="uid://paxlhb6ma43q" path="res://icon.svg" id="1_nmqrl"]
+[ext_resource type="Script" uid="uid://beawjojb6jtid" path="res://Scripts/BuyPipeButton.gd" id="2_uf5x1"]
+[ext_resource type="Resource" uid="uid://lhwar65rtdn8" path="res://Resources/node2.tres" id="3_43ur1"]
+[ext_resource type="Script" uid="uid://birkj6dde2i87" path="res://Scripts/DebugGoalButton.gd" id="4_6ptox"]
+[ext_resource type="Resource" uid="uid://cdlqcud8budfg" path="res://Resources/node1.tres" id="5_sr12i"]
+[ext_resource type="Script" uid="uid://dgmpkb4r6yt5o" path="res://Scripts/DynamicGoalPanel.gd" id="6_tko4l"]
+[ext_resource type="PackedScene" uid="uid://2rvovwt788pj" path="res://Scenes/Game/goal_item_ui.tscn" id="7_j4jrg"]
 
 [node name="Sidebars" type="HBoxContainer" unique_id=2095981365]
 anchors_preset = 15
@@ -305,3 +311,44 @@ balbalba bb
 balblab 
 abalba"
 autowrap_mode = 1
+
+[node name="BuyGPUButton" type="Button" parent="Goal/GoalPanel" unique_id=2061665581]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 419.0
+offset_right = 121.0
+offset_bottom = 473.0
+text = "Add GPU
+cost: 100"
+script = ExtResource("2_uf5x1")
+module_to_buy = ExtResource("3_43ur1")
+
+[node name="DebugGoalButton" type="Button" parent="Goal/GoalPanel" unique_id=1993125001]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 487.0
+offset_right = 127.0
+offset_bottom = 541.0
+text = "Goal Achieved
+Add: 100"
+script = ExtResource("4_6ptox")
+
+[node name="BuyCPUButton" type="Button" parent="Goal/GoalPanel" unique_id=405100311]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 352.0
+offset_right = 120.0
+offset_bottom = 406.0
+text = "Add CPU
+cost: 50"
+script = ExtResource("2_uf5x1")
+module_to_buy = ExtResource("5_sr12i")
+
+[node name="DynamicGoalPanel" type="VBoxContainer" parent="Goal/GoalPanel" unique_id=877071685]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 271.0
+offset_right = 123.0
+offset_bottom = 340.0
+script = ExtResource("6_tko4l")
+goal_item_scene = ExtResource("7_j4jrg")
