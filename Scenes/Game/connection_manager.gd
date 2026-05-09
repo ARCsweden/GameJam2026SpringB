@@ -62,8 +62,10 @@ func _unhandled_input(event: InputEvent) -> void:
 					# Cleanup old line/connection
 					remove_child(conn.line)
 					connections.erase(conn)
+					SignalBus.disconnect_slot_flow.emit(conn.start, conn.end)
 					conn.start.connection = null
 					conn.end.connection = null
+					
 				else:
 					# New line, starting at start node
 					line.add_point(start.global_position)

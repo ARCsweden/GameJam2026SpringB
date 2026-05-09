@@ -11,4 +11,5 @@ signal node_entered(slot: SchematicsNode)
 signal node_exited(slot: SchematicsNode)
 
 signal update_slot_flow(start_slot: NodeSlot, end_slot: NodeSlot)
+signal disconnect_slot_flow(start_slot: NodeSlot, end_slot: NodeSlot)
 signal spawn_from_store(module: ModuleData)
