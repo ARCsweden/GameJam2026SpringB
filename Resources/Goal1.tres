@@ -1,13 +1,15 @@
 [gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://rcxdu7ar0peg"]
 
+[ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="1_8u1eq"]
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_w5eog"]
 [ext_resource type="Resource" uid="uid://kkg8e06fywo5" path="res://Resources/Goal3.tres" id="2_fi1ry"]
 [ext_resource type="Resource" uid="uid://bbpn4wl0wonps" path="res://Resources/Goal2.tres" id="3_7ijsc"]
+[ext_resource type="PackedScene" uid="uid://bs4vg30lta46q" path="res://Scenes/Game/Nodes/investor_arm.tscn" id="5_0vvac"]
 
 [resource]
 script = ExtResource("1_w5eog")
 goal_id = "buy_cpu"
-description = "Buy 3 CPUs"
+description = "Buy CPUs"
 reward_amount = 10000
 target_value = 3
 next_goals = Array[ExtResource("1_w5eog")]([ExtResource("2_fi1ry"), ExtResource("3_7ijsc")])
@@ -15,4 +17,6 @@ is_repeatable = true
 action_tag = "cpu"
 target_multiplier = 2.0
 reward_multiplier = 1.5
+icon = ExtResource("1_8u1eq")
+packed_scene = ExtResource("5_0vvac")
 metadata/_custom_type_script = "uid://cmyshpwolbips"

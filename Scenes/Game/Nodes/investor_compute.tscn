@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bap75ypl22mi8"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_t1j5y"]
+[ext_resource type="Script" uid="uid://cqifnoensgc8o" path="res://Scenes/Game/Nodes/scematic_investor_node.gd" id="2_j5mho"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="3_7pbx1"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="4_ob7mo"]
+[ext_resource type="Script" uid="uid://y4yfi83dvdca" path="res://Scripts/GoalItemUI.gd" id="5_ywca7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_51kxl"]
+font_size = 10
+
+[node name="InvestorCompute" unique_id=1799637696 instance=ExtResource("1_t1j5y")]
+script = ExtResource("2_j5mho")
+
+[node name="NinePatchRect" parent="." index="0" unique_id=2050590102]
+modulate = Color(0.34117648, 0.6509804, 0.21960784, 1)
+
+[node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="0" unique_id=112302833 instance=ExtResource("3_7pbx1")]
+position = Vector2(23, 50)
+type = 2
+
+[node name="Sprite" parent="Slots/NodeSlot3" index="1" unique_id=883112050]
+texture = ExtResource("4_ob7mo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="3" unique_id=606330067]
+offset_left = 45.0
+offset_top = 29.0
+offset_right = 115.0
+offset_bottom = 68.0
+script = ExtResource("5_ywca7")
+
+[node name="Label" type="Label" parent="VBoxContainer" index="0" unique_id=677681245]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_51kxl")
+autowrap_mode = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" index="1" unique_id=251803453]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+show_percentage = false
+
+[editable path="Slots/NodeSlot3"]

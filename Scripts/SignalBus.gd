@@ -12,3 +12,4 @@ signal node_exited(slot: SchematicsNode)
 
 signal connection_made()
 signal spawn_from_store(module: ModuleData)
+signal spawn_goal_from_store(module: GoalData)

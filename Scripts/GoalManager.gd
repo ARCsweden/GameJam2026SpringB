@@ -123,7 +123,9 @@ func _finish_and_remove_goal(goal_id: String) -> void:
 		active_goals[goal_id] = 0
 		
 		# Tell the UI to update the visual bar back down to 0
-		goal_progress_updated.emit(goal_id, 0, completed_goal_data.target_value)
+		goal_completed.emit(goal_id)
+		goal_activated.emit(completed_goal_data)
+		#goal_progress_updated.emit(goal_id, 0, completed_goal_data.target_value)
 		print("Repeatable Goal Reset: ", goal_id)
 		
 	else:
