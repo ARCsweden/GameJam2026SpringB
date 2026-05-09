@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bopvl8m66kr2b"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_un01p"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_hgnmj"]
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="3_cq2aq"]
+
+[node name="CameraSimple" unique_id=1799637696 instance=ExtResource("1_un01p")]
+
+[node name="NinePatchRect" parent="." index="0" unique_id=2050590102]
+offset_right = 96.0
+offset_bottom = 80.0
+
+[node name="NodeSlot" parent="." index="1" unique_id=435795435 instance=ExtResource("2_hgnmj")]
+position = Vector2(48, 60)
+type = 1
+
+[node name="NodeSlot3" parent="." index="2" unique_id=1138025575 instance=ExtResource("2_hgnmj")]
+position = Vector2(76, 32)
+type = 2
+dir = 1
+
+[node name="Sprite" parent="NodeSlot3" index="1" unique_id=883112050]
+texture = ExtResource("3_cq2aq")
+
+[editable path="NodeSlot3"]

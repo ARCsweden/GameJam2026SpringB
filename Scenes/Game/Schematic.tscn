@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://kk50qp4e2lch"]
 
 [ext_resource type="Script" uid="uid://t8w8da7gera8" path="res://Scenes/Game/schematic.gd" id="1_3p7ui"]
-[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="2_npapt"]
+[ext_resource type="Script" uid="uid://cv1fxeve2avql" path="res://Scenes/Game/connection_manager.gd" id="2_xn3cd"]
+[ext_resource type="PackedScene" uid="uid://byqppitqlaym3" path="res://Scenes/Game/Nodes/battery_simple.tscn" id="3_xn3cd"]
+[ext_resource type="PackedScene" uid="uid://cak87gijsxlcr" path="res://Scenes/Game/Nodes/battery_super.tscn" id="4_hqwk4"]
+[ext_resource type="PackedScene" uid="uid://bopvl8m66kr2b" path="res://Scenes/Game/Nodes/camera_simple.tscn" id="5_bb6ld"]
+[ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="6_rs2g2"]
 
 [node name="Schematic" type="Node2D" unique_id=1559803732]
 script = ExtResource("1_3p7ui")
@@ -9,8 +13,17 @@ script = ExtResource("1_3p7ui")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=734684311]
 position_smoothing_enabled = true
 
-[node name="ScematicsNode" parent="." unique_id=1799637696 instance=ExtResource("2_npapt")]
-position = Vector2(90, 76)
+[node name="ConnectionManager" type="Node2D" parent="." unique_id=138402269]
+script = ExtResource("2_xn3cd")
 
-[node name="ScematicsNode2" parent="." unique_id=310915764 instance=ExtResource("2_npapt")]
-position = Vector2(-237, 16)
+[node name="ScematicsNode" parent="." unique_id=1799637696 instance=ExtResource("3_xn3cd")]
+position = Vector2(-180, 51)
+
+[node name="BatterySuper" parent="." unique_id=1389823244 instance=ExtResource("4_hqwk4")]
+position = Vector2(-58, 50)
+
+[node name="CameraSimple" parent="." unique_id=944194375 instance=ExtResource("5_bb6ld")]
+position = Vector2(-194, -103)
+
+[node name="ObjectDetection" parent="." unique_id=2018207026 instance=ExtResource("6_rs2g2")]
+position = Vector2(-39, -114)
