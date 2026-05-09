@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dovg0n42rqrcv"]
 
+[ext_resource type="Texture2D" uid="uid://paxlhb6ma43q" path="res://icon.svg" id="1_nmqrl"]
+
 [node name="Sidebars" type="HBoxContainer" unique_id=2095981365]
 anchors_preset = 15
 anchor_right = 1.0
@@ -8,6 +10,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+metadata/_edit_group_ = true
 
 [node name="Store" type="MarginContainer" parent="." unique_id=1188098701]
 custom_minimum_size = Vector2(300, 0)
@@ -21,39 +24,232 @@ theme_override_constants/margin_bottom = 10
 [node name="StorePanel" type="Panel" parent="Store" unique_id=810600983]
 layout_mode = 2
 
-[node name="StoreVBOX" type="VBoxContainer" parent="Store/StorePanel" unique_id=1691196248]
+[node name="ScrollContainer" type="ScrollContainer" parent="Store/StorePanel" unique_id=64656643]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="Store/StorePanel/StoreVBOX" unique_id=2108174408]
+[node name="StoreVBOX" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer" unique_id=1691196248]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX" unique_id=2108174408]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="Store/StorePanel/StoreVBOX/MarginContainer" unique_id=943674934]
+[node name="Panel" type="Panel" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer" unique_id=1989170303]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer/Panel" unique_id=2015513531]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer/Panel/VBoxContainer" unique_id=1910139612]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_nmqrl")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer/Panel/VBoxContainer" unique_id=943674934]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-text = "Add MCU"
+size_flags_vertical = 8
+text = "MCU"
+horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="Store/StorePanel/StoreVBOX" unique_id=1384172955]
+[node name="MarginContainer2" type="MarginContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX" unique_id=70102858]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="Store/StorePanel/StoreVBOX/MarginContainer2" unique_id=1524836364]
+[node name="Panel" type="Panel" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer2" unique_id=521238308]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer2/Panel" unique_id=216416036]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer2/Panel/VBoxContainer" unique_id=1318832446]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_nmqrl")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer2/Panel/VBoxContainer" unique_id=681555294]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-text = "Add FPGA"
+size_flags_vertical = 8
+text = "MCU"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX" unique_id=1154223547]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer3" unique_id=2099596035]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer3/Panel" unique_id=1333601873]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer3/Panel/VBoxContainer" unique_id=726905881]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_nmqrl")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer3/Panel/VBoxContainer" unique_id=1196036865]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "MCU"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX" unique_id=2021948163]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer4" unique_id=300296701]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer4/Panel" unique_id=1029786507]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer4/Panel/VBoxContainer" unique_id=2135886410]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_nmqrl")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer4/Panel/VBoxContainer" unique_id=959414595]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "MCU"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX" unique_id=345569196]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer5" unique_id=1780795776]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer5/Panel" unique_id=1990317121]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer5/Panel/VBoxContainer" unique_id=324172180]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_nmqrl")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer5/Panel/VBoxContainer" unique_id=1552029654]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "MCU"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="MarginContainer6" type="MarginContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX" unique_id=2008339687]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer6" unique_id=841973265]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer6/Panel" unique_id=351776613]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer6/Panel/VBoxContainer" unique_id=1786304839]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_nmqrl")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Store/StorePanel/ScrollContainer/StoreVBOX/MarginContainer6/Panel/VBoxContainer" unique_id=314288563]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "MCU"
+horizontal_alignment = 1
 autowrap_mode = 1
 
 [node name="Goal" type="MarginContainer" parent="." unique_id=1347628786]
