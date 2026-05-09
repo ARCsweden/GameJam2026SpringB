@@ -1,10 +1,10 @@
 extends Node
 
 enum RT {
-	NONE,
 	POWER,
 	VISION,
 	COMPUTE,
+	MOTION,
 }
 
 enum DIR {

@@ -9,18 +9,17 @@
 
 [node name="NodeSlot" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="0" unique_id=435795435 instance=ExtResource("2_j1vgl")]
 position = Vector2(20, 48)
-type = 2
+type = 1
 
 [node name="Sprite" parent="Slots/NodeSlot" index="1" unique_id=883112050]
 texture = ExtResource("3_8n4vn")
 
 [node name="NodeSlot2" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=138805625 instance=ExtResource("2_j1vgl")]
 position = Vector2(64, 76)
-type = 1
 
 [node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="2" unique_id=112302833 instance=ExtResource("2_j1vgl")]
 position = Vector2(108, 48)
-type = 3
+type = 2
 dir = 1
 
 [node name="Sprite" parent="Slots/NodeSlot3" index="1" unique_id=883112050]
