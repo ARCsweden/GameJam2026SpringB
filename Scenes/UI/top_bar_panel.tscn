@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://36wi4tl0cghm"]
+
+[node name="TopBarPanel" type="Panel" unique_id=240318811]
+custom_minimum_size = Vector2(100, 60)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="TopBarHBOX" type="HBoxContainer" parent="." unique_id=1699444937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBarHBOX" unique_id=1155378140]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Resources" type="HBoxContainer" parent="TopBarHBOX/MarginContainer" unique_id=841791752]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="BatteryContainer" type="MarginContainer" parent="TopBarHBOX/MarginContainer/Resources" unique_id=1273823117]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Battery" type="Label" parent="TopBarHBOX/MarginContainer/Resources/BatteryContainer" unique_id=848335045]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "10 kW"
+
+[node name="MoneyContainer" type="MarginContainer" parent="TopBarHBOX/MarginContainer/Resources" unique_id=1935326409]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Money" type="Label" parent="TopBarHBOX/MarginContainer/Resources/MoneyContainer" unique_id=1385641037]
+layout_mode = 2
+size_flags_vertical = 1
+text = "500k$"
+
+[node name="GPUContainer" type="MarginContainer" parent="TopBarHBOX/MarginContainer/Resources" unique_id=252269028]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="GPU" type="Label" parent="TopBarHBOX/MarginContainer/Resources/GPUContainer" unique_id=1858665200]
+layout_mode = 2
+size_flags_vertical = 1
+text = "560 Gflops"
