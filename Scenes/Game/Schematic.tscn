@@ -6,14 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://cak87gijsxlcr" path="res://Scenes/Game/Nodes/battery_super.tscn" id="4_hqwk4"]
 [ext_resource type="PackedScene" uid="uid://bopvl8m66kr2b" path="res://Scenes/Game/Nodes/camera_simple.tscn" id="5_bb6ld"]
 [ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="6_rs2g2"]
-[ext_resource type="Script" uid="uid://cgncr20ekrwfl" path="res://Scenes/Game/flow_manager.gd" id="7_bb6ld"]
 [ext_resource type="PackedScene" uid="uid://bt0g5kqt42ow5" path="res://Scenes/Game/Nodes/arm_simple.tscn" id="7_bb6ld"]
 
 [node name="Schematic" type="Node2D" unique_id=1559803732]
 script = ExtResource("1_3p7ui")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=734684311]
-position_smoothing_enabled = true
+position_smoothing_speed = 15.0
 
 [node name="ConnectionManager" type="Node2D" parent="." unique_id=138402269]
 script = ExtResource("2_xn3cd")
@@ -31,6 +30,6 @@ position = Vector2(-194, -103)
 position = Vector2(-39, -114)
 
 [node name="FlowManager" type="Node2D" parent="." unique_id=681621820]
-script = ExtResource("7_bb6ld")
+
 [node name="ScematicsNode2" parent="." unique_id=1585557815 instance=ExtResource("7_bb6ld")]
 position = Vector2(148, -53)

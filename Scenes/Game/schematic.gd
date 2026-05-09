@@ -38,8 +38,6 @@ func _process(delta: float) -> void:
 			node.set_position(get_global_mouse_position() - node.get_center())
 	else:
 		dragging = false
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		var mouse_move: Vector2 = Input.get_last_mouse_velocity()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -57,3 +55,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				camera.zoom = Vector2.ONE * Constants.ZOOM_LIMIT_MAX
 			if camera.zoom.x > Constants.ZOOM_LIMIT_MIN:
 				camera.zoom = Vector2.ONE * Constants.ZOOM_LIMIT_MIN
+
+	if event is InputEventMouseMotion:
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+			camera.position -= event.relative
