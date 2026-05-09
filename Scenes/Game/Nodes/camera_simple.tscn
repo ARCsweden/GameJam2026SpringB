@@ -10,16 +10,16 @@
 offset_right = 96.0
 offset_bottom = 80.0
 
-[node name="NodeSlot" parent="." index="1" unique_id=435795435 instance=ExtResource("2_hgnmj")]
+[node name="NodeSlot" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="0" unique_id=435795435 instance=ExtResource("2_hgnmj")]
 position = Vector2(48, 60)
 type = 1
 
-[node name="NodeSlot3" parent="." index="2" unique_id=1138025575 instance=ExtResource("2_hgnmj")]
+[node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=1138025575 instance=ExtResource("2_hgnmj")]
 position = Vector2(76, 32)
 type = 2
 dir = 1
 
-[node name="Sprite" parent="NodeSlot3" index="1" unique_id=883112050]
+[node name="Sprite" parent="Slots/NodeSlot3" index="1" unique_id=883112050]
 texture = ExtResource("3_cq2aq")
 
-[editable path="NodeSlot3"]
+[editable path="Slots/NodeSlot3"]
