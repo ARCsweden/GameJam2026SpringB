@@ -13,6 +13,7 @@ func _ready() -> void:
 
 func set_goal(goal: GoalData) -> void:
 	title.text = goal.description
+	story.text = goal.goal_text
 	reward.text = str(goal.reward_amount)
 	target.text = str(goal.target_value)
 

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://c7dkpvwvghu28"]
+
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_8e3k1"]
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_a3brp"]
+[ext_resource type="PackedScene" uid="uid://csjdfpg7vlx45" path="res://Scenes/Game/Nodes/investor_power.tscn" id="3_1cse8"]
+
+[resource]
+script = ExtResource("1_8e3k1")
+goal_id = "power_repeat"
+description = "Restore the Sun"
+reward_amount = 100
+target_value = 3
+is_repeatable = true
+target_multiplier = 1.1
+reward_multiplier = 1.1
+icon = ExtResource("1_a3brp")
+packed_scene = ExtResource("3_1cse8")
+goal_text = "The man that enters your office has a fevered look on his face, blurting out a \"We have no time!\" before eventually calming down enough to introduce himself and his request.
+
+\"Phinneas Fluge, philantropist and environmental activist - you might have heard of me.\" He continues without pausing for you to respond, his words a flurry. \"A dire situation have arisen, due to the misguided attempts of the past century in moving the world towards green energy. Nowadays, there are solar panels everywhere, with righteous citizens patting themselves on the back while STEALING THE ENERGY FROM THE SUN!\"
+
+Phinneas stares intently at you, as if to judge your position on this matter. Seeing no weakness in the facade of your stiff, polite smile, he continues, somewhat calmer. \"The sun loses enormous amounts of energy every second, so my organization have started the only true environmental effort; giving back what we have taken. I have built giant lasers that will shoot our stolen energy back to the sun, and keep it shiny and healthy.\"
+
+\"For this, I need you to send all your spare power to me. It's the best use of it, trust me.\"
+"
+metadata/_custom_type_script = "uid://cmyshpwolbips"
