@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_6jl56"]
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_fiyra"]
-[ext_resource type="PackedScene" uid="uid://dmh0ovt7x0b1w" path="res://Scenes/Game/Nodes/investor_vision.tscn" id="3_3kwa5"]
+[ext_resource type="PackedScene" uid="uid://bap75ypl22mi8" path="res://Scenes/Game/Nodes/investor_compute.tscn" id="3_qp511"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_qp511"]
 [ext_resource type="Resource" uid="uid://2o1b6rg7adwf" path="res://Resources/Goals/Requirements/req_camera.tres" id="5_qp511"]
 
@@ -12,10 +12,10 @@ goal_id = "vision_repeat"
 description = "The All-Seeing Eye"
 reward_amount = 1000
 is_repeatable = true
-target_multiplier = 1.1
-reward_multiplier = 1.1
+target_multiplier = 2.0
+reward_multiplier = 2.02
 icon = ExtResource("1_6jl56")
-packed_scene = ExtResource("3_3kwa5")
+packed_scene = ExtResource("3_qp511")
 goal_text = "A short woman in a business suit stares at you from behind her spectacles. \"You understand everything in the contract then?\"
 
 You peer down at the piles of papers stacked on your desk, all of it written in near-incomprehensible legalese such as only a dedicated government bureaucracy could produce. Chancing it, you look at her uncertainly. \"You want... large amounts of vision data?\"
