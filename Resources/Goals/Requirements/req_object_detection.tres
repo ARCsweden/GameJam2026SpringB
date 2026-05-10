@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_76fpr")
-action_tag = "object_detection"
+action_tag = "OBJECT_DETECTION"
 description = "Object Detection"
