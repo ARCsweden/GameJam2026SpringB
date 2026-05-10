@@ -19,4 +19,6 @@ signal disconnect_slot_flow(start_slot: NodeSlot, end_slot: NodeSlot)
 signal flow_updated(start_slot: NodeSlot, end_slot: NodeSlot)
 signal spawn_from_store(module: ModuleData)
 signal spawn_goal_from_store(module: GoalData)
+
+signal audio_sfx_requested(sound_name: String)
 signal goal_unlocked(goal: GoalData)

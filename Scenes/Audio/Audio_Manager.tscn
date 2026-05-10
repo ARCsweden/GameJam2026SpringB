@@ -1,27 +1,53 @@
 [gd_scene format=3 uid="uid://defgxkassrmn7"]
 
+[ext_resource type="Script" uid="uid://rfkqi5m50oom" path="res://Scripts/AudioManager.gd" id="1_wsber"]
+[ext_resource type="Script" uid="uid://h47uixvi48se" path="res://AudioDebug.gd" id="2_ah8ut"]
+
 [node name="AudioManager" type="Node" unique_id=848974002]
+script = ExtResource("1_wsber")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1117459515]
+volume_db = -10.0
+bus = &"Music"
 
 [node name="SFXPool" type="Node" parent="." unique_id=1949935199]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SFXPool" unique_id=714330484]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SFXPool" unique_id=1648745705]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SFXPool" unique_id=735671047]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="SFXPool" unique_id=106679249]
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="SFXPool" unique_id=109777207]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="SFXPool" unique_id=1275118829]
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="SFXPool" unique_id=1441873016]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="SFXPool" unique_id=210838241]
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="SFXPool" unique_id=884873101]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="SFXPool" unique_id=1845020008]
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="SFXPool" unique_id=1449998432]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="SFXPool" unique_id=335431198]
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="SFXPool" unique_id=886750781]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="SFXPool" unique_id=682941749]
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="SFXPool" unique_id=2060768769]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="SFXPool" unique_id=1015432895]
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="SFXPool" unique_id=1974835830]
+volume_db = -10.0
+bus = &"SFX"
 
-[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="SFXPool" unique_id=510543121]
+[node name="AudioDebug" type="Node" parent="." unique_id=2053408098]
+script = ExtResource("2_ah8ut")
+debug_audio = false

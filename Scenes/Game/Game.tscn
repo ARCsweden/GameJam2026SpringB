@@ -12,6 +12,8 @@
 [ext_resource type="Resource" uid="uid://xtfloqlj6r2m" path="res://Resources/Goals/goal_motion_repeat.tres" id="9_edkrd"]
 [ext_resource type="Resource" uid="uid://c7dkpvwvghu28" path="res://Resources/Goals/goal_power_repeat.tres" id="10_bsqcq"]
 [ext_resource type="Resource" uid="uid://0l8oqej2lhbb" path="res://Resources/Goals/goal_vision_repeat.tres" id="11_jf0ra"]
+[ext_resource type="PackedScene" uid="uid://defgxkassrmn7" path="res://Scenes/Audio/Audio_Manager.tscn" id="4_y3kpf"]
+[ext_resource type="Script" uid="uid://rfkqi5m50oom" path="res://Scripts/AudioManager.gd" id="5_3k6gv"]
 
 [node name="Game" type="Node2D" unique_id=235563203]
 
@@ -26,6 +28,9 @@ compute_repeat = ExtResource("8_ti1oi")
 motion_repeat = ExtResource("9_edkrd")
 power_repeat = ExtResource("10_bsqcq")
 vision_repeat = ExtResource("11_jf0ra")
+
+[node name="AudioManager" parent="." unique_id=848974002 instance=ExtResource("4_y3kpf")]
+script = ExtResource("5_3k6gv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
 

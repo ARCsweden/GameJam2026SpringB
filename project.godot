@@ -27,7 +27,6 @@ SignalBus="*uid://b4eipu7hxs7ow"
 EconomyManager="*uid://idr0nthsuonq"
 GoalManager="*uid://mawq8hvpvfie"
 ResourceTypes="*uid://ct7hi2a06sqef"
-AudioManager="*uid://defgxkassrmn7"
 
 [dotnet]
 
