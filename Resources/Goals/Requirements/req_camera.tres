@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GoalRequirement" format=3 uid="uid://2o1b6rg7adwf"]
+
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="1_eau2a"]
+
+[resource]
+script = ExtResource("1_eau2a")
+action_tag = "camera"
+description = "Camera"

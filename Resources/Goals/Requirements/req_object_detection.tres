@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GoalRequirement" format=3 uid="uid://daojiomyfatg"]
+
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="1_76fpr"]
+
+[resource]
+script = ExtResource("1_76fpr")
+action_tag = "object_detection"
+description = "Object Detection"

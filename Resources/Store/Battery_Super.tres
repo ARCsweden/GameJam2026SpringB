@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cxjh16v7qo2y6"]
+
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_ni546"]
+[ext_resource type="PackedScene" uid="uid://cak87gijsxlcr" path="res://Scenes/Game/Nodes/battery_super.tscn" id="2_olb0w"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="3_6h5dg"]
+
+[resource]
+script = ExtResource("3_6h5dg")
+module_name = "Battery_Super"
+cost = 280
+packed_scene = ExtResource("2_olb0w")
+action_tag = "battery_super"
+icon = ExtResource("1_ni546")
