@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_pruad"]
 [ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="1_qty45"]
 [ext_resource type="PackedScene" uid="uid://bs4vg30lta46q" path="res://Scenes/Game/Nodes/investor_arm.tscn" id="3_d20d2"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_d20d2"]
 
 [resource]
 script = ExtResource("1_pruad")
 goal_id = "motion_repeat"
 description = "Keeping the Wheels Turning"
 reward_amount = 10000
-target_value = 3
 is_repeatable = true
 target_multiplier = 1.1
 reward_multiplier = 1.1
@@ -28,4 +28,5 @@ You blink at the earnest little man. \"...Hamsters?\"
 Despite the substantial amount of money involved in the contract, morbid curiosity forces you to ask the question: \"Why?\"
 
 Håkan returns your blank look. \"How else am I going to keep the hamster wheels spinning?\""
+logic_type = 0
 metadata/_custom_type_script = "uid://cmyshpwolbips"

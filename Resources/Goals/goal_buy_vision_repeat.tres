@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://b0td447lf2q4y"]
+
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_fj7hg"]
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_tjfsk"]
+[ext_resource type="PackedScene" uid="uid://darq3a7grvg6n" path="res://Scenes/Game/Nodes/investor_passive.tscn" id="3_fj7hg"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_cw0i6"]
+
+[resource]
+script = ExtResource("2_tjfsk")
+goal_id = "buy_vision_repeat"
+is_repeatable = true
+target_multiplier = 1.1
+reward_multiplier = 1.1
+icon = ExtResource("1_fj7hg")
+packed_scene = ExtResource("3_fj7hg")
+metadata/_custom_type_script = "uid://cmyshpwolbips"
