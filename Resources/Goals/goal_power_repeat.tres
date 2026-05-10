@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_8e3k1"]
 [ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_a3brp"]
 [ext_resource type="PackedScene" uid="uid://csjdfpg7vlx45" path="res://Scenes/Game/Nodes/investor_power.tscn" id="3_1cse8"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_mq80e"]
 
 [resource]
 script = ExtResource("1_8e3k1")
 goal_id = "power_repeat"
 description = "Restore the Sun"
 reward_amount = 100
-target_value = 3
 is_repeatable = true
 target_multiplier = 1.1
 reward_multiplier = 1.1
@@ -23,4 +23,5 @@ Phinneas stares intently at you, as if to judge your position on this matter. Se
 
 \"For this, I need you to send all your spare power to me. It's the best use of it, trust me.\"
 "
+logic_type = 0
 metadata/_custom_type_script = "uid://cmyshpwolbips"
