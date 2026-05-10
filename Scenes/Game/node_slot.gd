@@ -46,8 +46,7 @@ func _ready():
 	
 	
 func _process(delta: float) -> void:
-	$Label.text = "P: " + str(amount_arr[0]) + "\nV: " + str(amount_arr[1]) + "\nC: " + str(amount_arr[2]) + "\nM: " + str(amount_arr[3])
-
+	pass
 func _on_slot_entered():
 	SignalBus.slot_entered.emit(self)
 	activation_sprite.show()

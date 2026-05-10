@@ -105,13 +105,29 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 					# Emit signal to propagate the change
 					SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
 			return
-
+	
+	# Counts up all inputs
 	for s_i in input_resource_slots:
 		for i in ResourceTypes.RT.size():
 			total_arr[i] += s_i.amount_arr[i]
+	
+	var inputs_flowing = true
+	for s_i in input_resource_slots:
+		var s_i_total = 0
+		for i in ResourceTypes.RT.size():
+			s_i_total += s_i.amount_arr[i]
+		if s_i_total == 0:
+			inputs_flowing = false
+			
+	# Combines input resources to the output. Meaning we are creating flow
 	for s_o in output_resource_slots:
 		for i in ResourceTypes.RT.size():
-			s_o.amount_arr[i] = total_arr[i] + s_o.powered_amount_arr[i]
+			s_o.amount_arr[i] = total_arr[i] 
+	for s_o in output_resource_slots:
+		# If flow exists on all inputs, then the output can produce its unique resource
+		if inputs_flowing:
+			for i in ResourceTypes.RT.size():
+				s_o.amount_arr[i] += s_o.powered_amount_arr[i] 
 		if s_o.connection != null:
 			# Emit signal to propagate the change
 			SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
