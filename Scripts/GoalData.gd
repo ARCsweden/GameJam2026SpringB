@@ -12,7 +12,7 @@ class_name GoalData
 @export var reward_multiplier: float = 1.0
 @export var icon: Texture2D
 @export var packed_scene: PackedScene
-@export var goal_text: String
+@export_multiline var goal_text: String
 #@export var amount_of_CPU: int
 #@export var amount_of_GPU: int
 #@export var amount_of_cameras: int # e.g., "Connect 5 pipes" -> target_value = 5
