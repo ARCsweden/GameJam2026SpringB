@@ -13,6 +13,10 @@ func update_line() -> void:
 		line.points[1] = end.global_position
 		var between = line.points[0].lerp(line.points[1], 0.5)
 		set_label_text()
+		if label.text == "":
+			line.modulate = Color.YELLOW
+		else:
+			line.modulate = Color.GREEN
 		between.x -= label.size.x / 2
 		between.x -= label.size.y / 2
 		label.set_position(between)
