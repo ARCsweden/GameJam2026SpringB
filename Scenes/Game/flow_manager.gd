@@ -135,5 +135,6 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 		if s_o.connection != null:
 			# Emit signal to propagate the change
 			SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
-			SignalBus.flow_updated.emit(s_o.connection.start, s_o.connection.end)
+			if s_o.connection:
+				SignalBus.flow_updated.emit(s_o.connection.start, s_o.connection.end)
 	SignalBus.flow_updated.emit(start_slot, stop_slot)
