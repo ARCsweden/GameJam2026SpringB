@@ -11,7 +11,8 @@ var goal_definitions: Dictionary = {} # Stores the GoalData resources
 
 
 func _ready() -> void:
-	pass
+	SignalBus.update_slot_flow.connect(on_graph_changed)
+	SignalBus.disconnect_slot_flow.connect(on_graph_changed)
 
 # METHOD A: Add an entire array of goals at the start of a level
 func load_level_goals(goals_array: Array[GoalData]) -> void:
@@ -31,7 +32,6 @@ func unlock_goal_for_store(base_goal: GoalData) -> void:
 func activate_single_goal(base_goal: GoalData) -> void:
 	# First check if it's already active to prevent duplicates
 	if not active_goals.has(base_goal.goal_id):
-		SignalBus.update_slot_flow.connect(on_graph_changed)
 		var goal = base_goal.duplicate()
 		# 1. Save the Resource data so we know the target and reward later
 		goal_definitions[goal.goal_id] = goal
@@ -45,6 +45,8 @@ func activate_single_goal(base_goal: GoalData) -> void:
 		
 		print("New Goal Added: ", goal.goal_id)
 		goal_activated.emit(goal)
+		
+		
 # Call this when the level starts to load in the level's specific goals
 func load_goals(goals_array: Array[GoalData]):
 	active_goals.clear()
@@ -83,12 +85,15 @@ func trigger_action(action: String, amount: int = 1) -> void:
 		_finish_and_remove_goal(finished_goal_id)
 
 func on_graph_changed(start, end) -> void:
-	print("TEST ON GRAPH CHANGE INVESTOR")
-	# Get Network state of connection
-	for goal_id in active_goals.keys():
-		#var goal_data = goal_definitions[goal_id]
-		var progress = active_goals[goal_id]
+	
+	if active_goals:
+		print("TEST ON GRAPH CHANGE INVESTOR")
+		# Get Network state of connection
+		for goal_id in active_goals.keys():
+			#var goal_data = goal_definitions[goal_id]
+			var progress = active_goals[goal_id]
 		#if goal_id.logic_type == GoalData.LogicType.ACTIVE:
+		#	pass
 		#	var target = 0
 		#	for req in goal_data.requirements:
 		#			target = req.target_value
@@ -153,8 +158,6 @@ func _finish_and_remove_goal(goal_id: String) -> void:
 		
 		# Send the newly scaled clone back to the Store!
 		unlock_goal_for_store(completed_goal_data)
-		SignalBus.update_slot_flow.disconnect(on_graph_changed)
-		
 		print("Repeatable Goal scaled and returned to store! ", goal_id)
 	else:
 		# It's a one-time goal. Tell the UI to delete it entirely.
@@ -163,6 +166,5 @@ func _finish_and_remove_goal(goal_id: String) -> void:
 		# Erase it from the backend dictionaries
 		active_goals.erase(goal_id)
 		goal_definitions.erase(goal_id)
-		SignalBus.update_slot_flow.disconnect(on_graph_changed)
 		print("Goal Completed and Removed: ", goal_id)
 	
