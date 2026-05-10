@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_h3qgs"]
 [ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_k250f"]
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="3_66rm0"]
 
 [node name="BatterySimple" unique_id=1799637696 instance=ExtResource("1_h3qgs")]
 
@@ -11,5 +12,6 @@ offset_bottom = 64.0
 
 [node name="NodeSlot" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="0" unique_id=435795435 instance=ExtResource("2_k250f")]
 position = Vector2(32, 32)
+texture = ExtResource("3_66rm0")
 dir = 1
 base_power_amount = 1

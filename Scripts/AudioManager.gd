@@ -2,12 +2,31 @@ extends Node
 
 # Dict with sounds 
 const SOUNDS = {
-	"Error": preload("res://Assets/Audio/SFX/Node_Error.ogg"),
+	"error": preload("res://Assets/Audio/SFX/Node_Error.ogg"),
+	"click": preload("res://Assets/Audio/SFX/UI_Click.ogg")
 	
 }
 
 @onready var music_player = $MusicPlayer
 @onready var sfx_pool = $SFXPool.get_children()
+
+func _ready() -> void:
+	
+	SignalBus.spawn_from_store.connect(_on_item_bought)
+	SignalBus.click_output.connect(_on_ui_click)
+	GoalManager.goal_completed.connect(_on_goal_completed)
+	print("Test")
+	play_music("Main_Theme")
+	
+# Callbacks
+func _on_item_bought(_module_data: ModuleData):
+	play_sfx("buy")
+
+func _on_ui_click(_object):
+	play_sfx("click")
+
+func _on_goal_completed(_goal_id: String):
+	play_sfx("goal_win")
 
 # Function to play sfx
 func play_sfx(sound_name: String):
@@ -21,6 +40,7 @@ func play_sfx(sound_name: String):
 	for player in sfx_pool:
 		if not player.playing:
 			player.stream = stream
+			player.pitch_scale = randf_range(0.9, 1.1)
 			player.play()
 			return
 	

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bqqptw7e3xy8q"]
+
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_4a2xd"]
+[ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="2_m8he8"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="3_caey2"]
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="4_m1807"]
+
+[node name="McuMerger" unique_id=1799637696 instance=ExtResource("1_4a2xd")]
+
+[node name="NinePatchRect" parent="." index="0" unique_id=2050590102]
+offset_bottom = 128.0
+
+[node name="NodeSlot" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="0" unique_id=435795435 instance=ExtResource("2_m8he8")]
+position = Vector2(20, 87)
+texture = ExtResource("3_caey2")
+type = 2
+
+[node name="NodeSlot2" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="1" unique_id=794183048 instance=ExtResource("2_m8he8")]
+position = Vector2(56, 108)
+texture = ExtResource("4_m1807")
+
+[node name="NodeSlot3" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="2" unique_id=858964053 instance=ExtResource("2_m8he8")]
+position = Vector2(108, 61)
+texture = ExtResource("3_caey2")
+type = 2
+dir = 1
+base_amount = 2
+
+[node name="NodeSlot4" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="3" unique_id=2266000 instance=ExtResource("2_m8he8")]
+position = Vector2(20, 48)
+texture = ExtResource("3_caey2")
+type = 2
+
+[node name="NodeSlot5" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="4" unique_id=334371904 instance=ExtResource("2_m8he8")]
+position = Vector2(94, 108)
+texture = ExtResource("4_m1807")

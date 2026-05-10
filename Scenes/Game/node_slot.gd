@@ -2,8 +2,10 @@ class_name NodeSlot
 extends Node2D
 
 @onready var area2d : Area2D = $Area2D
+@onready var sprite : Sprite2D = $Sprite
 @onready var activation_sprite : Sprite2D = $ActivationSprite
 
+@export var texture : Texture2D
 @export var type : ResourceTypes.RT
 @export var dir : ResourceTypes.DIR
 
@@ -44,9 +46,11 @@ func _ready():
 	unpowered_amount_arr[ResourceTypes.RT.COMPUTE] = unpowered_compute_amount
 	unpowered_amount_arr[ResourceTypes.RT.MOTION] = unpowered_motion_amount
 	
+	sprite.texture = texture
 	
 func _process(delta: float) -> void:
-	pass
+	pass	
+
 func _on_slot_entered():
 	SignalBus.slot_entered.emit(self)
 	activation_sprite.show()

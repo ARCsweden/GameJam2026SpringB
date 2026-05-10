@@ -10,3 +10,10 @@ func update_line() -> void:
 	if line and start and end:
 		line.points[0] = start.global_position
 		line.points[1] = end.global_position
+
+func remove() -> void:
+	if start:
+		start.connection = null
+	if end:
+		end.connection = null
+	line.queue_free()

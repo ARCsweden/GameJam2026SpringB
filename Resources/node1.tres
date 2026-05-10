@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cdlqcud8budfg"]
 
-[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_02lqg"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="1_02lqg"]
 [ext_resource type="PackedScene" uid="uid://byqppitqlaym3" path="res://Scenes/Game/Nodes/battery_simple.tscn" id="1_3f7hd"]
 [ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="1_oumwg"]
 
