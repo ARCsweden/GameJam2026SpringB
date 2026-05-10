@@ -1,6 +1,6 @@
 extends Node
 
-signal goal_progress_updated(goal_id: String, current: int, target: int)
+signal goal_progress_updated(goal_id: String, action_tag: String, current: int, target: int)
 signal goal_activated(goal: GoalData)
 signal goal_completed(goal_id: String) # New signal to tell the UI a goal is done!
 

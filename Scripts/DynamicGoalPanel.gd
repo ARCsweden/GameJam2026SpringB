@@ -25,7 +25,7 @@ func _on_goal_activated(goal: GoalData) -> void:
 	# 4. Save a reference to it in our dictionary so we can find it later
 	active_ui_elements[goal.goal_id] = new_item
 
-func _on_goal_progress_updated(goal_id: String, current: int, target: int) -> void:
+func _on_goal_progress_updated(goal_id: String, action_tag: String, current: int, target: int) -> void:
 	# Find the specific UI element for this goal and tell it to update
 	if active_ui_elements.has(goal_id):
 		active_ui_elements[goal_id].update_progress(current, target)
