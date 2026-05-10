@@ -8,9 +8,19 @@
 [resource]
 script = ExtResource("2_tjfsk")
 goal_id = "buy_vision_repeat"
+description = "Bird Watching"
 is_repeatable = true
 target_multiplier = 1.1
 reward_multiplier = 1.1
 icon = ExtResource("1_fj7hg")
 packed_scene = ExtResource("3_fj7hg")
+goal_text = "\"Are you sure your systems can handle eagles?\" the wild looking man asks, looking out into your data hall. \"Smaller birds, sure, maybe even corvids or seagulls, but eagles are pretty big. Not to mention albatrosses. Ever seen an albatross? Big.\"
+
+You scream internally. \"For the fifth time, I assure you Mr. Oberfelt, pictures of large birds are just as easy to store as pictures of small birds.\"
+
+\"Well, I don't trust it. These newfangled machines.\" He gestures vaguely towards the softly humming computers. \"Back in my day...\"
+
+Hurriedly stepping in before you have to live through another two hour tirade about bird watching and its apparent challenge, you interrupt him. \"Maybe a demonstration is in order? I can provide a lot of cameras, enough to cover every angle of even larger birds.\"
+
+\"Hrm, we shall see.\" Oberfelt still doesn't look fully convinced, but he does reach for his check book."
 metadata/_custom_type_script = "uid://cmyshpwolbips"

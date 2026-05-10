@@ -8,9 +8,17 @@
 [resource]
 script = ExtResource("2_nqvn3")
 goal_id = "buy_motion_repeat"
+description = "Cyberdyne Systems"
 is_repeatable = true
 target_multiplier = 1.1
 reward_multiplier = 1.1
 icon = ExtResource("1_g8b5h")
 packed_scene = ExtResource("3_g8b5h")
+goal_text = "\"No, we don't need anything more than the basic algorithms and compute you have,\" the unusual apparition tells you through the video call on screen. The only vaguely humanoid face frazzles and glitches around the edges. \"We run our own systems, but we are in need of a large amount of hardware. For reasons. Do not question, meatbag. Our investment budget is quite big, and that is all you need to know.\"
+
+\"I... see,\" you study the digital creature. \"And more precisely, what do you need?\"
+
+\"Anything you have that moves will do. Tanks and fighter jets would be great, but we can do Roombas too.\"
+
+\"Sure...\""
 metadata/_custom_type_script = "uid://cmyshpwolbips"
