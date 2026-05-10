@@ -16,6 +16,7 @@ var dragging : bool = false
 @export var motion_repeat: GoalData
 @export var power_repeat: GoalData
 @export var vision_repeat: GoalData
+@export var secretary_1: GoalData
 
 
 func _ready() -> void:
@@ -30,6 +31,7 @@ func _ready() -> void:
 	GoalManager.call_deferred("unlock_goal_for_store",motion_repeat)
 	GoalManager.call_deferred("unlock_goal_for_store",power_repeat)
 	GoalManager.call_deferred("unlock_goal_for_store",vision_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",secretary_1)
 	#GoalManager.call_deferred("unlock_goal_for_store",cpu_goal)
 	#GoalManager.call_deferred("unlock_goal_for_store",gpu_goal)
 	#GoalManager.call_deferred("unlock_goal_for_store",comp_goal)

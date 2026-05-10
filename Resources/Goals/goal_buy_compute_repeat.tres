@@ -10,6 +10,7 @@
 script = ExtResource("2_16xkn")
 goal_id = "buy_compute_repeat"
 description = "AGI horizon"
+reward_amount = 1000
 is_repeatable = true
 target_multiplier = 1.1
 reward_multiplier = 1.1
