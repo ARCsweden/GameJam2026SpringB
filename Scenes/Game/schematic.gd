@@ -18,6 +18,13 @@ func _ready() -> void:
 	SignalBus.node_exited.connect(_on_node_exited)
 	SignalBus.spawn_from_store.connect(_on_spawn_from_store)
 	SignalBus.spawn_goal_from_store.connect(_on_spawn_goal_from_store)
+	SignalBus.spawn_goal_done_effect.connect(_on_spawn_goal_done_effect)
+
+func _on_spawn_goal_done_effect(pos: Vector2) -> void:
+	var goal_fx = preload("res://Scenes/Game/money_fx.tscn")
+	var fx: Node2D = goal_fx.instantiate()
+	add_child(fx)
+	fx.global_position = pos
 
 # --- Spawn the Goal Node ---
 func _on_spawn_goal_from_store(goal: GoalData) -> void:
