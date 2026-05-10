@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_sn1vg")
-action_tag = "battery"
+action_tag = "POWER"
 description = "Battery"

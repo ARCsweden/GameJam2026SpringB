@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_mkjce")
-action_tag = "compute"
+action_tag = "COMPUTE"
 description = "compute"
+target_value = 2

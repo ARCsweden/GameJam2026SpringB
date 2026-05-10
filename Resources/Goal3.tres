@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="1_cbafk"]
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_umg5b"]
 [ext_resource type="PackedScene" uid="uid://bap75ypl22mi8" path="res://Scenes/Game/Nodes/investor_compute.tscn" id="3_rvgag"]
-[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_lrmp1"]
+[ext_resource type="Script" path="res://Scripts/GoalRequirement.gd" id="4_lrmp1"]
 [ext_resource type="Resource" uid="uid://bsdshgngocccn" path="res://Resources/req_vision.tres" id="5_l1clu"]
 
 [resource]
@@ -13,5 +13,6 @@ description = "Buy 5 Cpus"
 reward_amount = 1000000
 icon = ExtResource("1_cbafk")
 packed_scene = ExtResource("3_rvgag")
+logic_type = 0
 requirements = Array[ExtResource("4_lrmp1")]([ExtResource("5_l1clu")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"
