@@ -29,6 +29,10 @@ func _on_goal_completed(goal_id: String) -> void:
 	if goal_id == my_goal_id:
 		# The goal is done! Play a sound/particle here if you want, then delete it.
 		print("Goal Node Destroyed: ", goal_id)
+		# Remove active connections
+		for c in slots.get_children():
+			var slot = c as NodeSlot
+			SignalBus.connection_removed.emit(slot.connection)
 		queue_free()
 
 # Add your get_center() function here if your drag logic requires it!

@@ -10,6 +10,7 @@ var connections : Array[Connection] = []
 func _ready() -> void:
 	SignalBus.slot_entered.connect(_on_slot_entered)
 	SignalBus.slot_exited.connect(_on_slot_exited)
+	SignalBus.connection_removed.connect(_on_connection_removed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -43,7 +44,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					remove_child(line)
 					line.queue_free()
 				line = null
-				start = null
+				start = end
 				end = null
 			elif start: # Create new connection
 				# Create line
@@ -60,10 +61,7 @@ func _unhandled_input(event: InputEvent) -> void:
 						line.add_point(conn.start.global_position)
 					line.add_point(get_global_mouse_position())
 					# Cleanup old line/connection
-					remove_child(conn.line)
-					connections.erase(conn)
-					conn.start.connection = null
-					conn.end.connection = null
+					_on_connection_removed(conn)
 				else:
 					# New line, starting at start node
 					line.add_point(start.global_position)
@@ -72,6 +70,12 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _is_conn_valid(n1: NodeSlot, n2: NodeSlot) -> bool:
 	return n1.type == n2.type and n1.dir != n2.dir and n1.connection == null and n2.connection == null
+
+func _on_connection_removed(conn: Connection) -> void:
+	if conn.line:
+		remove_child(conn.line)
+	connections.erase(conn)
+	conn.remove()
 
 func _on_slot_entered(node: NodeSlot) -> void:
 	if line:
