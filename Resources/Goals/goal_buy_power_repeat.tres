@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("2_6ulp2")
 goal_id = "buy_power_repeat"
-description = "The Biggest Powerbank in the World"
+description = "The Biggest Powerbank"
 reward_amount = 100
 is_repeatable = true
 target_multiplier = 1.5

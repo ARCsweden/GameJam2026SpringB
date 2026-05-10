@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("2_4dicv")
 goal_id = "compute_repeat"
-description = "The Children Yearn for the Mines"
+description = "Young Entrepreneur"
 reward_amount = 500
 is_repeatable = true
 target_multiplier = 2.0
