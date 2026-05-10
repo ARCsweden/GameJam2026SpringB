@@ -48,6 +48,8 @@ func _disconnect_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 	for s_o in output_resource_slots:
 		if s_o.connection != null:
 			SignalBus.disconnect_slot_flow.emit(s_o.connection.start, s_o.connection.end)
+			SignalBus.flow_updated.emit(s_o.connection.start, s_o.connection.end)
+	SignalBus.flow_updated.emit(start_slot, stop_slot)
 	
 		#if input_slot.type != ResourceTypes.RT.POWER:
 			#SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
@@ -90,6 +92,8 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 				if s_o.connection != null:
 					# Emit signal to propagate the change
 					SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
+					SignalBus.flow_updated.emit(s_o.connection.start, s_o.connection.end)
+			SignalBus.flow_updated.emit(start_slot, stop_slot)
 			return
 	# Instantiates the array
 	var total_arr = []
@@ -131,3 +135,5 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 		if s_o.connection != null:
 			# Emit signal to propagate the change
 			SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
+			SignalBus.flow_updated.emit(s_o.connection.start, s_o.connection.end)
+	SignalBus.flow_updated.emit(start_slot, stop_slot)

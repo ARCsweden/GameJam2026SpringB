@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://csjdfpg7vlx45"]
+[gd_scene format=3 uid="uid://bihoieu86gsax"]
 
 [ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_5otan"]
 [ext_resource type="Script" uid="uid://cqifnoensgc8o" path="res://Scenes/Game/Nodes/scematic_investor_node.gd" id="2_fxdsf"]

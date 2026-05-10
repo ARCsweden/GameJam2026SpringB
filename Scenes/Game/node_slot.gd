@@ -22,7 +22,7 @@ var powered_amount_arr = []
 var amount_arr = []
 
 var connection : Connection = null
-var parent_node : SchematicsNode = null
+var parent_node = null
 
 func _ready():
 	for a in ResourceTypes.RT.size():

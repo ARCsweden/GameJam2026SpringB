@@ -11,8 +11,9 @@ var goal_definitions: Dictionary = {} # Stores the GoalData resources
 
 
 func _ready() -> void:
-	SignalBus.update_slot_flow.connect(on_graph_changed)
-	SignalBus.disconnect_slot_flow.connect(on_graph_changed)
+	#SignalBus.update_slot_flow.connect(on_graph_changed)
+	#SignalBus.disconnect_slot_flow.connect(on_graph_changed)
+	SignalBus.flow_updated.connect(on_graph_changed)
 
 # METHOD A: Add an entire array of goals at the start of a level
 func load_level_goals(goals_array: Array[GoalData]) -> void:
@@ -85,13 +86,44 @@ func trigger_action(action: String, amount: int = 1) -> void:
 		_finish_and_remove_goal(finished_goal_id)
 
 func on_graph_changed(start, end) -> void:
-	
+	# This function triggers on every graph change
 	if active_goals:
-		print("TEST ON GRAPH CHANGE INVESTOR")
+		# Checks if any graph change affects an investor node
+		var investor_node: GoalSchematicNode = null
+		if start.parent_node is GoalSchematicNode:
+			investor_node = start.parent_node
+		if end.parent_node is GoalSchematicNode:
+			investor_node = end.parent_node
+		if investor_node:
+			print(investor_node.my_goal_id)
+			print(investor_node.slots)
+			
+			# Finds all input slots
+			var input_resource_slots = []
+			for c in investor_node.slots.get_children():
+				var ns : NodeSlot = c as NodeSlot
+				if ns.dir == ResourceTypes.DIR.IN and ns.type != ResourceTypes.RT.POWER:
+					input_resource_slots.append(ns)
+			# Sums all inputs
+			var total_arr = []
+			for a in ResourceTypes.RT.size():
+				total_arr.append(0)
+			for s_i in input_resource_slots:
+				for i in ResourceTypes.RT.size():
+					total_arr[i] += s_i.amount_arr[i]
+			print(total_arr)
+		else:
+			return
+		
 		# Get Network state of connection
 		for goal_id in active_goals.keys():
-			#var goal_data = goal_definitions[goal_id]
+			var goal_data = goal_definitions[goal_id]
 			var progress = active_goals[goal_id]
+			if goal_data.logic_type == GoalData.LogicType.ACTIVE:
+				if investor_node.my_goal_id == goal_id:
+					pass
+			#var goal_data = goal_definitions[goal_id]
+			
 		#if goal_id.logic_type == GoalData.LogicType.ACTIVE:
 		#	pass
 		#	var target = 0
