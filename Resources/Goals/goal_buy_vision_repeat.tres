@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://b0td447lf2q4y"]
+
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_fj7hg"]
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_tjfsk"]
+[ext_resource type="PackedScene" uid="uid://darq3a7grvg6n" path="res://Scenes/Game/Nodes/investor_passive.tscn" id="3_fj7hg"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_cw0i6"]
+
+[resource]
+script = ExtResource("2_tjfsk")
+goal_id = "buy_vision_repeat"
+description = "Bird Watching"
+is_repeatable = true
+target_multiplier = 1.1
+reward_multiplier = 1.1
+icon = ExtResource("1_fj7hg")
+packed_scene = ExtResource("3_fj7hg")
+goal_text = "\"Are you sure your systems can handle eagles?\" the wild looking man asks, looking out into your data hall. \"Smaller birds, sure, maybe even corvids or seagulls, but eagles are pretty big. Not to mention albatrosses. Ever seen an albatross? Big.\"
+
+You scream internally. \"For the fifth time, I assure you Mr. Oberfelt, pictures of large birds are just as easy to store as pictures of small birds.\"
+
+\"Well, I don't trust it. These newfangled machines.\" He gestures vaguely towards the softly humming computers. \"Back in my day...\"
+
+Hurriedly stepping in before you have to live through another two hour tirade about bird watching and its apparent challenge, you interrupt him. \"Maybe a demonstration is in order? I can provide a lot of cameras, enough to cover every angle of even larger birds.\"
+
+\"Hrm, we shall see.\" Oberfelt still doesn't look fully convinced, but he does reach for his check book."
+metadata/_custom_type_script = "uid://cmyshpwolbips"
