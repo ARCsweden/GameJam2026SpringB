@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GoalRequirement" format=3 uid="uid://d0sxcn2wvk8ya"]
+
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="1_gc26c"]
+
+[resource]
+script = ExtResource("1_gc26c")
+action_tag = "compute"
+description = "Buy Compute"

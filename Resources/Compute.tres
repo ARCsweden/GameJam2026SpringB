@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://dlalqb133e4vq"]
+
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="1_m7fxb"]
+[ext_resource type="PackedScene" uid="uid://bqqptw7e3xy8q" path="res://Scenes/Game/Nodes/mcu_merger.tscn" id="2_17gx7"]
+[ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="2_23vju"]
+
+[resource]
+script = ExtResource("2_23vju")
+module_name = "Compute"
+cost = 200
+packed_scene = ExtResource("2_17gx7")
+action_tag = "compute"
+icon = ExtResource("1_m7fxb")
