@@ -61,7 +61,10 @@ func _unhandled_input(event: InputEvent) -> void:
 						line.add_point(conn.start.global_position)
 					line.add_point(get_global_mouse_position())
 					# Cleanup old line/connection
+					SignalBus.disconnect_slot_flow.emit(conn.start, conn.end)
 					_on_connection_removed(conn)
+					
+					
 				else:
 					# New line, starting at start node
 					line.add_point(start.global_position)
