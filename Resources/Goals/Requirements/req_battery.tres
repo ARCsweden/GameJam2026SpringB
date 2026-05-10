@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GoalRequirement" format=3 uid="uid://dlu8g5oq1dgnv"]
+
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="1_sn1vg"]
+
+[resource]
+script = ExtResource("1_sn1vg")
+action_tag = "battery"
+description = "Battery"
