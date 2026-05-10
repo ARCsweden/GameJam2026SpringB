@@ -9,6 +9,10 @@ signal goal_completed(goal_id: String) # New signal to tell the UI a goal is don
 var active_goals: Dictionary = {}
 var goal_definitions: Dictionary = {} # Stores the GoalData resources
 
+
+func _ready() -> void:
+	pass
+
 # METHOD A: Add an entire array of goals at the start of a level
 func load_level_goals(goals_array: Array[GoalData]) -> void:
 	active_goals.clear()
@@ -27,6 +31,7 @@ func unlock_goal_for_store(base_goal: GoalData) -> void:
 func activate_single_goal(base_goal: GoalData) -> void:
 	# First check if it's already active to prevent duplicates
 	if not active_goals.has(base_goal.goal_id):
+		SignalBus.update_slot_flow.connect(on_graph_changed)
 		var goal = base_goal.duplicate()
 		# 1. Save the Resource data so we know the target and reward later
 		goal_definitions[goal.goal_id] = goal
@@ -51,30 +56,48 @@ func load_goals(goals_array: Array[GoalData]):
 func trigger_action(action: String, amount: int = 1) -> void:
 	var goals_to_complete: Array[String] = []
 	
+		
 	for goal_id in active_goals.keys():
 		var goal_data = goal_definitions[goal_id]
 		var progress = active_goals[goal_id] # This is now a Dictionary
-		
 		# Does this goal care about the action that just happened?
-		if progress.has(action):
-			progress[action] += amount
-			
-			# Find the target value for this specific action
-			var target = 0
-			for req in goal_data.requirements:
-				if req.action_tag == action:
-					target = req.target_value
-					break
-					
-			# Tell the UI to update this specific bar
-			goal_progress_updated.emit(goal_id, action, progress[action], target)
-			
-			# Check if the ENTIRE goal is finished
-			if _is_goal_complete(goal_id):
-				goals_to_complete.append(goal_id)
+		if goal_data.logic_type == 	GoalData.LogicType.PASSIVE:
+			if progress.has(action):
+				progress[action] += amount
 				
+				# Find the target value for this specific action
+				var target = 0
+				for req in goal_data.requirements:
+					if req.action_tag == action:
+						target = req.target_value
+						break
+						
+				# Tell the UI to update this specific bar
+				goal_progress_updated.emit(goal_id, action, progress[action], target)
+				
+				# Check if the ENTIRE goal is finished
+				if _is_goal_complete(goal_id):
+					goals_to_complete.append(goal_id)
+					
 	for finished_goal_id in goals_to_complete:
 		_finish_and_remove_goal(finished_goal_id)
+
+func on_graph_changed(start, end) -> void:
+	print("TEST ON GRAPH CHANGE INVESTOR")
+	# Get Network state of connection
+	for goal_id in active_goals.keys():
+		#var goal_data = goal_definitions[goal_id]
+		var progress = active_goals[goal_id]
+		#if goal_id.logic_type == GoalData.LogicType.ACTIVE:
+		#	var target = 0
+		#	for req in goal_data.requirements:
+		#			target = req.target_value
+		#			break
+		#	pass
+		
+
+
+
 # Helper function to check if all requirements hit their target
 func _is_goal_complete(goal_id: String) -> bool:
 	var goal_data = goal_definitions[goal_id]
@@ -130,6 +153,7 @@ func _finish_and_remove_goal(goal_id: String) -> void:
 		
 		# Send the newly scaled clone back to the Store!
 		unlock_goal_for_store(completed_goal_data)
+		SignalBus.update_slot_flow.disconnect(on_graph_changed)
 		
 		print("Repeatable Goal scaled and returned to store! ", goal_id)
 	else:
@@ -139,5 +163,6 @@ func _finish_and_remove_goal(goal_id: String) -> void:
 		# Erase it from the backend dictionaries
 		active_goals.erase(goal_id)
 		goal_definitions.erase(goal_id)
+		SignalBus.update_slot_flow.disconnect(on_graph_changed)
 		print("Goal Completed and Removed: ", goal_id)
 	
