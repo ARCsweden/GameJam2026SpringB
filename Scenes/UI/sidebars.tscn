@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://c27bt5ygaamp0" path="res://Resources/Object_Detection.tres" id="9_h0ar1"]
 [ext_resource type="Resource" uid="uid://c0p8lydruxjxk" path="res://Resources/Arm_Simple.tres" id="10_i7w1n"]
 [ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="10_sr12i"]
+[ext_resource type="Resource" uid="uid://dlalqb133e4vq" path="res://Resources/Compute.tres" id="11_h0ar1"]
 [ext_resource type="Script" uid="uid://bvri523cqqbw4" path="res://Scripts/GoalsStoreGrid.gd" id="17_xo0gq"]
 [ext_resource type="PackedScene" uid="uid://c8q18rwxj14nt" path="res://Scenes/Game/goal_store_item_ui.tscn" id="18_lu8f2"]
 
@@ -281,7 +282,7 @@ layout_mode = 2
 layout_mode = 2
 script = ExtResource("8_43ur1")
 store_item_scene = ExtResource("9_6ptox")
-available_modules = Array[ExtResource("10_sr12i")]([ExtResource("5_et7fu"), ExtResource("6_xo0gq"), ExtResource("7_lu8f2"), ExtResource("9_h0ar1"), ExtResource("10_i7w1n"), ExtResource("5_tko4l"), ExtResource("3_43ur1"), ExtResource("5_sr12i"), ExtResource("3_43ur1"), ExtResource("3_43ur1")])
+available_modules = Array[ExtResource("10_sr12i")]([ExtResource("5_et7fu"), ExtResource("6_xo0gq"), ExtResource("7_lu8f2"), ExtResource("9_h0ar1"), ExtResource("10_i7w1n"), ExtResource("5_tko4l"), ExtResource("11_h0ar1"), ExtResource("5_sr12i"), ExtResource("3_43ur1"), ExtResource("3_43ur1")])
 
 [node name="Goal" type="MarginContainer" parent="." unique_id=1347628786]
 visible = false
