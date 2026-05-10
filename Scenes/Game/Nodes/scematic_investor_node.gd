@@ -28,6 +28,7 @@ func _on_progress_updated(goal_id: String, current: int, target: int) -> void:
 func _on_goal_completed(goal_id: String) -> void:
 	if goal_id == my_goal_id:
 		# The goal is done! Play a sound/particle here if you want, then delete it.
+		SignalBus.spawn_goal_done_effect.emit(global_position + get_center())
 		print("Goal Node Destroyed: ", goal_id)
 		# Remove active connections
 		for c in slots.get_children():

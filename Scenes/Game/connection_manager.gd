@@ -72,10 +72,11 @@ func _is_conn_valid(n1: NodeSlot, n2: NodeSlot) -> bool:
 	return n1.type == n2.type and n1.dir != n2.dir and n1.connection == null and n2.connection == null
 
 func _on_connection_removed(conn: Connection) -> void:
-	if conn.line:
-		remove_child(conn.line)
-	connections.erase(conn)
-	conn.remove()
+	if conn:
+		if conn.line:
+			remove_child(conn.line)
+		connections.erase(conn)
+		conn.remove()
 
 func _on_slot_entered(node: NodeSlot) -> void:
 	if line:
