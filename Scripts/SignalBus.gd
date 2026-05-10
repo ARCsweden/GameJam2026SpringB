@@ -10,6 +10,8 @@ signal slot_exited(slot: NodeSlot)
 signal node_entered(slot: SchematicsNode)
 signal node_exited(slot: SchematicsNode)
 
+signal show_goal_story(goal: GoalData)
+
 signal connection_removed(conn: Connection)
 signal spawn_goal_done_effect(pos: Vector2)
 signal update_slot_flow(start_slot: NodeSlot, end_slot: NodeSlot)
