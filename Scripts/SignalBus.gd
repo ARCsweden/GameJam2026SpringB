@@ -15,3 +15,5 @@ signal spawn_goal_done_effect(pos: Vector2)
 signal update_slot_flow(start_slot: NodeSlot, end_slot: NodeSlot)
 signal spawn_from_store(module: ModuleData)
 signal spawn_goal_from_store(module: GoalData)
+
+signal audio_sfx_requested(sound_name: String)

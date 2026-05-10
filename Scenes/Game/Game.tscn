@@ -4,12 +4,17 @@
 [ext_resource type="Resource" uid="uid://rcxdu7ar0peg" path="res://Resources/Goal1.tres" id="2_3586x"]
 [ext_resource type="PackedScene" uid="uid://c07fpo7nlye7n" path="res://Scenes/Game/GUI.tscn" id="2_gwu2e"]
 [ext_resource type="Resource" uid="uid://bbpn4wl0wonps" path="res://Resources/Goal2.tres" id="3_10ki7"]
+[ext_resource type="PackedScene" uid="uid://defgxkassrmn7" path="res://Scenes/Audio/Audio_Manager.tscn" id="4_y3kpf"]
+[ext_resource type="Script" uid="uid://rfkqi5m50oom" path="res://Scripts/AudioManager.gd" id="5_3k6gv"]
 
 [node name="Game" type="Node2D" unique_id=235563203]
 
 [node name="Schematic" parent="." unique_id=1559803732 instance=ExtResource("1_iukft")]
 cpu_goal = ExtResource("2_3586x")
 gpu_goal = ExtResource("3_10ki7")
+
+[node name="AudioManager" parent="." unique_id=848974002 instance=ExtResource("4_y3kpf")]
+script = ExtResource("5_3k6gv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740658751]
 
