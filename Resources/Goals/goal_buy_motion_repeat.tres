@@ -12,7 +12,6 @@ goal_id = "buy_motion_repeat"
 description = "Cyberdyne Systems"
 reward_amount = 100
 is_repeatable = true
-target_multiplier = 1.5
 reward_multiplier = 1.8
 icon = ExtResource("1_g8b5h")
 packed_scene = ExtResource("3_g8b5h")

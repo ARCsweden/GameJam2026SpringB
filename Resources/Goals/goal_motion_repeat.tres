@@ -12,7 +12,6 @@ goal_id = "motion_repeat"
 description = "Keeping the Wheels Turning"
 reward_amount = 500
 is_repeatable = true
-target_multiplier = 2.0
 reward_multiplier = 2.2
 icon = ExtResource("1_qty45")
 packed_scene = ExtResource("3_d20d2")
