@@ -5,14 +5,17 @@ extends Control
 func _ready() -> void:
 	pass
 	# Listen for when goals activate (this handles chains automatically!)
-	GoalManager.goal_activated.connect(_on_goal_activated)
+	#GoalManager.goal_activated.connect(_on_goal_activated)
+	SignalBus.goal_unlocked.connect(_on_goal_unlocked)
 	
 	# Race-condition check: Spawn any goals that activated BEFORE this UI loaded
 	for goal_id in GoalManager.active_goals.keys():
 		var goal_data = GoalManager.goal_definitions[goal_id]
 		_spawn_store_button(goal_data)
 
-func _on_goal_activated(goal: GoalData) -> void:
+#func _on_goal_activated(goal: GoalData) -> void:
+#	_spawn_store_button(goal)
+func _on_goal_unlocked(goal: GoalData) -> void:
 	_spawn_store_button(goal)
 
 func _spawn_store_button(goal: GoalData) -> void:
