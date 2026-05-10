@@ -3,14 +3,15 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_fswo7"]
 [ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="1_smwok"]
 [ext_resource type="PackedScene" uid="uid://bap75ypl22mi8" path="res://Scenes/Game/Nodes/investor_compute.tscn" id="3_uq566"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_u0ltf"]
+[ext_resource type="Resource" uid="uid://bsdshgngocccn" path="res://Resources/req_vision.tres" id="5_1pph0"]
 
 [resource]
 script = ExtResource("1_fswo7")
 goal_id = "buy_gpu"
 description = "Buy GPUs"
 reward_amount = 20000
-target_value = 3
-action_tag = "gpu"
 icon = ExtResource("1_smwok")
 packed_scene = ExtResource("3_uq566")
+requirements = Array[ExtResource("4_u0ltf")]([ExtResource("5_1pph0")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"

@@ -1,5 +1,6 @@
 extends Node2D
 
+var label: Label = null
 var line : Line2D = null
 var start : NodeSlot = null
 var end : NodeSlot = null
@@ -24,6 +25,9 @@ func _process(_delta: float) -> void:
 			line.points[1] = end.global_position
 		else:
 			line.points[1] = get_global_mouse_position()
+	# Update position of label
+	if label:
+		label.set_position(get_global_mouse_position())
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed == false:
@@ -35,6 +39,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					connection.line = line
 					connection.start = start
 					connection.end = end
+					connection.label = label
 					start.connection = connection
 					end.connection = connection
 					connections.append(connection)
@@ -43,12 +48,21 @@ func _unhandled_input(event: InputEvent) -> void:
 				else:
 					remove_child(line)
 					line.queue_free()
+					remove_child(label)
+					label.queue_free()
 				line = null
+				label = null
 				start = end
 				end = null
 			elif start: # Create new connection
+				
+				# Create new label
+				label = Label.new()
+				#label.text = str(start.amount_arr)
+				
 				# Create line
 				line = Line2D.new()
+				
 				# Remove existing line
 				if start.connection:
 					# Make the other side of the existing connection the start
@@ -70,6 +84,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					line.add_point(start.global_position)
 					line.add_point(get_global_mouse_position())
 				add_child(line)
+				add_child(label)
 
 func _is_conn_valid(n1: NodeSlot, n2: NodeSlot) -> bool:
 	return n1.type == n2.type and n1.dir != n2.dir and n1.connection == null and n2.connection == null
@@ -78,6 +93,8 @@ func _on_connection_removed(conn: Connection) -> void:
 	if conn:
 		if conn.line:
 			remove_child(conn.line)
+		if conn.label:
+			remove_child(conn.label)
 		connections.erase(conn)
 		conn.remove()
 

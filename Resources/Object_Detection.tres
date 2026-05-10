@@ -9,5 +9,5 @@ script = ExtResource("3_3g4s7")
 module_name = "Object_Detection"
 cost = 50
 packed_scene = ExtResource("2_1b58m")
-action_tag = "object_detection"
+action_tag = "vision"
 icon = ExtResource("1_r7ena")
