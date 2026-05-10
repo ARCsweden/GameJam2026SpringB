@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ks7glnpo1y2b"]
 
 [ext_resource type="Script" uid="uid://tjwn2ysgrd4p" path="res://Scenes/UI/mission_story_popup.gd" id="1_g2b45"]
+[ext_resource type="Resource" uid="uid://xtfloqlj6r2m" path="res://Resources/Goals/goal_motion_repeat.tres" id="2_e2070"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2b45"]
 bg_color = Color(0.47468156, 0.63038224, 0.67402166, 1)
@@ -13,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g2b45")
+goal_data = ExtResource("2_e2070")
 
 [node name="Panel" type="Panel" parent="." unique_id=799407977]
 custom_minimum_size = Vector2(600, 600)
@@ -83,10 +85,11 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer" unique_id=2060162894]
+[node name="VContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer" unique_id=2060162894]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1932711409]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VContainer" unique_id=1932711409]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 30
@@ -94,42 +97,32 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="StoryText" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer" unique_id=423825965]
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VContainer/MarginContainer" unique_id=253384421]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="StoryText" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VContainer/MarginContainer/ScrollContainer" unique_id=423825965]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 fit_content = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1446745078]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VContainer" unique_id=1446745078]
 layout_mode = 2
 
-[node name="Reward" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1516900863]
+[node name="Reward" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VContainer/HBoxContainer" unique_id=1516900863]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 text = "Reward"
 horizontal_alignment = 2
 
-[node name="RewardLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1536028733]
+[node name="RewardLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VContainer/HBoxContainer" unique_id=1536028733]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "10000"
-horizontal_alignment = 1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1238032583]
-layout_mode = 2
-
-[node name="Target" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1268034336]
-custom_minimum_size = Vector2(350, 0)
-layout_mode = 2
-text = "Target"
-horizontal_alignment = 2
-
-[node name="TargetLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=645587519]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-text = "3"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/TitleBar/ExitButton" to="." method="_on_exit_button_pressed"]

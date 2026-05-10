@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://0l8oqej2lhbb"]
+
+[ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_6jl56"]
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_fiyra"]
+[ext_resource type="PackedScene" uid="uid://dmh0ovt7x0b1w" path="res://Scenes/Game/Nodes/investor_vision.tscn" id="3_3kwa5"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_qp511"]
+
+[resource]
+script = ExtResource("1_fiyra")
+goal_id = "vision_repeat"
+description = "The All-Seeing Eye"
+reward_amount = 1000
+is_repeatable = true
+target_multiplier = 1.1
+reward_multiplier = 1.1
+icon = ExtResource("1_6jl56")
+packed_scene = ExtResource("3_3kwa5")
+goal_text = "A short woman in a business suit stares at you from behind her spectacles. \"You understand everything in the contract then?\"
+
+You peer down at the piles of papers stacked on your desk, all of it written in near-incomprehensible legalese such as only a dedicated government bureaucracy could produce. Chancing it, you look at her uncertainly. \"You want... large amounts of vision data?\"
+
+\"That's the long and short of it. Feed us everything you have, and you will be duly rewarded.\" She gives you a steely look, adjusting her glasses. \"And no, you do not have clearance to know what we are going to do with it. We will pay in increments as you produce data flows for us.\"
+
+The deal from the surveilance state looms on your desk."
+logic_type = 0
+metadata/_custom_type_script = "uid://cmyshpwolbips"

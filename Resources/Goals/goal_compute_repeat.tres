@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://dwoaf8rgo1ncm"]
+
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="1_igafa"]
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_4dicv"]
+[ext_resource type="PackedScene" uid="uid://bap75ypl22mi8" path="res://Scenes/Game/Nodes/investor_compute.tscn" id="3_4dicv"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_ck8bq"]
+
+[resource]
+script = ExtResource("2_4dicv")
+goal_id = "compute_repeat"
+description = "The Children Yearn for the Mines"
+reward_amount = 10000
+is_repeatable = true
+target_multiplier = 1.1
+reward_multiplier = 1.1
+icon = ExtResource("1_igafa")
+packed_scene = ExtResource("3_4dicv")
+goal_text = "Your customer looks to be about eight years old, with a concentrated look on her little face. \"I dunno if you can do it.\" She proclaims skeptically. \"Lemonade Inc. has gotten waaaay high requirements since we branched into crypto. We need all yer compute.\" Planting her hands on her hips, she stands firm.
+
+\"Mining ain't for the faint of heart. It's a dog eat dog world out there. Gonna need some powerful gear to live up to what we need.\" She brightens. \"If you manage, we'll throw in a complimentary lemonade along with the reward. Deal?\""
+logic_type = 0
+metadata/_custom_type_script = "uid://cmyshpwolbips"

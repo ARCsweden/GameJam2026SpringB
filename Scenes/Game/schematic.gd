@@ -8,11 +8,18 @@ var dragging : bool = false
 
 @export var cpu_goal: GoalData
 @export var gpu_goal: GoalData
+#@export var comp_goal: GoalData
 
 func _ready() -> void:
 	EconomyManager.initialize_game(Constants.STARTING_MONEY)
-	GoalManager.call_deferred("activate_single_goal",cpu_goal)
-	GoalManager.call_deferred("activate_single_goal",gpu_goal)
+	#GoalManager.call_deferred("activate_single_goal",cpu_goal)
+	#GoalManager.call_deferred("activate_single_goal",gpu_goal)
+	GoalManager.call_deferred("unlock_goal_for_store",cpu_goal)
+	GoalManager.call_deferred("unlock_goal_for_store",gpu_goal)
+	#GoalManager.call_deferred("unlock_goal_for_store",comp_goal)
+	#GoalManager.unlock_goal_for_store(cpu_goal)
+	#GoalManager.unlock_goal_for_store(gpu_goal)
+	
 
 	SignalBus.node_entered.connect(_on_node_entered)
 	SignalBus.node_exited.connect(_on_node_exited)
@@ -42,6 +49,7 @@ func _on_spawn_goal_from_store(goal: GoalData) -> void:
 	# 4. Hijack the master node variable!
 	node = new_goal_node
 	dragging = true
+	GoalManager.activate_single_goal(goal)
 	
 # --- Spawn the Regular Node ---
 func _on_spawn_from_store(module: ModuleData) -> void:

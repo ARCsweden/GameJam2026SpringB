@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="GoalData" format=3 uid="uid://dxjgwcv3i7hp0"]
+
+[ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_41q5f"]
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_6ulp2"]
+[ext_resource type="PackedScene" uid="uid://darq3a7grvg6n" path="res://Scenes/Game/Nodes/investor_passive.tscn" id="3_41q5f"]
+[ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_0ifgg"]
+
+[resource]
+script = ExtResource("2_6ulp2")
+goal_id = "buy_power_repeat"
+description = "The Biggest Powerbank in the World"
+is_repeatable = true
+target_multiplier = 1.1
+reward_multiplier = 1.1
+icon = ExtResource("1_41q5f")
+packed_scene = ExtResource("3_41q5f")
+goal_text = "\"I'm Mr. Guy Herrman, and I run an investment fund for developing powerbanks.\" The investor is a tall and thin, with a pointed face. With his black and white striped suit and strange pointy haircut, he looks like a walking pencil. \"We intend to make the world's biggest powerbank. Ever. We are going for the record on this one.\" Guy sounds very proud about this.
+
+\"Where others focus on portability and efficiency, we are solely interested in the one thing that matters: capacity. Prove that your machine hall can provide what we need, and we will keep investing in you to further your efforts. You can never have enough power!\""
+metadata/_custom_type_script = "uid://cmyshpwolbips"

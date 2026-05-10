@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://da1mgvj4p2ysg"]
+
+[sub_resource type="GDScript" id="GDScript_rltfo"]
+script/source = "extends VBoxContainer
+class_name GoalItemUI
+
+@onready var label: Label = $Label
+@onready var progress_bar: ProgressBar = $ProgressBar
+
+var base_description: String = \"\"
+
+# Called once when the goal is first activated
+func setup(goal: GoalData) -> void:
+	print(\"SETUP GOALS TO XX\")
+	base_description = goal.description
+	#progress_bar.max_value = goal.target_value
+	#update_progress(0, goal.target_value)
+
+# Called every time progress is made
+func update_progress(current: int, target: int) -> void:
+	#progress_bar.max_value = target
+	#progress_bar.value = current
+	# Using Godot's string formatting to make it look like: \"Buy CPU (1/2)\"
+	label.text = \"%s (%d/%d)\" % [base_description, current, target]
+"
+
+[node name="GoalItemUi" type="VBoxContainer" unique_id=93403026]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_rltfo")
+
+[node name="Label" type="Label" parent="." unique_id=770857475]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1797640829]
+layout_mode = 2
+show_percentage = false
