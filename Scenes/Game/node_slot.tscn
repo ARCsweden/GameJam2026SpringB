@@ -4,11 +4,21 @@
 [ext_resource type="Script" uid="uid://dddk585ujlkxj" path="res://Scenes/Game/node_slot.gd" id="1_weota"]
 [ext_resource type="Texture2D" uid="uid://c351to8o6x2le" path="res://Assets/Art/activation.png" id="2_2vx3h"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2vx3h"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_gg472"]
 radius = 16.0
 
 [node name="NodeSlot" type="Node2D" unique_id=435795435]
 script = ExtResource("1_weota")
+
+[node name="DebugLabel" type="Label" parent="." unique_id=468670895]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_2vx3h")
 
 [node name="ActivationSprite" type="Sprite2D" parent="." unique_id=1425754640]
 visible = false
