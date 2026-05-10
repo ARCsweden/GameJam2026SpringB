@@ -4,6 +4,14 @@
 [ext_resource type="Resource" uid="uid://rcxdu7ar0peg" path="res://Resources/Goal1.tres" id="2_3586x"]
 [ext_resource type="PackedScene" uid="uid://c07fpo7nlye7n" path="res://Scenes/Game/GUI.tscn" id="2_gwu2e"]
 [ext_resource type="Resource" uid="uid://bbpn4wl0wonps" path="res://Resources/Goal2.tres" id="3_10ki7"]
+[ext_resource type="Resource" uid="uid://blotwb6fft0u7" path="res://Resources/Goals/goal_buy_compute_repeat.tres" id="4_y3kpf"]
+[ext_resource type="Resource" uid="uid://bqpj78wu15i4a" path="res://Resources/Goals/goal_buy_motion_repeat.tres" id="5_3k6gv"]
+[ext_resource type="Resource" uid="uid://dxjgwcv3i7hp0" path="res://Resources/Goals/goal_buy_power_repeat.tres" id="6_gvja8"]
+[ext_resource type="Resource" uid="uid://b0td447lf2q4y" path="res://Resources/Goals/goal_buy_vision_repeat.tres" id="7_m1o7v"]
+[ext_resource type="Resource" uid="uid://dwoaf8rgo1ncm" path="res://Resources/Goals/goal_compute_repeat.tres" id="8_ti1oi"]
+[ext_resource type="Resource" uid="uid://xtfloqlj6r2m" path="res://Resources/Goals/goal_motion_repeat.tres" id="9_edkrd"]
+[ext_resource type="Resource" uid="uid://c7dkpvwvghu28" path="res://Resources/Goals/goal_power_repeat.tres" id="10_bsqcq"]
+[ext_resource type="Resource" uid="uid://0l8oqej2lhbb" path="res://Resources/Goals/goal_vision_repeat.tres" id="11_jf0ra"]
 [ext_resource type="PackedScene" uid="uid://defgxkassrmn7" path="res://Scenes/Audio/Audio_Manager.tscn" id="4_y3kpf"]
 [ext_resource type="Script" uid="uid://rfkqi5m50oom" path="res://Scripts/AudioManager.gd" id="5_3k6gv"]
 
@@ -12,6 +20,14 @@
 [node name="Schematic" parent="." unique_id=1559803732 instance=ExtResource("1_iukft")]
 cpu_goal = ExtResource("2_3586x")
 gpu_goal = ExtResource("3_10ki7")
+buy_compute_repeat = ExtResource("4_y3kpf")
+buy_motion_repeat = ExtResource("5_3k6gv")
+buy_power_repeat = ExtResource("6_gvja8")
+buy_vision_repeat = ExtResource("7_m1o7v")
+compute_repeat = ExtResource("8_ti1oi")
+motion_repeat = ExtResource("9_edkrd")
+power_repeat = ExtResource("10_bsqcq")
+vision_repeat = ExtResource("11_jf0ra")
 
 [node name="AudioManager" parent="." unique_id=848974002 instance=ExtResource("4_y3kpf")]
 script = ExtResource("5_3k6gv")

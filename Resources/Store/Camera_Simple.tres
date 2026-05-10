@@ -9,5 +9,5 @@ script = ExtResource("3_l2xes")
 module_name = "Camera_Simple"
 cost = 200
 packed_scene = ExtResource("2_ma6wc")
-action_tag = "camera"
+action_tag = "VISION"
 icon = ExtResource("1_5vhja")

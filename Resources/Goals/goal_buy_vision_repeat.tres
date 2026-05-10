@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_tjfsk"]
 [ext_resource type="PackedScene" uid="uid://darq3a7grvg6n" path="res://Scenes/Game/Nodes/investor_passive.tscn" id="3_fj7hg"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_cw0i6"]
+[ext_resource type="Resource" uid="uid://2o1b6rg7adwf" path="res://Resources/Goals/Requirements/req_camera.tres" id="5_tjfsk"]
 
 [resource]
 script = ExtResource("2_tjfsk")
@@ -23,4 +24,5 @@ You scream internally. \"For the fifth time, I assure you Mr. Oberfelt, pictures
 Hurriedly stepping in before you have to live through another two hour tirade about bird watching and its apparent challenge, you interrupt him. \"Maybe a demonstration is in order? I can provide a lot of cameras, enough to cover every angle of even larger birds.\"
 
 \"Hrm, we shall see.\" Oberfelt still doesn't look fully convinced, but he does reach for his check book."
+requirements = Array[ExtResource("4_cw0i6")]([ExtResource("5_tjfsk")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"

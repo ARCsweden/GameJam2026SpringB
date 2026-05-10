@@ -1,13 +1,9 @@
-[gd_scene format=3 uid="uid://bihoieu86gsax"]
+[gd_scene format=3 uid="uid://csjdfpg7vlx45"]
 
 [ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_5otan"]
 [ext_resource type="Script" uid="uid://cqifnoensgc8o" path="res://Scenes/Game/Nodes/scematic_investor_node.gd" id="2_fxdsf"]
 [ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/node_slot.tscn" id="3_ve4qd"]
 [ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="4_5otan"]
-[ext_resource type="Script" uid="uid://y4yfi83dvdca" path="res://Scripts/GoalItemUI.gd" id="5_6r15c"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_51kxl"]
-font_size = 10
 
 [node name="InvestorCompute" unique_id=1799637696 instance=ExtResource("1_5otan")]
 script = ExtResource("2_fxdsf")
@@ -19,20 +15,8 @@ modulate = Color(0.34117648, 0.6509804, 0.21960784, 1)
 position = Vector2(23, 50)
 texture = ExtResource("4_5otan")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." index="3" unique_id=606330067]
-offset_left = 45.0
-offset_top = 29.0
+[node name="BarsContainer" type="VBoxContainer" parent="." index="3" unique_id=1404630179]
+offset_left = 44.0
+offset_top = 13.0
 offset_right = 115.0
-offset_bottom = 68.0
-script = ExtResource("5_6r15c")
-
-[node name="Label" type="Label" parent="VBoxContainer" index="0" unique_id=677681245]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 2
-label_settings = SubResource("LabelSettings_51kxl")
-autowrap_mode = 3
-
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" index="1" unique_id=251803453]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 2
-show_percentage = false
+offset_bottom = 84.0

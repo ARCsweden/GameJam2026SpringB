@@ -9,5 +9,5 @@ script = ExtResource("2_23vju")
 module_name = "Compute"
 cost = 200
 packed_scene = ExtResource("2_17gx7")
-action_tag = "compute"
+action_tag = "COMPUTE"
 icon = ExtResource("1_m7fxb")

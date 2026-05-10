@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="1_qty45"]
 [ext_resource type="PackedScene" uid="uid://bs4vg30lta46q" path="res://Scenes/Game/Nodes/investor_arm.tscn" id="3_d20d2"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_d20d2"]
+[ext_resource type="Resource" uid="uid://cywxah62c0k2o" path="res://Resources/Goals/Requirements/req_arm.tres" id="5_px5h4"]
 
 [resource]
 script = ExtResource("1_pruad")
@@ -29,4 +30,5 @@ Despite the substantial amount of money involved in the contract, morbid curiosi
 
 Håkan returns your blank look. \"How else am I going to keep the hamster wheels spinning?\""
 logic_type = 0
+requirements = Array[ExtResource("4_d20d2")]([ExtResource("5_px5h4")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"

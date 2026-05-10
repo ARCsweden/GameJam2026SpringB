@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_a3brp"]
 [ext_resource type="PackedScene" uid="uid://bihoieu86gsax" path="res://Scenes/Game/Nodes/investor_power.tscn" id="3_1cse8"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_mq80e"]
+[ext_resource type="Resource" uid="uid://dlu8g5oq1dgnv" path="res://Resources/Goals/Requirements/req_battery.tres" id="5_kio0h"]
 
 [resource]
 script = ExtResource("1_8e3k1")
@@ -24,4 +25,5 @@ Phinneas stares intently at you, as if to judge your position on this matter. Se
 \"For this, I need you to send all your spare power to me. It's the best use of it, trust me.\"
 "
 logic_type = 0
+requirements = Array[ExtResource("4_mq80e")]([ExtResource("5_kio0h")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"
