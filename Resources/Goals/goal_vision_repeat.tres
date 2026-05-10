@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_fiyra"]
 [ext_resource type="PackedScene" uid="uid://dmh0ovt7x0b1w" path="res://Scenes/Game/Nodes/investor_vision.tscn" id="3_3kwa5"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_qp511"]
+[ext_resource type="Resource" uid="uid://2o1b6rg7adwf" path="res://Resources/Goals/Requirements/req_camera.tres" id="5_qp511"]
 
 [resource]
 script = ExtResource("1_fiyra")
@@ -23,4 +24,5 @@ You peer down at the piles of papers stacked on your desk, all of it written in 
 
 The deal from the surveilance state looms on your desk."
 logic_type = 0
+requirements = Array[ExtResource("4_qp511")]([ExtResource("5_qp511")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"

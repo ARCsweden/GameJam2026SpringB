@@ -9,5 +9,5 @@ script = ExtResource("3_nog5v")
 module_name = "Battery_Simple"
 cost = 50
 packed_scene = ExtResource("2_r2ttp")
-action_tag = "battery"
+action_tag = "POWER"
 icon = ExtResource("1_teoel")

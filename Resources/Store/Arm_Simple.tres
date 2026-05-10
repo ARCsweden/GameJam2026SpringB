@@ -9,5 +9,5 @@ script = ExtResource("3_qf8px")
 module_name = "Arm_Simple"
 cost = 1000
 packed_scene = ExtResource("2_4hx6n")
-action_tag = "arm"
+action_tag = "MOTION"
 icon = ExtResource("1_44bfj")

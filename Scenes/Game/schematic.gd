@@ -8,14 +8,30 @@ var dragging : bool = false
 
 @export var cpu_goal: GoalData
 @export var gpu_goal: GoalData
-#@export var comp_goal: GoalData
+@export var buy_compute_repeat: GoalData
+@export var buy_motion_repeat: GoalData
+@export var buy_power_repeat: GoalData
+@export var buy_vision_repeat: GoalData
+@export var compute_repeat: GoalData
+@export var motion_repeat: GoalData
+@export var power_repeat: GoalData
+@export var vision_repeat: GoalData
+
 
 func _ready() -> void:
 	EconomyManager.initialize_game(Constants.STARTING_MONEY)
 	#GoalManager.call_deferred("activate_single_goal",cpu_goal)
 	#GoalManager.call_deferred("activate_single_goal",gpu_goal)
-	GoalManager.call_deferred("unlock_goal_for_store",cpu_goal)
-	GoalManager.call_deferred("unlock_goal_for_store",gpu_goal)
+	GoalManager.call_deferred("unlock_goal_for_store",buy_compute_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",buy_motion_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",buy_power_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",buy_vision_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",compute_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",motion_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",power_repeat)
+	GoalManager.call_deferred("unlock_goal_for_store",vision_repeat)
+	#GoalManager.call_deferred("unlock_goal_for_store",cpu_goal)
+	#GoalManager.call_deferred("unlock_goal_for_store",gpu_goal)
 	#GoalManager.call_deferred("unlock_goal_for_store",comp_goal)
 	#GoalManager.unlock_goal_for_store(cpu_goal)
 	#GoalManager.unlock_goal_for_store(gpu_goal)

@@ -384,7 +384,7 @@ layout_mode = 2
 size_flags_horizontal = 10
 
 [node name="ScrollContainer" type="ScrollContainer" parent="GoalStore" unique_id=1151201094]
-custom_minimum_size = Vector2(210, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 
 [node name="GoalStoreGrid" type="GridContainer" parent="GoalStore/ScrollContainer" unique_id=1345384772]

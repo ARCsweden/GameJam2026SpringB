@@ -9,5 +9,5 @@ script = ExtResource("3_6h5dg")
 module_name = "Battery_Super"
 cost = 280
 packed_scene = ExtResource("2_olb0w")
-action_tag = "battery_super"
+action_tag = "POWER"
 icon = ExtResource("1_ni546")

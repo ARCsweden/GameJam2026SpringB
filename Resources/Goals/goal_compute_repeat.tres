@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_4dicv"]
 [ext_resource type="PackedScene" uid="uid://bap75ypl22mi8" path="res://Scenes/Game/Nodes/investor_compute.tscn" id="3_4dicv"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_ck8bq"]
+[ext_resource type="Resource" uid="uid://bmofrqwlwjta7" path="res://Resources/Goals/Requirements/req_compute.tres" id="5_4dicv"]
 
 [resource]
 script = ExtResource("2_4dicv")
@@ -19,4 +20,5 @@ goal_text = "Your customer looks to be about eight years old, with a concentrate
 
 \"Mining ain't for the faint of heart. It's a dog eat dog world out there. Gonna need some powerful gear to live up to what we need.\" She brightens. \"If you manage, we'll throw in a complimentary lemonade along with the reward. Deal?\""
 logic_type = 0
+requirements = Array[ExtResource("4_ck8bq")]([ExtResource("5_4dicv")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"
