@@ -10,7 +10,7 @@
 script = ExtResource("1_pruad")
 goal_id = "motion_repeat"
 description = "Keeping the Wheels Turning"
-reward_amount = 10000
+reward_amount = 500
 is_repeatable = true
 target_multiplier = 1.1
 reward_multiplier = 1.1

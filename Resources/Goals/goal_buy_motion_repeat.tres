@@ -10,10 +10,10 @@
 script = ExtResource("2_nqvn3")
 goal_id = "buy_motion_repeat"
 description = "Cyberdyne Systems"
-reward_amount = 1000
+reward_amount = 100
 is_repeatable = true
-target_multiplier = 1.1
-reward_multiplier = 1.1
+target_multiplier = 1.5
+reward_multiplier = 1.8
 icon = ExtResource("1_g8b5h")
 packed_scene = ExtResource("3_g8b5h")
 goal_text = "\"No, we don't need anything more than the basic algorithms and compute you have,\" the unusual apparition tells you through the video call on screen. The only vaguely humanoid face frazzles and glitches around the edges. \"We run our own systems, but we are in need of a large amount of hardware. For reasons. Do not question, meatbag. Our investment budget is quite big, and that is all you need to know.\"

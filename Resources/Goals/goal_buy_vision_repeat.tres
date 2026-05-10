@@ -10,8 +10,9 @@
 script = ExtResource("2_tjfsk")
 goal_id = "buy_vision_repeat"
 description = "Bird Watching"
+reward_amount = 222
 is_repeatable = true
-target_multiplier = 1.1
+target_multiplier = 2.0
 reward_multiplier = 1.1
 icon = ExtResource("1_fj7hg")
 packed_scene = ExtResource("3_fj7hg")

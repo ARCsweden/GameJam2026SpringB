@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_8e3k1"]
 [ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_a3brp"]
-[ext_resource type="PackedScene" uid="uid://bihoieu86gsax" path="res://Scenes/Game/Nodes/investor_power.tscn" id="3_1cse8"]
+[ext_resource type="PackedScene" uid="uid://csjdfpg7vlx45" path="res://Scenes/Game/Nodes/investor_power.tscn" id="3_1cse8"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_mq80e"]
 [ext_resource type="Resource" uid="uid://dlu8g5oq1dgnv" path="res://Resources/Goals/Requirements/req_battery.tres" id="5_kio0h"]
 
@@ -12,8 +12,8 @@ goal_id = "power_repeat"
 description = "Restore the Sun"
 reward_amount = 100
 is_repeatable = true
-target_multiplier = 1.1
-reward_multiplier = 1.1
+target_multiplier = 2.0
+reward_multiplier = 1.4
 icon = ExtResource("1_a3brp")
 packed_scene = ExtResource("3_1cse8")
 goal_text = "The man that enters your office has a fevered look on his face, blurting out a \"We have no time!\" before eventually calming down enough to introduce himself and his request.

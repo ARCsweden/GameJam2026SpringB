@@ -10,10 +10,10 @@
 script = ExtResource("2_4dicv")
 goal_id = "compute_repeat"
 description = "The Children Yearn for the Mines"
-reward_amount = 10000
+reward_amount = 500
 is_repeatable = true
-target_multiplier = 1.1
-reward_multiplier = 1.1
+target_multiplier = 2.0
+reward_multiplier = 1.8
 icon = ExtResource("1_igafa")
 packed_scene = ExtResource("3_4dicv")
 goal_text = "Your customer looks to be about eight years old, with a concentrated look on her little face. \"I dunno if you can do it.\" She proclaims skeptically. \"Lemonade Inc. has gotten waaaay high requirements since we branched into crypto. We need all yer compute.\" Planting her hands on her hips, she stands firm.

@@ -10,9 +10,10 @@
 script = ExtResource("2_6ulp2")
 goal_id = "buy_power_repeat"
 description = "The Biggest Powerbank in the World"
+reward_amount = 100
 is_repeatable = true
-target_multiplier = 1.1
-reward_multiplier = 1.1
+target_multiplier = 1.5
+reward_multiplier = 1.4
 icon = ExtResource("1_41q5f")
 packed_scene = ExtResource("3_41q5f")
 goal_text = "\"I'm Mr. Guy Herrman, and I run an investment fund for developing powerbanks.\" The investor is a tall and thin, with a pointed face. With his black and white striped suit and strange pointy haircut, he looks like a walking pencil. \"We intend to make the world's biggest powerbank. Ever. We are going for the record on this one.\" Guy sounds very proud about this.
