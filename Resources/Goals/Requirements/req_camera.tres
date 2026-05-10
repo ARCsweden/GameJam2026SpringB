@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_eau2a")
-action_tag = "camera"
+action_tag = "VISION"
 description = "Camera"

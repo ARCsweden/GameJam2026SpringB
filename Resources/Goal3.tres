@@ -13,5 +13,6 @@ description = "Buy 5 Cpus"
 reward_amount = 1000000
 icon = ExtResource("1_cbafk")
 packed_scene = ExtResource("3_rvgag")
+logic_type = 0
 requirements = Array[ExtResource("4_lrmp1")]([ExtResource("5_l1clu")])
 metadata/_custom_type_script = "uid://cmyshpwolbips"

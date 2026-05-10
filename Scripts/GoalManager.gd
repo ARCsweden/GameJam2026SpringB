@@ -86,6 +86,7 @@ func trigger_action(action: String, amount: int = 1) -> void:
 		_finish_and_remove_goal(finished_goal_id)
 
 func on_graph_changed(start, end) -> void:
+	var goals_to_complete: Array[String] = []
 	# This function triggers on every graph change
 	if active_goals:
 		# Checks if any graph change affects an investor node
@@ -112,16 +113,52 @@ func on_graph_changed(start, end) -> void:
 				for i in ResourceTypes.RT.size():
 					total_arr[i] += s_i.amount_arr[i]
 			print(total_arr)
-		else:
-			return
 		
 		# Get Network state of connection
-		for goal_id in active_goals.keys():
-			var goal_data = goal_definitions[goal_id]
-			var progress = active_goals[goal_id]
-			if goal_data.logic_type == GoalData.LogicType.ACTIVE:
-				if investor_node.my_goal_id == goal_id:
-					pass
+			for goal_id in active_goals.keys():
+				var goal_data = goal_definitions[goal_id]
+				var progress = active_goals[goal_id]
+				if goal_data.logic_type == GoalData.LogicType.ACTIVE:
+					if investor_node.my_goal_id == goal_id:
+						
+						var is_fully_complete = true
+						
+						# 1. Loop through every requirement for this specific goal
+						for req in goal_data.requirements:
+							
+							# 2. Match the string tag (e.g., "COMPUTE") to the Enum index
+							# .to_upper() ensures it matches even if you typed "compute" in the inspector
+							var enum_string = req.action_tag.to_upper() 
+							
+							if ResourceTypes.RT.has(enum_string):
+								var resource_index = ResourceTypes.RT[enum_string]
+								
+								# 3. Get the actual amount currently flowing into the node
+								var current_amount = total_arr[resource_index]
+								
+								# 4. Save it in the progress dictionary
+								progress[req.action_tag] = current_amount
+								
+								# 5. Emit the signal! This is what physically moves the UI progress bars!
+								goal_progress_updated.emit(goal_id, req.action_tag, current_amount, req.target_value)
+								
+								# 6. Check if this specific requirement is lacking
+								if current_amount < req.target_value:
+									is_fully_complete = false
+							else:
+								print("ERROR: action_tag '", req.action_tag, "' does not exist in ResourceTypes.RT!")
+								is_fully_complete = false
+								
+						# 7. If the loop finishes and nothing was lacking, the goal is done!
+						if is_fully_complete:
+							goals_to_complete.append(goal_id)
+							
+			# 8. Safely process completions outside the dictionary loop
+			for finished_goal in goals_to_complete:
+				_finish_and_remove_goal(finished_goal)
+			#if goal_data.logic_type == GoalData.LogicType.ACTIVE:
+		#		if investor_node.my_goal_id == goal_id:
+			#		pass
 			#var goal_data = goal_definitions[goal_id]
 			
 		#if goal_id.logic_type == GoalData.LogicType.ACTIVE:
@@ -131,7 +168,8 @@ func on_graph_changed(start, end) -> void:
 		#			target = req.target_value
 		#			break
 		#	pass
-		
+		else:
+			return
 
 
 

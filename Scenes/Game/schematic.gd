@@ -8,6 +8,7 @@ var dragging : bool = false
 
 @export var cpu_goal: GoalData
 @export var gpu_goal: GoalData
+#@export var comp_goal: GoalData
 
 func _ready() -> void:
 	EconomyManager.initialize_game(Constants.STARTING_MONEY)
@@ -15,6 +16,7 @@ func _ready() -> void:
 	#GoalManager.call_deferred("activate_single_goal",gpu_goal)
 	GoalManager.call_deferred("unlock_goal_for_store",cpu_goal)
 	GoalManager.call_deferred("unlock_goal_for_store",gpu_goal)
+	#GoalManager.call_deferred("unlock_goal_for_store",comp_goal)
 	#GoalManager.unlock_goal_for_store(cpu_goal)
 	#GoalManager.unlock_goal_for_store(gpu_goal)
 	
