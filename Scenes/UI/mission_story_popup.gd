@@ -18,5 +18,10 @@ func set_goal(goal: GoalData) -> void:
 	target.text = str(goal.target_value)
 
 
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("cancel"):
+		queue_free()
+
+
 func _on_exit_button_pressed() -> void:
 	queue_free()

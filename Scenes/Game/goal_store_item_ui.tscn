@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://c8q18rwxj14nt"]
 
 [ext_resource type="Script" uid="uid://cp8o73rkv1t6v" path="res://Scenes/Game/GoalStoreItemUI.gd" id="1_ml7nu"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="2_da1ho"]
+[ext_resource type="Texture2D" uid="uid://cj1er6fry4wiq" path="res://Assets/Art/story.png" id="3_ua2sd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ps5tp"]
-font_size = 20
-
-[sub_resource type="LabelSettings" id="LabelSettings_um6xf"]
 font_size = 20
 
 [node name="GoalStoreItemUI" type="PanelContainer" unique_id=1783544407]
@@ -14,23 +13,38 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ml7nu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1510626441]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1612524994]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1510626441]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer" unique_id=237646383]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=237646383]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 label_settings = SubResource("LabelSettings_ps5tp")
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=173939847]
+[node name="Texture" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=173939847]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+texture = ExtResource("2_da1ho")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=646510233]
+[node name="StoryButton" type="Button" parent="MarginContainer" unique_id=1845789694]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
 size_flags_vertical = 8
-label_settings = SubResource("LabelSettings_um6xf")
-horizontal_alignment = 1
+icon = ExtResource("3_ua2sd")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/StoryButton" to="." method="_on_story_button_pressed"]
