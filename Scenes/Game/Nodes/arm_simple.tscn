@@ -32,6 +32,7 @@ offset_bottom = 47.0
 position = Vector2(106, 31)
 type = 3
 dir = 1
+powered_motion_amount = 1
 
 [node name="Sprite" parent="Slots/NodeSlot3" index="1" unique_id=883112050]
 texture = ExtResource("3_asx6s")

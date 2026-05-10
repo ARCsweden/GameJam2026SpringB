@@ -15,6 +15,8 @@ extends Node2D
 @export var unpowered_compute_amount = 0
 @export var unpowered_motion_amount = 0
 
+var unpowered_amount_arr = []
+var powered_amount_arr = []
 var amount_arr = []
 
 var connection : Connection = null
@@ -27,6 +29,21 @@ func _ready():
 	amount_arr[ResourceTypes.RT.VISION] = 0
 	amount_arr[ResourceTypes.RT.COMPUTE] = 0
 	amount_arr[ResourceTypes.RT.MOTION] = 0
+	
+	for a in ResourceTypes.RT.size():
+		powered_amount_arr.append(0)
+	powered_amount_arr[ResourceTypes.RT.POWER] = 0
+	powered_amount_arr[ResourceTypes.RT.VISION] = powered_vision_amount
+	powered_amount_arr[ResourceTypes.RT.COMPUTE] = powered_compute_amount
+	powered_amount_arr[ResourceTypes.RT.MOTION] = powered_motion_amount
+
+	for a in ResourceTypes.RT.size():
+		unpowered_amount_arr.append(0)
+	unpowered_amount_arr[ResourceTypes.RT.POWER] = 0
+	unpowered_amount_arr[ResourceTypes.RT.VISION] = unpowered_vision_amount
+	unpowered_amount_arr[ResourceTypes.RT.COMPUTE] = unpowered_compute_amount
+	unpowered_amount_arr[ResourceTypes.RT.MOTION] = unpowered_motion_amount
+	
 	
 func _process(delta: float) -> void:
 	$Label.text = "P: " + str(amount_arr[0]) + "\nV: " + str(amount_arr[1]) + "\nC: " + str(amount_arr[2]) + "\nM: " + str(amount_arr[3])
