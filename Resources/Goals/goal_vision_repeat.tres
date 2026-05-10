@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_fiyra"]
 [ext_resource type="PackedScene" uid="uid://dmh0ovt7x0b1w" path="res://Scenes/Game/Nodes/investor_vision.tscn" id="3_3kwa5"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_qp511"]
-[ext_resource type="Resource" uid="uid://d0sxcn2wvk8ya" path="res://Resources/req_compute.tres" id="5_r23as"]
 
 [resource]
 script = ExtResource("1_fiyra")

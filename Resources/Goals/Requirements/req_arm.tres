@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_53rbi")
-action_tag = "arm"
+action_tag = "MOTION"
 description = "Robot Arm"
