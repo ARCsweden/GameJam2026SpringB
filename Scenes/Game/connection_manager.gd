@@ -37,11 +37,11 @@ func _process(_delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed == false:
+	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if line:
+			if line and event.pressed == false:
 				_finish_connection()
-			elif start:
+			elif start and event.pressed:
 				_start_connection()
 
 
