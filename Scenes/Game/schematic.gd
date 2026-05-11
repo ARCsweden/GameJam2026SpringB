@@ -75,8 +75,7 @@ func _process(delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		# Because both modules and goals are assigned to "node", 
 		# this single block of code now flawlessly drags both of them!
-		if node:
-			dragging = true
+		if node and dragging:
 			node.set_position(get_global_mouse_position() - node.get_center())
 	else:
 		dragging = false
@@ -94,6 +93,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				camera.zoom = Vector2.ONE * Constants.ZOOM_LIMIT_MAX
 			if camera.zoom.x > Constants.ZOOM_LIMIT_MIN:
 				camera.zoom = Vector2.ONE * Constants.ZOOM_LIMIT_MIN
+			# Handle node drag
+			if node:
+				dragging = true
 
 	# Handle right-click panning
 	if event is InputEventMouseMotion:
