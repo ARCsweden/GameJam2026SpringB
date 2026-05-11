@@ -1,16 +1,27 @@
 [gd_scene format=3 uid="uid://kk50qp4e2lch"]
 
 [ext_resource type="Script" uid="uid://t8w8da7gera8" path="res://Scenes/Game/schematic.gd" id="1_3p7ui"]
+[ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_vyf6i"]
 [ext_resource type="Script" uid="uid://cv1fxeve2avql" path="res://Scenes/Game/connection_manager.gd" id="2_xn3cd"]
+[ext_resource type="Resource" uid="uid://8cjev45dfdgy" path="res://Resources/Goals/goal_secretary_1.tres" id="3_8dvip"]
 [ext_resource type="PackedScene" uid="uid://byqppitqlaym3" path="res://Scenes/Game/Nodes/battery_simple.tscn" id="3_xn3cd"]
+[ext_resource type="Resource" uid="uid://dxjgwcv3i7hp0" path="res://Resources/Goals/goal_buy_power_repeat.tres" id="4_a538f"]
 [ext_resource type="PackedScene" uid="uid://cak87gijsxlcr" path="res://Scenes/Game/Nodes/battery_super.tscn" id="4_hqwk4"]
 [ext_resource type="PackedScene" uid="uid://bopvl8m66kr2b" path="res://Scenes/Game/Nodes/camera_simple.tscn" id="5_bb6ld"]
+[ext_resource type="Resource" uid="uid://b0td447lf2q4y" path="res://Resources/Goals/goal_buy_vision_repeat.tres" id="5_k468j"]
+[ext_resource type="Resource" uid="uid://blotwb6fft0u7" path="res://Resources/Goals/goal_buy_compute_repeat.tres" id="6_04njj"]
 [ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="6_rs2g2"]
 [ext_resource type="Script" uid="uid://cgncr20ekrwfl" path="res://Scenes/Game/flow_manager.gd" id="7_bb6ld"]
+[ext_resource type="Resource" uid="uid://bqpj78wu15i4a" path="res://Resources/Goals/goal_buy_motion_repeat.tres" id="7_k1yn7"]
+[ext_resource type="Resource" uid="uid://c7dkpvwvghu28" path="res://Resources/Goals/goal_power_repeat.tres" id="8_gvkqi"]
 [ext_resource type="PackedScene" uid="uid://cx67oxm5oxbbb" path="res://Scenes/Game/Nodes/arm_simple.tscn" id="8_rs2g2"]
+[ext_resource type="Resource" uid="uid://0l8oqej2lhbb" path="res://Resources/Goals/goal_vision_repeat.tres" id="9_tgi41"]
+[ext_resource type="Resource" uid="uid://dwoaf8rgo1ncm" path="res://Resources/Goals/goal_compute_repeat.tres" id="10_nqbhm"]
+[ext_resource type="Resource" uid="uid://xtfloqlj6r2m" path="res://Resources/Goals/goal_motion_repeat.tres" id="11_y2p4h"]
 
 [node name="Schematic" type="Node2D" unique_id=1559803732]
 script = ExtResource("1_3p7ui")
+initial_goals = Array[ExtResource("2_vyf6i")]([ExtResource("3_8dvip"), ExtResource("4_a538f"), ExtResource("5_k468j"), ExtResource("6_04njj"), ExtResource("7_k1yn7"), ExtResource("8_gvkqi"), ExtResource("9_tgi41"), ExtResource("10_nqbhm"), ExtResource("11_y2p4h")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=734684311]
 
