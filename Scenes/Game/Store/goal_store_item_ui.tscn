@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8q18rwxj14nt"]
 
-[ext_resource type="Script" uid="uid://cp8o73rkv1t6v" path="res://Scenes/Game/GoalStoreItemUI.gd" id="1_ml7nu"]
+[ext_resource type="Script" uid="uid://cp8o73rkv1t6v" path="res://Scenes/Game/Store/GoalStoreItemUI.gd" id="1_ml7nu"]
 [ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="2_da1ho"]
 [ext_resource type="Texture2D" uid="uid://cj1er6fry4wiq" path="res://Assets/Art/story.png" id="3_ua2sd"]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://papeltj4fgxv"]
 
 [ext_resource type="Texture2D" uid="uid://dahr6hr820ouk" path="res://Assets/Art/power.png" id="1_gg472"]
-[ext_resource type="Script" uid="uid://dddk585ujlkxj" path="res://Scenes/Game/node_slot.gd" id="1_weota"]
+[ext_resource type="Script" uid="uid://dddk585ujlkxj" path="res://Scenes/Game/Nodes/node_slot.gd" id="1_weota"]
 [ext_resource type="Texture2D" uid="uid://c351to8o6x2le" path="res://Assets/Art/activation.png" id="2_2vx3h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2vx3h"]

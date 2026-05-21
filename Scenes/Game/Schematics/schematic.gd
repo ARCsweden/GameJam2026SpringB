@@ -21,7 +21,7 @@ func _ready() -> void:
 	SignalBus.spawn_goal_done_effect.connect(_on_spawn_goal_done_effect)
 
 func _on_spawn_goal_done_effect(pos: Vector2) -> void:
-	var goal_fx = preload("res://Scenes/Game/money_fx.tscn")
+	var goal_fx = preload("res://Scenes/Effects/money_fx.tscn")
 	var fx: Node2D = goal_fx.instantiate()
 	add_child(fx)
 	fx.global_position = pos

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccnuk2wqctkw6"]
 
 [ext_resource type="Texture2D" uid="uid://p1wpvwl2csap" path="res://Assets/Art/node.png" id="1_2gwpg"]
-[ext_resource type="Script" uid="uid://c0seprcog42nt" path="res://Scenes/Game/scematics_node.gd" id="1_kixod"]
+[ext_resource type="Script" uid="uid://c0seprcog42nt" path="res://Scenes/Game/Nodes/scematics_node.gd" id="1_kixod"]
 [ext_resource type="Texture2D" uid="uid://26t36bs5l4sr" path="res://Assets/Art/move_icon.png" id="3_ogetc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ogetc"]

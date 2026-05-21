@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://36wi4tl0cghm"]
 
-[ext_resource type="Script" uid="uid://dx2vsf4ctm4ti" path="res://Scripts/MoneyUI.gd" id="1_7xdl6"]
+[ext_resource type="Script" uid="uid://dx2vsf4ctm4ti" path="res://Scripts/GUI/MoneyUI.gd" id="1_7xdl6"]
 
 [node name="TopBarPanel" type="Panel" unique_id=240318811]
 custom_minimum_size = Vector2(100, 60)
