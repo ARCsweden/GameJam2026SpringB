@@ -1,6 +1,6 @@
 extends Control
 
-@onready var popup_scene : PackedScene = preload("res://Scenes/UI/mission_story_popup.tscn")
+@onready var popup_scene : PackedScene = preload("res://Scenes/UI/Story/mission_story_popup.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

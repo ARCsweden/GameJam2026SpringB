@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cr8pnipqwsbje"]
 
-[ext_resource type="Script" uid="uid://vyl5l8ejy41e" path="res://Scenes/UI/mission_story_popup_target.gd" id="1_nfjxe"]
+[ext_resource type="Script" uid="uid://vyl5l8ejy41e" path="res://Scenes/UI/Story/mission_story_popup_target.gd" id="1_nfjxe"]
 
 [node name="MissionStoryPopupTarget" type="HBoxContainer" unique_id=1389373123]
 script = ExtResource("1_nfjxe")

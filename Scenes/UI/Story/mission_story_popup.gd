@@ -7,7 +7,7 @@ extends Control
 @onready var reward : Label = %RewardLabel
 @onready var vbox : VBoxContainer = %VContainer
 
-@onready var target_scene : PackedScene = preload("res://Scenes/UI/mission_story_popup_target.tscn")
+@onready var target_scene : PackedScene = preload("res://Scenes/UI/Story/mission_story_popup_target.tscn")
 
 func _ready() -> void:
 	if goal_data:

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ks7glnpo1y2b"]
 
-[ext_resource type="Script" uid="uid://tjwn2ysgrd4p" path="res://Scenes/UI/mission_story_popup.gd" id="1_g2b45"]
+[ext_resource type="Script" uid="uid://tjwn2ysgrd4p" path="res://Scenes/UI/Story/mission_story_popup.gd" id="1_g2b45"]
 [ext_resource type="Resource" uid="uid://xtfloqlj6r2m" path="res://Resources/Goals/goal_motion_repeat.tres" id="2_e2070"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2b45"]

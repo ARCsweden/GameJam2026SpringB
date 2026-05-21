@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c07fpo7nlye7n"]
 
-[ext_resource type="Script" uid="uid://b7okeegesjtks" path="res://Scenes/Game/gui.gd" id="1_07wxn"]
+[ext_resource type="Script" uid="uid://b7okeegesjtks" path="res://Scenes/UI/gui.gd" id="1_07wxn"]
 [ext_resource type="PackedScene" uid="uid://dovg0n42rqrcv" path="res://Scenes/UI/sidebars.tscn" id="1_d2po1"]
 [ext_resource type="PackedScene" uid="uid://36wi4tl0cghm" path="res://Scenes/UI/top_bar_panel.tscn" id="2_px1ag"]
 

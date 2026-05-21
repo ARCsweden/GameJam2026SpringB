@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://darq3a7grvg6n"]
 
-[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/scematics_node.tscn" id="1_gms4v"]
+[ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/Nodes/scematics_node.tscn" id="1_gms4v"]
 [ext_resource type="Script" uid="uid://cqifnoensgc8o" path="res://Scenes/Game/Nodes/scematic_investor_node.gd" id="2_x0gx0"]
 
 [node name="InvestorArm" unique_id=1799637696 instance=ExtResource("1_gms4v")]
