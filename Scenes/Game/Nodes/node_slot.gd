@@ -48,7 +48,7 @@ func _ready():
 	
 	sprite.texture = texture
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$DebugLabel.text = "P: " + str(amount_arr[0]) + "\nV: " + str(amount_arr[1]) + "\nC: " + str(amount_arr[2]) + "\nM: " + str(amount_arr[3])
 
 func _on_slot_entered():

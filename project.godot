@@ -28,6 +28,10 @@ EconomyManager="*uid://idr0nthsuonq"
 GoalManager="*uid://mawq8hvpvfie"
 ResourceTypes="*uid://ct7hi2a06sqef"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [dotnet]
 
 project/assembly_name="HypeUp"

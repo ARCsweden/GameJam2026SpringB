@@ -7,19 +7,16 @@ func _ready() -> void:
 	SignalBus.disconnect_slot_flow.connect(_disconnect_slot_flow)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _disconnect_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):	
 	var input_slot: NodeSlot
-	var output_slot: NodeSlot
+	# TODO: Note, output_slot here is never used, so only one side of the flow is updated. Is this correct?
+	#var output_slot: NodeSlot
 	if start_slot.dir == ResourceTypes.DIR.IN:
 		input_slot = start_slot
-		output_slot = stop_slot
+		#output_slot = stop_slot
 	else:
 		input_slot = stop_slot
-		output_slot = start_slot
+		#output_slot = start_slot
 	
 	var total_arr = []
 	for a in ResourceTypes.RT.size():
