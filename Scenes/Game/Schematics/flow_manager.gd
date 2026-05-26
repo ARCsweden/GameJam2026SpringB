@@ -104,17 +104,6 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 	for a in ResourceTypes.RT.size():
 		total_arr.append(0)
 
-	# Special case, vision blocks have no resource inputs
-	# TODO: Is the if here needed? Kinda ugly.
-	if input_slot.type == ResourceTypes.RT.POWER:
-		if input_resource_slots == []:
-			for s_o in output_resource_slots:
-				s_o.amount_arr[ResourceTypes.RT.VISION] = 1
-				if s_o.connection != null:
-					# Emit signal to propagate the change
-					SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
-			return
-
 	# Counts up all inputs
 	for s_i in input_resource_slots:
 		# TODO: Note, better if these bus blocks were a type instead, holding the resources.

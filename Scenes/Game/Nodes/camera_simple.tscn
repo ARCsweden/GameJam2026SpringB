@@ -20,3 +20,4 @@ position = Vector2(76, 32)
 texture = ExtResource("3_cq2aq")
 type = 1
 dir = 1
+powered_vision_amount = 1
