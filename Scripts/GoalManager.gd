@@ -100,13 +100,13 @@ func on_graph_changed(start, end) -> void:
 			print(investor_node.slots)
 			
 			# Finds all input slots
-			var input_resource_slots = []
+			var input_resource_slots : Array[NodeSlot] = []
 			for c in investor_node.slots.get_children():
 				var ns : NodeSlot = c as NodeSlot
-				if ns.dir == ResourceTypes.DIR.IN and ns.type != ResourceTypes.RT.POWER:
+				if ns.dir == ResourceTypes.DIR.IN:
 					input_resource_slots.append(ns)
 			# Sums all inputs
-			var total_arr = []
+			var total_arr : Array[int] = []
 			for a in ResourceTypes.RT.size():
 				total_arr.append(0)
 			for s_i in input_resource_slots:

@@ -9,17 +9,17 @@ extends Node2D
 @export var type : ResourceTypes.RT
 @export var dir : ResourceTypes.DIR
 
-@export var base_power_amount = 0
-@export var powered_vision_amount = 0
-@export var powered_compute_amount = 0
-@export var powered_motion_amount = 0
-@export var unpowered_vision_amount = 0
-@export var unpowered_compute_amount = 0
-@export var unpowered_motion_amount = 0
+@export var base_power_amount : int = 0
+@export var powered_vision_amount : int = 0
+@export var powered_compute_amount : int = 0
+@export var powered_motion_amount : int = 0
+@export var unpowered_vision_amount : int = 0
+@export var unpowered_compute_amount : int = 0
+@export var unpowered_motion_amount : int = 0
 
-var unpowered_amount_arr = []
-var powered_amount_arr = []
-var amount_arr = []
+var unpowered_amount_arr : Array[int] = []
+var powered_amount_arr : Array[int] = []
+var amount_arr : Array[int] = []
 
 var connection : Connection = null
 var parent_node = null

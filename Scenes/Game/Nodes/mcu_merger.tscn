@@ -24,7 +24,6 @@ position = Vector2(108, 61)
 texture = ExtResource("3_caey2")
 type = 2
 dir = 1
-base_amount = 2
 
 [node name="NodeSlot4" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="3" unique_id=2266000 instance=ExtResource("2_m8he8")]
 position = Vector2(20, 48)

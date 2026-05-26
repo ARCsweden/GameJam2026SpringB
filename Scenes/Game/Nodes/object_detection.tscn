@@ -22,3 +22,4 @@ position = Vector2(108, 48)
 texture = ExtResource("4_spijq")
 type = 2
 dir = 1
+powered_compute_amount = 1
