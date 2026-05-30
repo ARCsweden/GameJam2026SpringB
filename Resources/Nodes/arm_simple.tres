@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://cy86eng2ww7v5"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_tecku"]
+[ext_resource type="Resource" uid="uid://cc5xqj37jn115" path="res://Resources/Nodes/Slots/power_in.tres" id="2_n3bps"]
+[ext_resource type="Resource" uid="uid://dxq13oq5nswyo" path="res://Resources/Nodes/Slots/compute_in.tres" id="3_n3bps"]
+[ext_resource type="Resource" uid="uid://cknlfewih7k7f" path="res://Resources/Nodes/Slots/motion_out.tres" id="4_ojixc"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="4_vt58u"]
+
+[resource]
+script = ExtResource("4_vt58u")
+node_name = "Simple Arm"
+left_slots = Array[ExtResource("1_tecku")]([ExtResource("3_n3bps")])
+right_slots = Array[ExtResource("1_tecku")]([ExtResource("4_ojixc")])
+bottom_slots = Array[ExtResource("1_tecku")]([ExtResource("2_n3bps"), ExtResource("2_n3bps")])
+size = Vector2i(164, 128)
+color = Color(0.66, 0.19800001, 0.19800001, 1)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

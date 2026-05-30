@@ -29,18 +29,15 @@ func _disconnect_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 	var input_resource_slots = []
 	var output_resource_slots =  []
 	var input_power_slots = []
-	var output_power_slots = []
 	for c in input_slot.parent_node.slots.get_children():
 		var ns : NodeSlot = c as NodeSlot
-		if ns.dir == ResourceTypes.DIR.IN and ns.type != ResourceTypes.RT.POWER:
-			input_resource_slots.append(ns)
-		elif ns.dir == ResourceTypes.DIR.OUT and ns.type != ResourceTypes.RT.POWER:
+		if ns.dir == ResourceTypes.DIR.IN:
+			if ns.type == ResourceTypes.RT.POWER:
+				input_power_slots.append(ns)
+			else:
+				input_resource_slots.append(ns)
+		elif ns.dir == ResourceTypes.DIR.OUT:
 			output_resource_slots.append(ns)
-			ns.amount_arr = zero_arr.duplicate(true)
-		elif ns.dir == ResourceTypes.DIR.IN and ns.type == ResourceTypes.RT.POWER:
-			input_power_slots.append(ns)
-		elif ns.dir == ResourceTypes.DIR.OUT and ns.type == ResourceTypes.RT.POWER:
-			output_power_slots.append(ns)
 			ns.amount_arr = zero_arr.duplicate(true)
 
 	for s_o in output_resource_slots:
@@ -67,31 +64,24 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 	input_slot.amount_arr = output_slot.amount_arr.duplicate(true)
 	# Investigate all NodeSlots of the SchematicsNode that is our Input.
 	var input_resource_slots : Array[NodeSlot] = []
-	var output_resource_slots : Array[NodeSlot] =  []
+	var output_resource_slots : Array[NodeSlot] = []
 	var input_power_slots : Array[NodeSlot] = []
-	var output_power_slots : Array[NodeSlot] = []
 	for c in input_slot.parent_node.slots.get_children():
 		var ns : NodeSlot = c as NodeSlot
 		# Sort the NodeSlots into their various types
-		if ns.type == ResourceTypes.RT.POWER:
-			if ns.dir == ResourceTypes.DIR.IN:
+		if ns.dir == ResourceTypes.DIR.IN:
+			if ns.type == ResourceTypes.RT.POWER:
 				input_power_slots.append(ns)
-			elif ns.dir == ResourceTypes.DIR.OUT:
-				output_power_slots.append(ns)
-		else:
-			if ns.dir == ResourceTypes.DIR.IN:
+			else:
 				input_resource_slots.append(ns)
-			elif ns.dir == ResourceTypes.DIR.OUT:
-				output_resource_slots.append(ns)
+		elif ns.dir == ResourceTypes.DIR.OUT:
+			output_resource_slots.append(ns)
 
 	# Check all power slots are powered
 	for p in input_power_slots:
 		# TODO: Could use if they are connected or not here instead?
 		if p.amount_arr[ResourceTypes.RT.POWER] == 0:
-			# Add in all unpowered amounts
 			for s_o in output_resource_slots:
-				for i in ResourceTypes.RT.size():
-					s_o.amount_arr[i] = s_o.unpowered_amount_arr[i]
 				if s_o.connection != null:
 					# Emit signal to propagate the change
 					SignalBus.update_slot_flow.emit(s_o.connection.start, s_o.connection.end)
@@ -106,7 +96,7 @@ func _update_slot_flow(start_slot: NodeSlot, stop_slot: NodeSlot):
 
 	# Counts up all inputs
 	for s_i in input_resource_slots:
-		# TODO: Note, better if these bus blocks were a type instead, holding the resources.
+		# TODO: Note, better if these bus blocks were a type instead, holding the resources?
 		for i in ResourceTypes.RT.size():
 			total_arr[i] += s_i.amount_arr[i]
 

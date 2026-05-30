@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://c5ijc8ay08a36"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_4pqtq"]
+[ext_resource type="Resource" uid="uid://cc5xqj37jn115" path="res://Resources/Nodes/Slots/power_in.tres" id="2_6dnqo"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="2_y1bwq"]
+[ext_resource type="Resource" uid="uid://dxq13oq5nswyo" path="res://Resources/Nodes/Slots/compute_in.tres" id="3_o61jo"]
+[ext_resource type="Resource" uid="uid://d0f1cwvkgygsg" path="res://Resources/Nodes/Slots/compute_merge.tres" id="4_8y5p4"]
+
+[resource]
+script = ExtResource("2_y1bwq")
+left_slots = Array[ExtResource("1_4pqtq")]([ExtResource("3_o61jo"), ExtResource("3_o61jo")])
+right_slots = Array[ExtResource("1_4pqtq")]([ExtResource("4_8y5p4")])
+bottom_slots = Array[ExtResource("1_4pqtq")]([ExtResource("2_6dnqo"), ExtResource("2_6dnqo")])
+size = Vector2i(160, 160)
+color = Color(0.7141666, 0.51, 1, 1)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

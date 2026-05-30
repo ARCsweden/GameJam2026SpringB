@@ -9,7 +9,7 @@ var my_goal_id: String = ""
 var progress_bars: Dictionary = {}
 var labels: Dictionary = {}
 
-func setup(goal: GoalData) -> void:
+func setup_goal(goal: GoalData) -> void:
 	my_goal_id = goal.goal_id
 	
 	# Generate UI for every requirement
@@ -49,6 +49,8 @@ func _on_progress_updated(goal_id: String, action_tag: String, current: int, tar
 					break
 					
 			labels[action_tag].text = desc + " (" + str(current) + "/" + str(target) + ")"
+
+
 func _on_goal_completed(goal_id: String) -> void:
 	if goal_id == my_goal_id:
 		# The goal is done! Play a sound/particle here if you want, then delete it.
@@ -59,15 +61,3 @@ func _on_goal_completed(goal_id: String) -> void:
 			var slot = c as NodeSlot
 			SignalBus.connection_removed.emit(slot.connection)
 		queue_free()
-
-# Add your get_center() function here if your drag logic requires it!
-func get_center() -> Vector2:
-	return Vector2.ONE * 16
-	
-
-func _on_area_2d_mouse_entered() -> void:
-	SignalBus.node_entered.emit(self)
-
-
-func _on_area_2d_mouse_exited() -> void:
-	SignalBus.node_exited.emit(self)

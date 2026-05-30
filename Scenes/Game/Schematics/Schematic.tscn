@@ -4,17 +4,12 @@
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_vyf6i"]
 [ext_resource type="Script" uid="uid://cv1fxeve2avql" path="res://Scenes/Game/Schematics/connection_manager.gd" id="2_xn3cd"]
 [ext_resource type="Resource" uid="uid://8cjev45dfdgy" path="res://Resources/Goals/goal_secretary_1.tres" id="3_8dvip"]
-[ext_resource type="PackedScene" uid="uid://byqppitqlaym3" path="res://Scenes/Game/Nodes/battery_simple.tscn" id="3_xn3cd"]
 [ext_resource type="Resource" uid="uid://dxjgwcv3i7hp0" path="res://Resources/Goals/goal_buy_power_repeat.tres" id="4_a538f"]
-[ext_resource type="PackedScene" uid="uid://cak87gijsxlcr" path="res://Scenes/Game/Nodes/battery_super.tscn" id="4_hqwk4"]
-[ext_resource type="PackedScene" uid="uid://bopvl8m66kr2b" path="res://Scenes/Game/Nodes/camera_simple.tscn" id="5_bb6ld"]
 [ext_resource type="Resource" uid="uid://b0td447lf2q4y" path="res://Resources/Goals/goal_buy_vision_repeat.tres" id="5_k468j"]
 [ext_resource type="Resource" uid="uid://blotwb6fft0u7" path="res://Resources/Goals/goal_buy_compute_repeat.tres" id="6_04njj"]
-[ext_resource type="PackedScene" uid="uid://cd2mf4640gwy6" path="res://Scenes/Game/Nodes/object_detection.tscn" id="6_rs2g2"]
 [ext_resource type="Script" uid="uid://cgncr20ekrwfl" path="res://Scenes/Game/Schematics/flow_manager.gd" id="7_bb6ld"]
 [ext_resource type="Resource" uid="uid://bqpj78wu15i4a" path="res://Resources/Goals/goal_buy_motion_repeat.tres" id="7_k1yn7"]
 [ext_resource type="Resource" uid="uid://c7dkpvwvghu28" path="res://Resources/Goals/goal_power_repeat.tres" id="8_gvkqi"]
-[ext_resource type="PackedScene" uid="uid://cx67oxm5oxbbb" path="res://Scenes/Game/Nodes/arm_simple.tscn" id="8_rs2g2"]
 [ext_resource type="Resource" uid="uid://0l8oqej2lhbb" path="res://Resources/Goals/goal_vision_repeat.tres" id="9_tgi41"]
 [ext_resource type="Resource" uid="uid://dwoaf8rgo1ncm" path="res://Resources/Goals/goal_compute_repeat.tres" id="10_nqbhm"]
 [ext_resource type="Resource" uid="uid://xtfloqlj6r2m" path="res://Resources/Goals/goal_motion_repeat.tres" id="11_y2p4h"]
@@ -28,20 +23,5 @@ initial_goals = Array[ExtResource("2_vyf6i")]([ExtResource("3_8dvip"), ExtResour
 [node name="ConnectionManager" type="Node2D" parent="." unique_id=138402269]
 script = ExtResource("2_xn3cd")
 
-[node name="ScematicsNode" parent="." unique_id=1799637696 instance=ExtResource("3_xn3cd")]
-position = Vector2(-180, 51)
-
-[node name="BatterySuper" parent="." unique_id=1389823244 instance=ExtResource("4_hqwk4")]
-position = Vector2(-58, 50)
-
-[node name="CameraSimple" parent="." unique_id=944194375 instance=ExtResource("5_bb6ld")]
-position = Vector2(-194, -103)
-
-[node name="ObjectDetection" parent="." unique_id=2018207026 instance=ExtResource("6_rs2g2")]
-position = Vector2(-39, -114)
-
 [node name="FlowManager" type="Node2D" parent="." unique_id=681621820]
 script = ExtResource("7_bb6ld")
-
-[node name="ScematicsNode2" parent="." unique_id=1585557815 instance=ExtResource("8_rs2g2")]
-position = Vector2(148, -53)
