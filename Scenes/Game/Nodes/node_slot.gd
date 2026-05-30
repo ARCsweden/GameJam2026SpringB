@@ -9,51 +9,31 @@ extends Node2D
 @export var type : ResourceTypes.RT
 @export var dir : ResourceTypes.DIR
 
-@export var base_power_amount : int = 0
-@export var powered_vision_amount : int = 0
-@export var powered_compute_amount : int = 0
-@export var powered_motion_amount : int = 0
-@export var unpowered_vision_amount : int = 0
-@export var unpowered_compute_amount : int = 0
-@export var unpowered_motion_amount : int = 0
-
-var unpowered_amount_arr : Array[int] = []
 var powered_amount_arr : Array[int] = []
 var amount_arr : Array[int] = []
 
 var connection : Connection = null
 var parent_node = null
 
-func _ready():
+
+func _init() -> void:
 	for a in ResourceTypes.RT.size():
 		amount_arr.append(0)
-	amount_arr[ResourceTypes.RT.POWER] = base_power_amount
-	amount_arr[ResourceTypes.RT.VISION] = 0
-	amount_arr[ResourceTypes.RT.COMPUTE] = 0
-	amount_arr[ResourceTypes.RT.MOTION] = 0
-	
-	for a in ResourceTypes.RT.size():
 		powered_amount_arr.append(0)
-	powered_amount_arr[ResourceTypes.RT.POWER] = 0
-	powered_amount_arr[ResourceTypes.RT.VISION] = powered_vision_amount
-	powered_amount_arr[ResourceTypes.RT.COMPUTE] = powered_compute_amount
-	powered_amount_arr[ResourceTypes.RT.MOTION] = powered_motion_amount
 
-	for a in ResourceTypes.RT.size():
-		unpowered_amount_arr.append(0)
-	unpowered_amount_arr[ResourceTypes.RT.POWER] = 0
-	unpowered_amount_arr[ResourceTypes.RT.VISION] = unpowered_vision_amount
-	unpowered_amount_arr[ResourceTypes.RT.COMPUTE] = unpowered_compute_amount
-	unpowered_amount_arr[ResourceTypes.RT.MOTION] = unpowered_motion_amount
-	
+
+func _ready():
 	sprite.texture = texture
-	
+
+
 func _process(_delta: float) -> void:
 	$DebugLabel.text = "P: " + str(amount_arr[0]) + "\nV: " + str(amount_arr[1]) + "\nC: " + str(amount_arr[2]) + "\nM: " + str(amount_arr[3])
+
 
 func _on_slot_entered():
 	SignalBus.slot_entered.emit(self)
 	activation_sprite.show()
+
 
 func _on_slot_exited():
 	SignalBus.slot_exited.emit(self)

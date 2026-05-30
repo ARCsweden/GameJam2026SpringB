@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://bxxlckwfamich"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_evuqn"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="2_lr3bm"]
+[ext_resource type="Resource" uid="uid://c1q07vqofgwgj" path="res://Resources/Nodes/Slots/power_out.tres" id="3_mpx1e"]
+
+[resource]
+script = ExtResource("2_lr3bm")
+node_name = "Super Battery"
+top_slots = Array[ExtResource("1_evuqn")]([ExtResource("3_mpx1e"), ExtResource("3_mpx1e"), ExtResource("3_mpx1e")])
+size = Vector2i(140, 64)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

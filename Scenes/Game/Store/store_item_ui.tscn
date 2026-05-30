@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnktsncfaa2e0"]
 
-[ext_resource type="Script" uid="uid://cfvcem4esi47i" path="res://Scripts/StoreItemUI.gd" id="1_0opp5"]
+[ext_resource type="Script" uid="uid://cfvcem4esi47i" path="res://Scripts/GUI/StoreItemUI.gd" id="1_0opp5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ps5tp"]
 font_size = 20

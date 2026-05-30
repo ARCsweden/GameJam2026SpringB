@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://c0p8lydruxjxk"]
 
 [ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="1_44bfj"]
-[ext_resource type="PackedScene" uid="uid://cx67oxm5oxbbb" path="res://Scenes/Game/Nodes/arm_simple.tscn" id="2_4hx6n"]
+[ext_resource type="Resource" uid="uid://cy86eng2ww7v5" path="res://Resources/Nodes/arm_simple.tres" id="2_qf8px"]
 [ext_resource type="Script" uid="uid://cxwn8yrjkyp3v" path="res://Scripts/ModuleData.gd" id="3_qf8px"]
 
 [resource]
 script = ExtResource("3_qf8px")
 module_name = "Arm_Simple"
 cost = 1000
-packed_scene = ExtResource("2_4hx6n")
+node_data = ExtResource("2_qf8px")
 action_tag = "MOTION"
 icon = ExtResource("1_44bfj")

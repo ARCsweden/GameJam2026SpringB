@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://pjglujup0n68"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_rcu50"]
+[ext_resource type="Resource" uid="uid://cc5xqj37jn115" path="res://Resources/Nodes/Slots/power_in.tres" id="2_g7oam"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="2_sej0m"]
+[ext_resource type="Resource" uid="uid://b26o6a7xl7874" path="res://Resources/Nodes/Slots/vision_in.tres" id="3_5p2u1"]
+[ext_resource type="Resource" uid="uid://ciaqtd5p6kcf6" path="res://Resources/Nodes/Slots/compute_out.tres" id="4_80mnq"]
+
+[resource]
+script = ExtResource("2_sej0m")
+node_name = "Object Detection"
+left_slots = Array[ExtResource("1_rcu50")]([ExtResource("3_5p2u1")])
+right_slots = Array[ExtResource("1_rcu50")]([ExtResource("4_80mnq")])
+bottom_slots = Array[ExtResource("1_rcu50")]([ExtResource("2_g7oam")])
+size = Vector2i(128, 96)
+color = Color(0.44326472, 0.938903, 0.7600858, 1)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

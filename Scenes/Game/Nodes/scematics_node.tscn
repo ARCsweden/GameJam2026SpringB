@@ -29,7 +29,5 @@ texture = ExtResource("3_ogetc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveIcon/Area2D" unique_id=2118973219]
 shape = SubResource("CircleShape2D_ogetc")
 
-[connection signal="mouse_entered" from="NinePatchRect" to="." method="_on_nine_patch_rect_mouse_entered"]
-[connection signal="mouse_exited" from="NinePatchRect" to="." method="_on_nine_patch_rect_mouse_exited"]
 [connection signal="mouse_entered" from="MoveIcon/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="MoveIcon/Area2D" to="." method="_on_area_2d_mouse_exited"]

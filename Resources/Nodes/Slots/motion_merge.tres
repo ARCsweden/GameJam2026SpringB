@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NodeSlotData" format=3 uid="uid://xr1nfdy4cot5"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_enrta"]
+[ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="2_8fmpc"]
+
+[resource]
+script = ExtResource("1_enrta")
+texture = ExtResource("2_8fmpc")
+direction = 1
+type = 3
+metadata/_custom_type_script = "uid://dhmohva7qvrqk"

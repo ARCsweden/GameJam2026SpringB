@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cx67oxm5oxbbb"]
+[gd_scene format=3 uid="uid://bt0g5kqt42ow5"]
 
 [ext_resource type="PackedScene" uid="uid://ccnuk2wqctkw6" path="res://Scenes/Game/Nodes/scematics_node.tscn" id="1_d7xf2"]
 [ext_resource type="PackedScene" uid="uid://papeltj4fgxv" path="res://Scenes/Game/Nodes/node_slot.tscn" id="2_84cqp"]
@@ -21,7 +21,6 @@ position = Vector2(106, 31)
 texture = ExtResource("3_asx6s")
 type = 3
 dir = 1
-powered_motion_amount = 1
 
 [node name="NodeSlot4" parent="Slots" parent_id_path=PackedInt32Array(1721700871) index="3" unique_id=539755019 instance=ExtResource("2_84cqp")]
 position = Vector2(23, 46)

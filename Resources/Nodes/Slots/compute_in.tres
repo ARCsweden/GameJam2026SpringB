@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NodeSlotData" format=3 uid="uid://dxq13oq5nswyo"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_g6ayd"]
+[ext_resource type="Texture2D" uid="uid://dl4e8na64nkak" path="res://Assets/Art/mcu.png" id="2_g6ayd"]
+
+[resource]
+script = ExtResource("1_g6ayd")
+texture = ExtResource("2_g6ayd")
+type = 2
+metadata/_custom_type_script = "uid://dhmohva7qvrqk"

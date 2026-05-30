@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var camera : Camera2D = $Camera2D
 
+var sn_scene: PackedScene = preload("res://Scenes/Game/Nodes/scematics_node.tscn")
+
 # We only need ONE variable now! It will hold either a regular module or a goal.
 var node : SchematicsNode = null 
 var dragging : bool = false
@@ -33,8 +35,8 @@ func _on_spawn_goal_from_store(goal: GoalData) -> void:
 	add_child(new_goal_node)
 	
 	# 2. Pass the data to the node
-	if new_goal_node.has_method("setup"):
-		new_goal_node.setup(goal)
+	if new_goal_node.has_method("setup_goal"):
+		new_goal_node.setup_goal(goal)
 	
 	# 3. Snap to mouse
 	new_goal_node.set_position(get_global_mouse_position() - new_goal_node.get_center())
@@ -46,8 +48,14 @@ func _on_spawn_goal_from_store(goal: GoalData) -> void:
 	
 # --- Spawn the Regular Node ---
 func _on_spawn_from_store(module: ModuleData) -> void:
-	var new_node = module.packed_scene.instantiate() as SchematicsNode
-	add_child(new_node)
+	var new_node : SchematicsNode
+	if module.node_data:
+		new_node = sn_scene.instantiate()
+		add_child(new_node)
+		new_node.setup_node(module.node_data)
+	else:
+		new_node = module.packed_scene.instantiate() as SchematicsNode
+		add_child(new_node)
 	
 	new_node.set_position(get_global_mouse_position() - new_node.get_center())
 	
