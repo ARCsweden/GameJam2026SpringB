@@ -3,6 +3,7 @@ extends Node2D
 @onready var camera : Camera2D = $Camera2D
 
 var sn_scene: PackedScene = preload("res://Scenes/Game/Nodes/scematics_node.tscn")
+var sin_scene: PackedScene = preload("res://Scenes/Game/Nodes/scematics_investor_node.tscn")
 
 # We only need ONE variable now! It will hold either a regular module or a goal.
 var node : SchematicsNode = null 
@@ -28,40 +29,28 @@ func _on_spawn_goal_done_effect(pos: Vector2) -> void:
 	add_child(fx)
 	fx.global_position = pos
 
+func spawn_node(new_node: SchematicsNode, node_data: NodeData) -> void:
+	add_child(new_node)
+	new_node.setup_node(node_data)
+	# 2. Snap to mouse
+	new_node.set_position(get_global_mouse_position() - new_node.get_center())
+	# 3. Hijack the master node variable!
+	node = new_node
+	dragging = true
+
+
 # --- Spawn the Goal Node ---
 func _on_spawn_goal_from_store(goal: GoalData) -> void:
 	# 1. Instantiate it and cast it as a SchematicsNode!
-	var new_goal_node = goal.packed_scene.instantiate() as SchematicsNode
-	add_child(new_goal_node)
-	
-	# 2. Pass the data to the node
-	if new_goal_node.has_method("setup_goal"):
-		new_goal_node.setup_goal(goal)
-	
-	# 3. Snap to mouse
-	new_goal_node.set_position(get_global_mouse_position() - new_goal_node.get_center())
-	
-	# 4. Hijack the master node variable!
-	node = new_goal_node
-	dragging = true
+	var new_node = sin_scene.instantiate() as GoalSchematicNode
+	spawn_node(new_node, goal.node_data)
+	new_node.setup_goal(goal)
 	GoalManager.activate_single_goal(goal)
 	
 # --- Spawn the Regular Node ---
 func _on_spawn_from_store(module: ModuleData) -> void:
-	var new_node : SchematicsNode
-	if module.node_data:
-		new_node = sn_scene.instantiate()
-		add_child(new_node)
-		new_node.setup_node(module.node_data)
-	else:
-		new_node = module.packed_scene.instantiate() as SchematicsNode
-		add_child(new_node)
-	
-	new_node.set_position(get_global_mouse_position() - new_node.get_center())
-	
-	node = new_node
-	dragging = true
-	
+	var new_node = sn_scene.instantiate() as SchematicsNode
+	spawn_node(new_node, module.node_data)
 	if module.action_tag != "":
 		GoalManager.trigger_action(module.action_tag, 1)
 

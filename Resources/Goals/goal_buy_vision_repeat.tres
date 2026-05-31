@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dybjbmwqss7du" path="res://Assets/Art/vision.png" id="1_fj7hg"]
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_tjfsk"]
-[ext_resource type="PackedScene" uid="uid://darq3a7grvg6n" path="res://Scenes/Game/Nodes/investor_passive.tscn" id="3_fj7hg"]
+[ext_resource type="Resource" uid="uid://b46k1ench6kta" path="res://Resources/Nodes/Investor/investor_passive.tres" id="3_tjfsk"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_cw0i6"]
 [ext_resource type="Resource" uid="uid://2o1b6rg7adwf" path="res://Resources/Goals/Requirements/req_camera.tres" id="5_tjfsk"]
 
@@ -15,7 +15,7 @@ is_repeatable = true
 target_multiplier = 2.0
 reward_multiplier = 1.1
 icon = ExtResource("1_fj7hg")
-packed_scene = ExtResource("3_fj7hg")
+node_data = ExtResource("3_tjfsk")
 goal_text = "\"Are you sure your systems can handle eagles?\" the wild looking man asks, looking out into your data hall. \"Smaller birds, sure, maybe even corvids or seagulls, but eagles are pretty big. Not to mention albatrosses. Ever seen an albatross? Big.\"
 
 You scream internally. \"For the fifth time, I assure you Mr. Oberfelt, pictures of large birds are just as easy to store as pictures of small birds.\"

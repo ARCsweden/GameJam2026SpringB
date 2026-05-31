@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://c2s01g7s1blx"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_bqf58"]
+[ext_resource type="Resource" uid="uid://25tawgi8o5bc" path="res://Resources/Nodes/Slots/motion_in.tres" id="2_bqf58"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="3_x3d6t"]
+
+[resource]
+script = ExtResource("3_x3d6t")
+node_name = "Investor Motion"
+left_slots = Array[ExtResource("1_bqf58")]([ExtResource("2_bqf58")])
+size = Vector2i(128, 96)
+color = Color(0.17615142, 0.56255627, 0, 1)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

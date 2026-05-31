@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://bg6j7uxsvybiq"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_a85ee"]
+[ext_resource type="Resource" uid="uid://b26o6a7xl7874" path="res://Resources/Nodes/Slots/vision_in.tres" id="2_a85ee"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="3_pep80"]
+
+[resource]
+script = ExtResource("3_pep80")
+node_name = "Investor Vision"
+left_slots = Array[ExtResource("1_a85ee")]([ExtResource("2_a85ee")])
+size = Vector2i(128, 96)
+color = Color(0.17615142, 0.56255627, 0, 1)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

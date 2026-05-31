@@ -11,7 +11,7 @@ enum LogicType {ACTIVE, PASSIVE}
 @export var target_multiplier: float = 1.0 
 @export var reward_multiplier: float = 1.0
 @export var icon: Texture2D
-@export var packed_scene: PackedScene
+@export var node_data: NodeData
 @export_multiline var goal_text: String
 @export var logic_type: LogicType = LogicType.PASSIVE
 @export var requirements: Array[GoalRequirement]
