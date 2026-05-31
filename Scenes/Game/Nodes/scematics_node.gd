@@ -6,6 +6,7 @@ var ns_scene : PackedScene = preload("res://Scenes/Game/Nodes/node_slot.tscn")
 @onready var move_icon : Sprite2D = $MoveIcon
 @onready var ninepatch : NinePatchRect = $NinePatchRect
 @onready var slots : Node2D = $Slots
+@onready var name_label : Label = %NodeName
 
 const MOVE_OFFSET: int = 16
 const SLOT_OFFSET: int = 32
@@ -59,6 +60,9 @@ func get_slots(node_data: NodeData, sa: Array[NodeSlotData], horizontal: bool) -
 func setup_node(node_data: NodeData) -> void:
 	ninepatch.size = node_data.size
 	ninepatch.modulate = node_data.color
+	
+	name_label.size.x = node_data.size.x
+	name_label.text = node_data.node_name
 
 	if node_data.top_slots:
 		var n_slot = get_slots(node_data, node_data.top_slots, true)

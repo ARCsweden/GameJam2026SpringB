@@ -8,6 +8,7 @@
 
 [resource]
 script = ExtResource("2_y1bwq")
+node_name = "CPU"
 left_slots = Array[ExtResource("1_4pqtq")]([ExtResource("3_o61jo"), ExtResource("3_o61jo")])
 right_slots = Array[ExtResource("1_4pqtq")]([ExtResource("4_8y5p4")])
 bottom_slots = Array[ExtResource("1_4pqtq")]([ExtResource("2_6dnqo"), ExtResource("2_6dnqo")])
