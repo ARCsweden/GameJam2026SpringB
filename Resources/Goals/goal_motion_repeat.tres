@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="1_pruad"]
 [ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="1_qty45"]
-[ext_resource type="PackedScene" uid="uid://bs4vg30lta46q" path="res://Scenes/Game/Nodes/investor_arm.tscn" id="3_d20d2"]
+[ext_resource type="Resource" uid="uid://c2s01g7s1blx" path="res://Resources/Nodes/Investor/investor_motion.tres" id="3_px5h4"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_d20d2"]
 [ext_resource type="Resource" uid="uid://cywxah62c0k2o" path="res://Resources/Goals/Requirements/req_arm.tres" id="5_px5h4"]
 
@@ -12,9 +12,10 @@ goal_id = "motion_repeat"
 description = "Keeping the Wheels Turning"
 reward_amount = 500
 is_repeatable = true
+target_multiplier = 2.0
 reward_multiplier = 2.2
 icon = ExtResource("1_qty45")
-packed_scene = ExtResource("3_d20d2")
+node_data = ExtResource("3_px5h4")
 goal_text = "\"Håkan Sunesson,\" the small and graying elderly man introduces himself. \"I have a problem that I believe your company could help solve.\"
 
 \"We provide everything in bleeding-edge robotics under the sun,\" you boast confidently. \"Industrial, automotive, space, military, whatever you need.\"

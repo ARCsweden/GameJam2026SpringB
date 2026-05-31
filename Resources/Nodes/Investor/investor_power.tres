@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NodeData" format=3 uid="uid://diebojstev0k"]
+
+[ext_resource type="Script" uid="uid://dhmohva7qvrqk" path="res://Scripts/NodeSlotData.gd" id="1_speae"]
+[ext_resource type="Resource" uid="uid://cc5xqj37jn115" path="res://Resources/Nodes/Slots/power_in.tres" id="2_44k7a"]
+[ext_resource type="Script" uid="uid://32r53s0xul4s" path="res://Scripts/NodeData.gd" id="3_2pl8f"]
+
+[resource]
+script = ExtResource("3_2pl8f")
+node_name = "Investor Power"
+left_slots = Array[ExtResource("1_speae")]([ExtResource("2_44k7a")])
+size = Vector2i(128, 96)
+color = Color(0.17615142, 0.56255627, 0, 1)
+metadata/_custom_type_script = "uid://32r53s0xul4s"

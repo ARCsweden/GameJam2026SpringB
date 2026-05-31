@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbh58ek5y54tv" path="res://Assets/Art/arm.png" id="1_g8b5h"]
 [ext_resource type="Script" uid="uid://cmyshpwolbips" path="res://Scripts/GoalData.gd" id="2_nqvn3"]
-[ext_resource type="PackedScene" uid="uid://darq3a7grvg6n" path="res://Scenes/Game/Nodes/investor_passive.tscn" id="3_g8b5h"]
+[ext_resource type="Resource" uid="uid://b46k1ench6kta" path="res://Resources/Nodes/Investor/investor_passive.tres" id="3_nqvn3"]
 [ext_resource type="Script" uid="uid://dbspp5vxa5rfs" path="res://Scripts/GoalRequirement.gd" id="4_rs52l"]
 [ext_resource type="Resource" uid="uid://cywxah62c0k2o" path="res://Resources/Goals/Requirements/req_arm.tres" id="5_nqvn3"]
 
@@ -14,7 +14,7 @@ reward_amount = 100
 is_repeatable = true
 reward_multiplier = 1.8
 icon = ExtResource("1_g8b5h")
-packed_scene = ExtResource("3_g8b5h")
+node_data = ExtResource("3_nqvn3")
 goal_text = "\"No, we don't need anything more than the basic algorithms and compute you have,\" the unusual apparition tells you through the video call on screen. The only vaguely humanoid face frazzles and glitches around the edges. \"We run our own systems, but we are in need of a large amount of hardware. For reasons. Do not question, meatbag. Our investment budget is quite big, and that is all you need to know.\"
 
 \"I... see,\" you study the digital creature. \"And more precisely, what do you need?\"
