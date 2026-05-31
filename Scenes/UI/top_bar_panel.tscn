@@ -31,6 +31,7 @@ layout_mode = 2
 size_flags_horizontal = 6
 
 [node name="BatteryContainer" type="MarginContainer" parent="TopBarHBOX/MarginContainer/Resources" unique_id=1273823117]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/margin_left = 5
@@ -55,6 +56,7 @@ text = "500k$"
 script = ExtResource("1_7xdl6")
 
 [node name="GPUContainer" type="MarginContainer" parent="TopBarHBOX/MarginContainer/Resources" unique_id=252269028]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/margin_left = 5
