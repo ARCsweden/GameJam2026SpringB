@@ -8,7 +8,7 @@
 font_size = 20
 
 [node name="GoalStoreItemUI" type="PanelContainer" unique_id=1783544407]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 0)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ml7nu")
@@ -20,24 +20,30 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1510626441]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=237646383]
+[node name="Texture" type="TextureRect" parent="MarginContainer" unique_id=173939847]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-label_settings = SubResource("LabelSettings_ps5tp")
-
-[node name="Texture" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=173939847]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 4
 texture = ExtResource("2_da1ho")
 expand_mode = 5
 
-[node name="StoryButton" type="Button" parent="MarginContainer" unique_id=1845789694]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=274969820]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer" unique_id=237646383]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Name"
+label_settings = SubResource("LabelSettings_ps5tp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StoryButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1845789694]
 unique_name_in_owner = true
 clip_contents = true
 custom_minimum_size = Vector2(60, 60)
@@ -47,4 +53,4 @@ size_flags_vertical = 8
 icon = ExtResource("3_ua2sd")
 icon_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/StoryButton" to="." method="_on_story_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/StoryButton" to="." method="_on_story_button_pressed"]

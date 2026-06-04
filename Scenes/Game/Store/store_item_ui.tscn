@@ -4,33 +4,50 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_ps5tp"]
 font_size = 20
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_um6xf"]
 font_size = 20
 
 [node name="StoreItemUI" type="PanelContainer" unique_id=1783544407]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(250, 0)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_0opp5")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1510626441]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=246894823]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=173939847]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+expand_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1510626441]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer" unique_id=237646383]
+[node name="ItemName" type="Label" parent="MarginContainer/VBoxContainer" unique_id=237646383]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 label_settings = SubResource("LabelSettings_ps5tp")
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=173939847]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=855001365]
 layout_mode = 2
-size_flags_vertical = 3
-expand_mode = 5
+theme_override_constants/margin_right = 15
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=646510233]
+[node name="PrizeLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=646510233]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
 size_flags_vertical = 8
 label_settings = SubResource("LabelSettings_um6xf")
 horizontal_alignment = 1

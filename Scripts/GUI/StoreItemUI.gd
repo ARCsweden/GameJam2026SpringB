@@ -3,17 +3,15 @@ class_name StoreItemUI
 
 var module_data: ModuleData
 
-# Let's pretend you added an @onready var icon = $TextureRect and price_label = $Label
-
-@onready var icon_rect: TextureRect = $VBoxContainer/TextureRect # Adjust path if needed
-@onready var price_label: Label = $VBoxContainer/Label 
-@onready var item_name: Label = $VBoxContainer/Label2          # Adjust path if needed
+@onready var icon_rect: TextureRect = %TextureRect
+@onready var price_label: Label = %PrizeLabel 
+@onready var item_name: Label = %ItemName
 
 func setup(data: ModuleData) -> void:
 	module_data = data
 	icon_rect.texture = data.icon
 	price_label.text = "$" + str(data.cost)
-	item_name.text = str(data.module_name)
+	item_name.text = data.module_name
 	# icon.texture = data.icon # (If you add an icon variable to ModuleData later!)
 	# price_label.text = "$" + str(data.cost)
 # This listens for raw inputs directly on the UI element
