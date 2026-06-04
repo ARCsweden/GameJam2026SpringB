@@ -24,12 +24,25 @@ metadata/_edit_group_ = true
 
 [node name="Store" type="MarginContainer" parent="." unique_id=2350805]
 layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Store" unique_id=1837228376]
-custom_minimum_size = Vector2(210, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="Store" unique_id=2116988652]
 layout_mode = 2
 
-[node name="StoreGrid" type="GridContainer" parent="Store/ScrollContainer" unique_id=544246150]
+[node name="Label" type="Label" parent="Store/VBoxContainer" unique_id=679936173]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Store"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Store/VBoxContainer" unique_id=1837228376]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StoreGrid" type="GridContainer" parent="Store/VBoxContainer/ScrollContainer" unique_id=544246150]
 layout_mode = 2
 script = ExtResource("8_43ur1")
 store_item_scene = ExtResource("9_6ptox")
@@ -39,11 +52,22 @@ available_modules = Array[ExtResource("10_sr12i")]([ExtResource("5_et7fu"), ExtR
 layout_mode = 2
 size_flags_horizontal = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="GoalStore" unique_id=1151201094]
-custom_minimum_size = Vector2(300, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="GoalStore" unique_id=660642458]
 layout_mode = 2
 
-[node name="GoalStoreGrid" type="GridContainer" parent="GoalStore/ScrollContainer" unique_id=1345384772]
+[node name="Label" type="Label" parent="GoalStore/VBoxContainer" unique_id=1782828496]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Quests"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GoalStore/VBoxContainer" unique_id=1151201094]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GoalStoreGrid" type="GridContainer" parent="GoalStore/VBoxContainer/ScrollContainer" unique_id=1345384772]
 layout_mode = 2
 script = ExtResource("17_xo0gq")
 goal_store_item_scene = ExtResource("18_lu8f2")
